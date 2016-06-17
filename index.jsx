@@ -8,10 +8,10 @@ class App extends Component {
 			<div>
 		        <h1>App</h1>
 		        <ul>
-		        	<li><IndexLink to="/" activeClassName="active">Home</IndexLink></li>
-		          	<li><Link to="/about" activeClassName="active">About</Link></li>
-		         	 <li><Link to="/inbox" activeClassName="active">Inbox</Link></li>
-		         	 <li><Link to="/inbox/messages/123" activeClassName="active">Message</Link></li>
+		        	<li><IndexLink to="/step" activeClassName="active">Home</IndexLink></li>
+		          	<li><Link to="/step/about" activeClassName="active">About</Link></li>
+		         	 <li><Link to="/step/inbox" activeClassName="active">Inbox</Link></li>
+		         	 <li><Link to="/step/inbox/messages/123" activeClassName="active">Message</Link></li>
 		        </ul>
 		        {this.props.children}
 		      </div>
@@ -111,7 +111,7 @@ class NotFound extends Component {
 //路由3，URL路径修改
 const routeConfig = [
 	{ 
-		path: '/',
+		path: 'step',
 	    component: App,
 	    indexRoute: { component: Dashboard },
 	    childRoutes: [

@@ -2,7 +2,7 @@
  * @Author: lushijie
  * @Date:   2016-06-13 11:49:13
  * @Last Modified by:   lushijie
- * @Last Modified time: 2016-06-16 21:09:03
+ * @Last Modified time: 2016-06-17 09:36:57
  */
 var webpack = require('webpack');
 
@@ -18,19 +18,25 @@ var config = {
         inline: true,
         port: 5055,
         host: '0.0.0.0',
-        historyApiFallback: true
+        //historyApiFallback: true //如果是index.html直接这一项就可以了
+        historyApiFallback: {
+            index: 'main.html'
+            // rewrites: [
+            //     { from: /\/soccer/, to: '/soccer.html'}
+            // ]
+        }
     },
     resolve: {
         extensions: ['', '.js', '.jsx']
     },
     module: {
-        // preLoaders: [
-        //   {
-        //     test: /\.jsx$/,
-        //     exclude: /node_modules/,
-        //     loader: 'eslint-loader' //配置eslintrc
-        //   }
-        // ],
+        preLoaders: [
+          {
+            test: /\.jsx$/,
+            exclude: /node_modules/,
+            loader: 'eslint-loader' //配置eslintrc
+          }
+        ],
         loaders: [{
             test: /\.jsx?$/,
             exclude: /node_modules/,

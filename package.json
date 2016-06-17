@@ -4,7 +4,7 @@
   "description": "react从入门到精通",
   "main": "index.js",
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm run start:prod || npm start:dev",
+    "start": "npm run start:dev",
     "start:dev": "NODE_ENV=dev webpack-dev-server --hot",
     "start:prod": "NODE_ENV=production webpack"
   },
