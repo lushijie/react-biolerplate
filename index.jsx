@@ -25,55 +25,6 @@ class App extends Component {
 	}
 }
 
-// class Dashboard extends Component {
-//   render() {
-//     return <div>Welcome to the appq!</div>
-//   }
-// }
-
-// class About extends Component {
-// 	render() {
-// 		return (
-// 			<div>
-// 				<h2>About</h2>
-// 				{this.props.children || "Welcome to your About"}
-// 			</div>
-// 		)
-// 	}
-// }
-
-// class Inbox extends Component {
-// 	render() {
-// 		return (
-// 			<div>
-// 			  	<h2>Inbox</h2>
-// 			 	{this.props.children || "Welcome to your Inbox"}
-// 			</div>
-// 		)
-// 	}
-// }
-
-// class Message extends Component {
-// 	componentDidMount() {
-// 		console.info(this.props.params.id);
-// 	  	console.info(this.props.location.query);
-// 	}
-// 	render() {
-// 		return (
-// 			<h3>Message {this.props.params.id}</h3>
-// 		)
-// 	}
-// }
-
-// class NotFound extends Component {
-// 	render () {
-// 		return (
-// 			<div> 404 NotFound</div>
-// 		)
-// 	}
-// }
-
-
 // 路由实现方式1
 // render(
 // 	(
@@ -114,7 +65,7 @@ class App extends Component {
 //   }
 // ]
 
-//路由3，URL路径修改
+//路由实现方式2_URL路径修改
 const routeConfig = [
 	{ 
 		path: 'step',
