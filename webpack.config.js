@@ -2,7 +2,7 @@
  * @Author: lushijie
  * @Date:   2016-06-13 11:49:13
  * @Last Modified by:   lushijie
- * @Last Modified time: 2016-06-17 10:51:29
+ * @Last Modified time: 2016-06-17 10:56:50
  */
 var webpack = require('webpack');
 
@@ -20,7 +20,7 @@ var config = {
         host: '0.0.0.0',
         //historyApiFallback: true //如果是index.html直接这一项就可以了
         historyApiFallback: {
-            index: './views/main.html'
+            index: __dirname + '/views/main.html'
             // rewrites: [
             //     { from: /\/soccer/, to: '/soccer.html'}
             // ]
