@@ -1,7 +1,13 @@
 import React, {Component} from 'react';
 import {render} from 'react-dom';
 import { Router, Route, IndexRoute, Link, IndexLink, browserHistory} from 'react-router';
+import Dashboard from './components/dashboard.jsx';
+import About from './components/about.jsx';
+import Inbox from './components/inbox.jsx';
+import Message from './components/message.jsx';
+import NotFound from './components/notfound.jsx';
 import './index.scss';
+
 class App extends Component {
 	render(){
 		return (
@@ -19,53 +25,53 @@ class App extends Component {
 	}
 }
 
-class Dashboard extends Component {
-  render() {
-    return <div>Welcome to the appq!</div>
-  }
-}
+// class Dashboard extends Component {
+//   render() {
+//     return <div>Welcome to the appq!</div>
+//   }
+// }
 
-class About extends Component {
-	render() {
-		return (
-			<div>
-				<h2>About</h2>
-				{this.props.children || "Welcome to your About"}
-			</div>
-		)
-	}
-}
+// class About extends Component {
+// 	render() {
+// 		return (
+// 			<div>
+// 				<h2>About</h2>
+// 				{this.props.children || "Welcome to your About"}
+// 			</div>
+// 		)
+// 	}
+// }
 
-class Inbox extends Component {
-	render() {
-		return (
-			<div>
-			  	<h2>Inbox</h2>
-			 	{this.props.children || "Welcome to your Inbox"}
-			</div>
-		)
-	}
-}
+// class Inbox extends Component {
+// 	render() {
+// 		return (
+// 			<div>
+// 			  	<h2>Inbox</h2>
+// 			 	{this.props.children || "Welcome to your Inbox"}
+// 			</div>
+// 		)
+// 	}
+// }
 
-class Message extends Component {
-	componentDidMount() {
-		console.info(this.props.params.id);
-	  	console.info(this.props.location.query);
-	}
-	render() {
-		return (
-			<h3>Message {this.props.params.id}</h3>
-		)
-	}
-}
+// class Message extends Component {
+// 	componentDidMount() {
+// 		console.info(this.props.params.id);
+// 	  	console.info(this.props.location.query);
+// 	}
+// 	render() {
+// 		return (
+// 			<h3>Message {this.props.params.id}</h3>
+// 		)
+// 	}
+// }
 
-class NotFound extends Component {
-	render () {
-		return (
-			<div> 404 NotFound</div>
-		)
-	}
-}
+// class NotFound extends Component {
+// 	render () {
+// 		return (
+// 			<div> 404 NotFound</div>
+// 		)
+// 	}
+// }
 
 
 // 路由实现方式1
