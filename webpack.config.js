@@ -2,7 +2,7 @@
  * @Author: lushijie
  * @Date:   2016-06-13 11:49:13
  * @Last Modified by:   lushijie
- * @Last Modified time: 2016-06-17 16:45:11
+ * @Last Modified time: 2016-06-17 17:47:30
  */
 var webpack = require('webpack');
 var config = {
@@ -10,7 +10,7 @@ var config = {
     output: {
         path: 'src/build',
         filename: 'index.js',
-        //chunkFileName: '[name].[chunkhash:8].chunk.js',
+        chunkFilename: '[name].[chunkhash:8].chunk.js',//chunkFilename好奇怪的大小写
         publicPath: '/build/' //编译之后的访问路径
     },
     devServer: {

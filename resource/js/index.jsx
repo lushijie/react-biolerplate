@@ -103,7 +103,7 @@ const routeConfig = [
                 getComponent: (nextState, cb) => {
                     require.ensure([], (require) => {
                          cb(null, require('../../components/about.jsx').default)
-                    })
+                    },'about')
                 }
             },
             //{ path: 'about', component: About },
