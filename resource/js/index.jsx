@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import {render} from 'react-dom';
 import { Router, Route, IndexRoute, Link, IndexLink, browserHistory} from 'react-router';
-import Dashboard from './components/dashboard.jsx';
-import About from './components/about.jsx';
-import Inbox from './components/inbox.jsx';
-import Message from './components/message.jsx';
-import NotFound from './components/notfound.jsx';
-import './index.scss';
+import Dashboard from 'components/dashboard.jsx';
+import About from 'components/about.jsx';
+import Inbox from 'components/inbox.jsx';
+import Message from 'components/message.jsx';
+import NotFound from 'components/notfound.jsx';
+import 'resource/css/index.scss';
 
 class App extends Component {
 	render(){

@@ -2,12 +2,12 @@
  * @Author: lushijie
  * @Date:   2016-06-13 11:49:13
  * @Last Modified by:   lushijie
- * @Last Modified time: 2016-06-17 09:36:57
+ * @Last Modified time: 2016-06-17 10:51:29
  */
 var webpack = require('webpack');
 
 var config = {
-    entry: __dirname + '/index.jsx',
+    entry: __dirname + '/resource/js/index.jsx',
     output: {
         path: 'src/build',
         filename: 'index.js',
@@ -20,14 +20,18 @@ var config = {
         host: '0.0.0.0',
         //historyApiFallback: true //如果是index.html直接这一项就可以了
         historyApiFallback: {
-            index: 'main.html'
+            index: './views/main.html'
             // rewrites: [
             //     { from: /\/soccer/, to: '/soccer.html'}
             // ]
         }
     },
     resolve: {
-        extensions: ['', '.js', '.jsx']
+        extensions: ['', '.js', '.jsx'],
+        alias:{
+            components: __dirname + '/components',
+            resource: __dirname + '/resource'
+        }
     },
     module: {
         preLoaders: [
