@@ -1,0 +1,38 @@
+{
+  "name": "react-step-by-step",
+  "version": "0.0.0",
+  "description": "react从入门到精通",
+  "main": "index.js",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm start:dev",
+    "start:dev": "NODE_ENV=dev webpack-dev-server --hot",
+    "start:prod": "NODE_ENV=production webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^6.3.6",
+    "babel-core": "~6.9.1",
+    "babel-loader": "~6.2.4",
+    "babel-preset-es2015": "~6.9.0",
+    "babel-preset-react": "~6.5.0",
+    "babel-preset-stage-0": "~6.5.0",
+    "eslint": "^2.12.0",
+    "eslint-loader": "^1.3.0",
+    "if-env": "^1.0.0",
+    "node-sass": "^3.7.0",
+    "precss": "^1.4.0",
+    "react": "~15.1.0",
+    "react-dom": "~15.1.0",
+    "sass-loader": "^3.2.0",
+    "webpack": "~1.13.1",
+    "webpack-dev-server": "~1.14.1"
+  },
+  "devDependencies": {
+    "css-loader": "~0.23.1",
+    "file-loader": "^0.8.5",
+    "postcss-loader": "~0.9.1",
+    "style-loader": "~0.13.1",
+    "url-loader": "^0.5.7"
+  }
+}
