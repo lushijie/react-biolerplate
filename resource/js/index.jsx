@@ -90,19 +90,12 @@ const routeConfig = [
         path: 'step',
         component: App,
         indexRoute: { component: Dashboard },
-        // indexRoute:{
-        //  getComponent: (location, cb) => {
-        //          require.ensure([], (require) => {
-        //              cb(null, require('../../components/dashboard.jsx'))
-        //          })
-        //     }
-        // },
         childRoutes: [
             { 
                 path: 'about', 
                 getComponent: (nextState, cb) => {
                     require.ensure([], (require) => {
-                         cb(null, require('../../components/about.jsx').default)
+                         cb(null, require('components/about.jsx').default)
                     },'about')
                 }
             },
