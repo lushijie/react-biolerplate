@@ -1,8 +1,8 @@
-/* 
+/*
  * @Author: lushijie
  * @Date:   2016-06-13 11:49:13
  * @Last Modified by:   lushijie
- * @Last Modified time: 2016-06-17 17:47:30
+ * @Last Modified time: 2016-09-07 20:01:59
  */
 var webpack = require('webpack');
 var config = {
@@ -69,8 +69,8 @@ var config = {
         process.env.NODE_ENV === 'production' ?
         [
             new webpack.DefinePlugin({
-              "process.env": { 
-                 NODE_ENV: JSON.stringify("production") 
+              "process.env": {
+                 NODE_ENV: JSON.stringify("production")
                }
             })//fix Warning: It looks like you're using a minified copy of the development build of React.
             ,new webpack.optimize.DedupePlugin() //删除重复的依赖。

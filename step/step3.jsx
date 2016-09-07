@@ -101,7 +101,7 @@ class NotFound extends Component {
 //       { path: 'inbox',
 //         component: Inbox,
 //         childRoutes: [
-//           { 
+//           {
 //           	path: 'messages/:id', component: Message
 //           }
 //         ]
@@ -112,7 +112,7 @@ class NotFound extends Component {
 
 //路由3，URL路径修改
 const routeConfig = [
-	{ 
+	{
 		path: '/',
 	    component: App,
 	    indexRoute: { component: Dashboard },
@@ -132,7 +132,7 @@ const routeConfig = [
 	        ]
 	      }
 	    ]
-	},  
+	},
 	{
 	  path: '*',
 	  component: NotFound,

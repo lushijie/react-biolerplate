@@ -27,7 +27,7 @@ import './index.scss';
 // 	      return <div key={index}>Hello, {name}!</div>
 // 	    })
 // 	  }
-// 	</div>, 
+// 	</div>,
 // 	document.getElementById('app2')
 // );
 
@@ -65,9 +65,9 @@ import './index.scss';
 //   </NotesList>,
 //   document.getElementById('app2')
 // );
-// 
-// 
-// 
+//
+//
+//
 //-----------------------------------------------------------------------------------------
 //propTypes 与 getDefaultProps
 //
@@ -89,7 +89,7 @@ import './index.scss';
 //   <MyTitle title="lushijie" />,
 //   document.getElementById('app2')
 // );
-// 
+//
 
 //-----------------------------------------------------------------------------------------
 //handleClick 与 getInitialState
@@ -137,7 +137,7 @@ import './index.scss';
 //   <MyComponent />,
 //   document.getElementById('app2')
 // );
-// 
+//
 
 
 //---------------------------------------------------------------------------------------
@@ -208,4 +208,4 @@ import './index.scss';
 //   <Hello name="world"/>,
 //   document.getElementById('app2')
 // );
-// 
+//

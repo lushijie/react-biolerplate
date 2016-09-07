@@ -40,7 +40,7 @@ import 'resource/css/index.scss';
 //       { path: 'inbox',
 //         component: Inbox,
 //         childRoutes: [
-//           { 
+//           {
 //              path: 'messages/:id', component: Message
 //           }
 //         ]
@@ -51,7 +51,7 @@ import 'resource/css/index.scss';
 
 //路由实现方式2_URL路径修改
 // const routeConfig = [
-//  { 
+//  {
 //      path: 'step',
 //      component: App,
 //      indexRoute: { component: Dashboard },
@@ -71,7 +71,7 @@ import 'resource/css/index.scss';
 //          ]
 //        }
 //      ]
-//  },  
+//  },
 //  {
 //    path: '*',
 //    component: NotFound,
@@ -86,13 +86,13 @@ import 'resource/css/index.scss';
 //路由实现方式——动态路由
 
 const routeConfig = [
-    { 
+    {
         path: 'step',
         component: App,
         indexRoute: { component: Dashboard },
         childRoutes: [
-            { 
-                path: 'about', 
+            {
+                path: 'about',
                 getComponent: (nextState, cb) => {
                     require.ensure([], (require) => {
                          cb(null, require('components/about.jsx').default)
@@ -100,7 +100,7 @@ const routeConfig = [
                 }
             },
             //{ path: 'about', component: About },
-            { 
+            {
                 path: 'inbox',
                 component: Inbox,
                 childRoutes: [
@@ -115,7 +115,7 @@ const routeConfig = [
                 ]
             }
         ]
-    },  
+    },
     {
       path: '*',
       component: NotFound,
