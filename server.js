@@ -2,7 +2,7 @@
  * @Author: lushijie
  * @Date:   2016-06-16 18:21:14
  * @Last Modified by:   lushijie
- * @Last Modified time: 2016-09-07 20:02:00
+ * @Last Modified time: 2016-09-08 10:36:11
  */
 var express = require('express')
 var path = require('path')
@@ -12,9 +12,9 @@ var app = express()
 //app.use(compression())
 // serve our static stuff like index.css
 // app.use(express.static(__dirname))
-app.use(express.static(path.join(__dirname, 'src/build/')))
+app.use(express.static(path.join(__dirname, 'dist')))
 
-app.use('/build', express.static(path.join(__dirname, 'src/build/')))
+app.use('/dist', express.static(path.join(__dirname, 'dist')))
 
 // send all requests to index.html so browserHistory in React Router works
 app.get('*', function(req, res) {

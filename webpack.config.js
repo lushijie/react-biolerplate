@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2016-02-25 15:33:13
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-09-08 10:24:21
+* @Last Modified time: 2016-09-08 10:35:15
 */
 /**
  * webpack --display-error-details
@@ -44,8 +44,8 @@ module.exports = {
         // ]
     },
     output: {
-        publicPath: '/build/',//webpack-dev-server会使用改路径寻找output 文件
-        path: 'build',// 正式部署时打包进入的文件夹名称
+        publicPath: '/dist/',//webpack-dev-server会使用改路径寻找output 文件
+        path: 'dist',// 正式部署时打包进入的文件夹名称
         filename: '[name].bundle.js',//控制的是除common.bundle.js（改文件名就是如此）之外的其他模块的文件名,
         //当时entry使用对象形式时，[hash]不可以使用，[id]、[chunkhash]与[name]可以使用
         chunkFilename: '[name].[chunkhash:8].chunk.js'
