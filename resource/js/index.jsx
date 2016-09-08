@@ -87,7 +87,7 @@ import 'resource/css/index.scss';
 
 const routeConfig = [
     {
-        path: 'step',
+        path: 'home',
         component: App,
         indexRoute: { component: Dashboard },
         childRoutes: [

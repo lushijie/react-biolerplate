@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2016-02-25 15:33:13
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-09-08 10:35:15
+* @Last Modified time: 2016-09-08 20:23:18
 */
 /**
  * webpack --display-error-details
@@ -145,7 +145,7 @@ module.exports = {
         contentBase: '.',//相当于整个devserver的跟目录，默认情况下等于__dirname
         hot: true,
         inline: true,
-        port: 5055,
+        port: 5050,
         host: '0.0.0.0',
         // proxy: {
         //       "/proxy": {
