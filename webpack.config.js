@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2016-02-25 15:33:13
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-09-09 09:51:39
+* @Last Modified time: 2016-09-09 12:39:03
 */
 /**
  * webpack --display-error-details
@@ -91,7 +91,7 @@ module.exports = {
                 test: /\.jsx?$/,
                 loader: 'babel-loader', // 'babel' is also a legal name to reference
                 // include: [
-                //     path.resolve(__dirname, '/public/resource/js'),
+                //     path.resolve(__dirname, 'public/resource/js'),
                 // ],
                 exclude: [
                   path.resolve(__dirname, 'node_modules'),
@@ -161,9 +161,10 @@ module.exports = {
             //     { from: /\/soccer/, to: '/soccer.html'}
             // ]
         }
-    }
-    // ,
+    },
     // postcss: function () { // postcss 插件
-    //     return [precss, autoprefixer];
+    //     return {
+    //         plugins: [require('precss'), require('autoprefixer')]
+    //     }
     // }
 };
