@@ -5,7 +5,7 @@ import App from 'components/app.jsx';
 import Dashboard from 'components/dashboard.jsx';
 //如果about组件使用动态路由，此处不能以这样的方式引入about了，否则about的动态加载失败！
 // import About from 'components/about.jsx';
-import Inbox from 'components/inbox.jsx';
+//import Inbox from 'components/inbox.jsx';
 import Message from 'components/message.jsx';
 import NotFound from 'components/notfound.jsx';
 import 'resource/css/index.scss';
@@ -96,13 +96,20 @@ const routeConfig = [
                 getComponent: (nextState, cb) => {
                     require.ensure([], (require) => {
                          cb(null, require('components/about.jsx').default)
-                    },'about')
+                    },'about');
                 }
             },
+            //非动态加载About的时候使用这种方式
             //{ path: 'about', component: About },
             {
                 path: 'inbox',
-                component: Inbox,
+                //非动态加载Inbox的时候使用这种方式
+                //component: Inbox,
+                getComponent: (nextState, cb) => {
+                    require.ensure([], (require) => {
+                         cb(null, require('components/inbox.jsx').default)
+                    },'inbox');
+                },
                 childRoutes: [
                   { path: '/messages/:id', component: Message },
                   { path: 'messages/:id',

@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2016-02-25 15:33:13
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-09-09 09:14:52
+* @Last Modified time: 2016-09-09 09:51:39
 */
 /**
  * webpack --display-error-details
@@ -25,15 +25,15 @@ module.exports = {
     //devtool: 'cheap-module-source-map',
     context: __dirname,//基础目录（绝对路径），entry根据此路径进行解析
     //entry 情况1,
-    //entry 为字符串，生成 common.bundle.js 与 main.bundle.js
+    //entry 为字符串，生成 common.bundle.js 与 main.bundle.js（启用commonchunk的情况下）
     // entry: './resource/js/index.jsx',
 
     //entry 情况2
-    //entry 如果为一个数组，数组中的文件会打包在一起融合到main.bundle.js进入boot，生成common.bundle.js与main.bundle.js
+    //entry 如果为一个数组，数组中的文件会打包在一起融合到main.bundle.js进入boot，生成common.bundle.js与main.bundle.js（启用commonchunk的情况下）
     //entry: ['./public/resource/js/page/home.js','./public/resource/js/page/admin.js'],
 
     //entry 情况3
-    //entry为对象,生成common.bundle.js 与 home.bundle.js 与 admin.bundle.js(home,admin为对象的key)
+    //entry为对象,生成common.bundle.js 与 home.bundle.js 与 admin.bundle.js(home,admin为对象的key)（启用commonchunk的情况下）
     entry: {
         index: './resource/js/index.jsx'
         //admin: './public/resource/js/page/admin.js',
@@ -131,18 +131,16 @@ module.exports = {
         ],
         extensions: ['', '.js', '.jsx'],//引用时遇到这些后缀结束的文件可以不加后缀名
         alias:{
-             'Rjs': 'public/resource/js',//别名，可在引用的时候使用缩写
-             'Rcss': 'public/resource/css',
-             'Rimg': 'public/resource/img',
-             'components': __dirname + '/components',
-             'resource': __dirname + '/resource'
+            //别名，可在引用的时候使用缩写
+            'components': __dirname + '/components',
+            'resource': __dirname + '/resource'
         }
     },
     devServer: {
-        // stats: {
-        //     cached: false,
-        //     colors: true
-        // },
+        stats: {
+            cached: false,
+            colors: true
+        },
         contentBase: '.',//相当于整个devserver的跟目录，默认情况下等于__dirname
         hot: true,
         inline: true,
