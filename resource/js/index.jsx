@@ -52,7 +52,7 @@ import 'resource/css/index.scss';
 //路由实现方式2_URL路径修改
 // const routeConfig = [
 //  {
-//      path: 'step',
+//      path: '/',
 //      component: App,
 //      indexRoute: { component: Dashboard },
 //      childRoutes: [
