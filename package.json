@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "export NODE_ENV=development && webpack-dev-server",
-    "prod": "export NODE_ENV=development && webpack"
+    "publish": "export NODE_ENV=development && webpack"
   },
   "author": "",
   "license": "ISC",

@@ -44,6 +44,10 @@ const routeConfig = [
                     require.ensure([], (require) => {
                          cb(null, require('components/about.jsx').default)
                     },'about');
+                },
+                onEnter: function(nextState, replace){
+                  console.log('nextState', nextState);
+                  console.log('replace', replace);
                 }
             },
             //非动态加载About的时候使用这种方式

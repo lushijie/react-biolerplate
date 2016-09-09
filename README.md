@@ -1,8 +1,9 @@
 react种子项目
 =============
 运行：
-- dev
-npm run dev  http://ip:5055/
+- npm start
+http://ip:5050/
 
-- production
-npm run prod http://ip:8360/
+- publish
+npm run publish
+http://ip:8360/
