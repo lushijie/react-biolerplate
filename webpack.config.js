@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2016-02-25 15:33:13
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-09-08 20:23:18
+* @Last Modified time: 2016-09-09 09:14:52
 */
 /**
  * webpack --display-error-details
@@ -110,12 +110,13 @@ module.exports = {
         ]
     },
     plugins: [
+        new webpack.optimize.OccurrenceOrderPlugin(),
     //     Pconf.definePluginConf,
         Pconf.cleanPluginConf,
     //     Pconf.bannerPluginConf,
     //     Pconf.uglifyJsPluginConf,
     //     Pconf.extractTextPluginConf,
-    //     Pconf.commonsChunkPluginConf,
+        Pconf.commonsChunkPluginConf,
     //     Pconf.minChunkSizePluginConf,
         Pconf.hotModuleReplacementPluginConf,
     //     Pconf.transferWebpackPluginConf,
@@ -138,10 +139,10 @@ module.exports = {
         }
     },
     devServer: {
-        stats: {
-            cached: false,
-            colors: true
-        },
+        // stats: {
+        //     cached: false,
+        //     colors: true
+        // },
         contentBase: '.',//相当于整个devserver的跟目录，默认情况下等于__dirname
         hot: true,
         inline: true,
