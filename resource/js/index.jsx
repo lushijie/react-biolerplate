@@ -3,7 +3,8 @@ import {render} from 'react-dom';
 import { Router, Route, IndexRoute, Link, IndexLink, browserHistory} from 'react-router';
 import App from 'components/app.jsx';
 import Dashboard from 'components/dashboard.jsx';
-import About from 'components/about.jsx';
+//如果about组件使用动态路由，此处不能以这样的方式引入about了，否则about的动态加载失败！
+// import About from 'components/about.jsx';
 import Inbox from 'components/inbox.jsx';
 import Message from 'components/message.jsx';
 import NotFound from 'components/notfound.jsx';
