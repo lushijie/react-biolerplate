@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {render} from 'react-dom';
-import { Router, Route, IndexRoute, Link, IndexLink, hashHistory} from 'react-router';
+import { Router, Route, IndexRoute, Link, IndexLink, browserHistory} from 'react-router';
 import App from 'components/app.jsx';
 import Dashboard from 'components/dashboard.jsx';
 import AboutDashBoard from 'components/about-dashboard.jsx';
@@ -103,6 +103,7 @@ const routeConfig = [
 ]
 
 render(
-  <Router history={hashHistory} routes={routeConfig} />,
+  /*history={browserHistory}*/
+  <Router history={browserHistory} routes={routeConfig} />,
   document.getElementById('app2')
 )
