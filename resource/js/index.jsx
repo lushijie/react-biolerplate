@@ -47,8 +47,8 @@ const routeConfig = [
                     },'about');
                 },
                 onEnter: function(nextState, replace){
-                  console.log('nextState', nextState);
-                  console.log('replace', replace);
+                  console.log('about,nextState', nextState);
+                  //console.log('replace', replace);
                 }
             },
             //非动态加载About的时候使用这种方式
@@ -63,9 +63,10 @@ const routeConfig = [
                     },'inbox');
                 },
                 childRoutes: [
-                  { path: '/messages/:id', component: Message },
                   { path: 'messages/:id',
+                    component: Message,//非动态加载
                     onEnter: function (nextState, replace) {
+                      console.log('messages,nextState', nextState);
                       //onEnter hook会从最外层的父路由开始直到最下层子路由结束
                       // replace('/messages/' + nextState.params.id)//路由替换
                     },
