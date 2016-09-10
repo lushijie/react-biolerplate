@@ -1,33 +1,34 @@
 import React, {Component} from 'react';
 import {render} from 'react-dom';
-import { Router, Route, IndexRoute, Link, IndexLink, browserHistory} from 'react-router';
+import { Router, Route, IndexRoute, Link, IndexLink, hashHistory} from 'react-router';
 import App from 'components/app.jsx';
 import Dashboard from 'components/dashboard.jsx';
 //如果about组件使用动态路由，此处不能以这样的方式引入about了，否则about的动态加载失败！
 // import About from 'components/about.jsx';
-//import Inbox from 'components/inbox.jsx';
+// import Inbox from 'components/inbox.jsx';
 import Message from 'components/message.jsx';
 import NotFound from 'components/notfound.jsx';
 import 'resource/css/index.scss';
 
 // 路由实现方式1
-// render(
-//  (
-//      <Router>
-//          <Route path="/" component={App}>
-//              <IndexRoute component={Dashboard} />
-//              <Route path="about" component={About} />
-//              <Route path="inbox" component={Inbox}>
-//                {/* 使用 /messages/:id 替换 messages/:id */}
-//                {/* <Route path="/messages/:id" component={Message} /> */}
-//                {/* 跳转 /inbox/messages/:id 到 /messages/:id 来兼容旧的url */}
-//                {/*<Redirect from="messages/:id" to="/messages/:id" /> */}
-//                <Route path="messages/:id" component={Message} />
-//              </Route>
-//          </Route>
-//      </Router>
-//  ),document.getElementById('app2')
-// );
+
+//render(
+// (
+//     <Router history={hashHistory}>
+//         <Route path="/" component={App}>
+//             <IndexRoute component={Dashboard} />
+//             <Route path="about" component={About} />
+//             <Route path="inbox" component={Inbox}>
+//               {/* 使用 /messages/:id 替换 messages/:id */}
+//               {/* <Route path="/messages/:id" component={Message} /> */}
+//               {/* 跳转 /inbox/messages/:id 到 /messages/:id 来兼容旧的url */}
+//               {/*<Redirect from="messages/:id" to="/messages/:id" /> */}
+//               <Route path="messages/:id" component={Message} />
+//             </Route>
+//         </Route>
+//     </Router>
+// ),document.getElementById('app2')
+//);
 
 
 // 路由实现方式2
@@ -81,4 +82,7 @@ const routeConfig = [
     }
 ]
 
-render(<Router history={browserHistory} routes={routeConfig} />, document.getElementById('app2'))
+render(
+  <Router history={hashHistory} routes={routeConfig} />,
+  document.getElementById('app2')
+)
