@@ -65,16 +65,33 @@ const routeConfig = [
                     },'inbox');
                 },
                 childRoutes: [
-                  { path: 'messages/:id',
-                    component: Message,//非动态加载
-                    onEnter: function (nextState, replace) {
-                      console.log('messages,nextState', nextState);
-                      //onEnter hook会从最外层的父路由开始直到最下层子路由结束
-                      // replace('/messages/' + nextState.params.id)//路由替换
-                    },
-                    onLeave: function () {
-                    }//onLeave hook 会在所有将离开的路由中触发，从最下层的子路由开始直到最外层父路由结束
-                  }
+                  {
+                      // 相对路径：messages/id为相对路径 最终url是 ip:5050/inbox/messages/id
+                      // 绝对路径：/messages/id为绝对路径 最终url是 ip:5050/messages/id
+                      path: 'messages/:id',
+                      component: Message,//非动态加载
+                      onEnter: function (nextState, replace) {
+                        console.log('messages,nextState', nextState);
+                        //onEnter hook会从最外层的父路由开始直到最下层子路由结束
+                        // replace('/messages/' + nextState.params.id)//路由替换
+                      },
+                      onLeave: function () {
+                      }//onLeave hook 会在所有将离开的路由中触发，从最下层的子路由开始直到最外层父路由结束
+                  },
+
+                  //------start------
+                  //可以将相对路径重定向到绝对路径
+                  // {
+                  //   path: '/message/:id',
+                  //   component: Message,
+                  // },
+                  // {
+                  //   path: 'message/:id',
+                  //   onEnter: function (nextState, replaceState) {
+                  //     replaceState(null, '/messages/' + nextState.params.id);
+                  //   }
+                  // }
+                  //------end------
                 ]
             }
         ]
