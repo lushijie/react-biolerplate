@@ -3,8 +3,8 @@ import {render} from 'react-dom';
 
 export default class extends Component {
 	componentDidMount() {
-		console.info(this.props.params);
-	  	console.info(this.props);
+		//console.info(this.props.params);
+	  	//console.info(this.props);
 	}
 	render() {
 		return (

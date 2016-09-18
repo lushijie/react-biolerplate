@@ -48,8 +48,8 @@ const routeConfig = [
                          cb(null, require('components/about.jsx').default)
                     },'about');
                 },
-                onEnter: function(nextState, replace){
-                  console.log('about,nextState', nextState);
+                onEnter: function(nextState, replaceState){
+                  //console.log('about,nextState', nextState);
                 }
             },
             //非动态加载About的时候使用这种方式
@@ -62,12 +62,18 @@ const routeConfig = [
                          cb(null, require('components/inbox.jsx').default)
                     },'inbox');
                 },
+                onEnter: function(nextState, replaceState){
+                  console.log('Inbox onEnter');
+                },
                 childRoutes: [
                   //------可以将相对路径重定向到绝对路径------
                   {
                     //绝对路径：/messages/id为绝对路径 最终url是 ip:5050/messages/id
                     path: '/messages/:id',
                     component: Message,
+                    onEnter: function (nextState, replaceState) {
+                      console.log('Message Redirect');
+                    }
                   },
                   {
                     //相对路径：messages/id为相对路径 最终url是 ip:5050/inbox/messages/id
@@ -75,12 +81,13 @@ const routeConfig = [
                     //路由匹配规则
                     //messages/:id 匹配 messages/123
                     //messages(/:id) 匹配 messages 和 messages/123
-                    onEnter: function (nextState, replace) {
-                    //onEnter hook会从最外层的父路由开始直到最下层子路由结束
-                      replace(null, '/messages/' + nextState.params.id);
+                    onEnter: function (nextState, replaceState) {
+                      //onEnter hook会从最外层的父路由开始直到最下层子路由结束
+                      console.log('Message onEnter');
+                      replaceState(null, '/messages/' + nextState.params.id);
                     },
                     onLeave: function() {
-                        //onLeave hook 会在所有将离开的路由中触发，从最下层的子路由开始直到最外层父路由结束
+                      //onLeave hook 会在所有将离开的路由中触发，从最下层的子路由开始直到最外层父路由结束
                     }
                   }
                 ]
