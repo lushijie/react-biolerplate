@@ -72,6 +72,9 @@ const routeConfig = [
                   {
                     //相对路径：messages/id为相对路径 最终url是 ip:5050/inbox/messages/id
                     path: 'messages/:id',
+                    //路由匹配规则
+                    //messages/:id 匹配 messages/123
+                    //messages(/:id) 匹配 messages 和 messages/123
                     onEnter: function (nextState, replace) {
                     //onEnter hook会从最外层的父路由开始直到最下层子路由结束
                       replace(null, '/messages/' + nextState.params.id);
