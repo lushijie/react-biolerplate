@@ -43,14 +43,8 @@ const routeConfig = [
                 path: 'about',
                 indexRoute: { component: AboutDashBoard },//index路由加载项
                 getComponent: (nextState, cb) => {
-                    //method1
-                    // require.ensure([], (require) => {
-                    //      cb(null, require('components/about.jsx').default)
-                    // },'about');
-                    //
-                    //method2
-                    require.ensure(['components/about.jsx'], () => {
-                        cb()
+                    require.ensure([], (require) => {
+                         cb(null, require('components/about.jsx').default)
                     },'about');
                 },
                 onEnter: function(nextState, replaceState){
