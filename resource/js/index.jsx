@@ -31,7 +31,6 @@ import 'resource/css/index.scss';
 // ),document.getElementById('app2')
 //);
 
-
 // 路由实现方式2
 //路由实现方式——动态路由
 const routeConfig = [
@@ -44,8 +43,14 @@ const routeConfig = [
                 path: 'about',
                 indexRoute: { component: AboutDashBoard },//index路由加载项
                 getComponent: (nextState, cb) => {
-                    require.ensure([], (require) => {
-                         cb(null, require('components/about.jsx').default)
+                    //method1
+                    // require.ensure([], (require) => {
+                    //      cb(null, require('components/about.jsx').default)
+                    // },'about');
+                    //
+                    //method2
+                    require.ensure(['components/about.jsx'], () => {
+                        cb()
                     },'about');
                 },
                 onEnter: function(nextState, replaceState){

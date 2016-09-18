@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2016-03-04 11:28:41
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-09-08 10:24:02
+* @Last Modified time: 2016-09-18 15:37:11
 */
 
 var webpack = require('webpack');
@@ -69,7 +69,7 @@ module.exports = {
 	'bannerPluginConf': new webpack.BannerPlugin('This file is created by lushijie'),
 
 	//下次打包清除上一次打包文件
-	'cleanPluginConf': new CleanPlugin(['build'], {
+	'cleanPluginConf': new CleanPlugin(['dist'], {
 	  root: __dirname,
 	  verbose: true,
 	  dry: false
