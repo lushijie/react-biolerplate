@@ -1,4 +1,4 @@
-react种子项目
+react动态路由示例项目
 =============
 1.	安装依赖npm install
 2.	开发运行 npm start
