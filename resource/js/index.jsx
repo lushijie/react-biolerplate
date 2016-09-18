@@ -50,48 +50,36 @@ const routeConfig = [
                 },
                 onEnter: function(nextState, replace){
                   console.log('about,nextState', nextState);
-                  //console.log('replace', replace);
                 }
             },
             //非动态加载About的时候使用这种方式
             //{ path: 'about', component: About },
             {
                 path: 'inbox',
-                //非动态加载Inbox的时候使用这种方式
-                //component: Inbox,
+                //component: Inbox,//非动态加载Inbox的时候使用这种方式,动态加载使用下面getComponent
                 getComponent: (nextState, cb) => {
                     require.ensure([], (require) => {
                          cb(null, require('components/inbox.jsx').default)
                     },'inbox');
                 },
                 childRoutes: [
+                  //------可以将相对路径重定向到绝对路径------
                   {
-                      // 相对路径：messages/id为相对路径 最终url是 ip:5050/inbox/messages/id
-                      // 绝对路径：/messages/id为绝对路径 最终url是 ip:5050/messages/id
-                      path: 'messages/:id',
-                      component: Message,//非动态加载
-                      onEnter: function (nextState, replace) {
-                        console.log('messages,nextState', nextState);
-                        //onEnter hook会从最外层的父路由开始直到最下层子路由结束
-                        // replace('/messages/' + nextState.params.id)//路由替换
-                      },
-                      onLeave: function () {
-                      }//onLeave hook 会在所有将离开的路由中触发，从最下层的子路由开始直到最外层父路由结束
+                    //绝对路径：/messages/id为绝对路径 最终url是 ip:5050/messages/id
+                    path: '/messages/:id',
+                    component: Message,
                   },
-
-                  //------start------
-                  //可以将相对路径重定向到绝对路径
-                  // {
-                  //   path: '/message/:id',
-                  //   component: Message,
-                  // },
-                  // {
-                  //   path: 'message/:id',
-                  //   onEnter: function (nextState, replaceState) {
-                  //     replaceState(null, '/messages/' + nextState.params.id);
-                  //   }
-                  // }
-                  //------end------
+                  {
+                    //相对路径：messages/id为相对路径 最终url是 ip:5050/inbox/messages/id
+                    path: 'messages/:id',
+                    onEnter: function (nextState, replace) {
+                    //onEnter hook会从最外层的父路由开始直到最下层子路由结束
+                      replace(null, '/messages/' + nextState.params.id);
+                    },
+                    onLeave: function() {
+                        //onLeave hook 会在所有将离开的路由中触发，从最下层的子路由开始直到最外层父路由结束
+                    }
+                  }
                 ]
             }
         ]

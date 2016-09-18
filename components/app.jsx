@@ -14,7 +14,7 @@ export default class extends Component {
 		          	{/*IndexLink可以保证在子节点激活的状态下，父节点不会同样的被激活*/}
 		         	<li><IndexLink to="/inbox" activeClassName="active">Inbox</IndexLink></li>
 		         	<li style={{marginLeft: '20px'}}>
-		         		<Link to="/inbox/messages/123" activeClassName="active" query={{q:'querytest'}} hash={'hashtest'} >Message</Link>
+		         		<Link to="/messages/123" activeClassName="active" query={{q:'querytest'}} hash={'hashtest'} >Message</Link>
 		         	</li>
 		        </ul>
 		        {this.props.children}
