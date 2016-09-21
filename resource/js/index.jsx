@@ -44,7 +44,7 @@ const routeConfig = [
                 indexRoute: { component: AboutDashBoard },//index路由加载项
                 getComponent: (nextState, cb) => {
                     require.ensure([], (require) => {
-                         cb(null, require('components/about.jsx').default)
+                         cb(null, require('components/about').default)
                     },'about');
                 },
                 onEnter: function(nextState, replaceState){
@@ -58,7 +58,7 @@ const routeConfig = [
                 //component: Inbox,//非动态加载Inbox的时候使用这种方式,动态加载使用下面getComponent
                 getComponent: (nextState, cb) => {
                     require.ensure([], (require) => {
-                         cb(null, require('components/inbox.jsx').default)
+                         cb(null, require('components/inbox').default)
                     },'inbox');
                 },
                 onEnter: function(nextState, replaceState){

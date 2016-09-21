@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2016-02-25 15:33:13
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-09-09 12:39:03
+* @Last Modified time: 2016-09-21 16:07:53
 */
 /**
  * webpack --display-error-details
@@ -51,15 +51,15 @@ module.exports = {
         chunkFilename: '[name].[chunkhash:8].chunk.js'
     },
     module: {
-        // preLoaders: [
-        //     {
-        //       //babel eslint 校验
-        //       test: /\.(js|jsx)$/,
-        //       exclude: /node_modules/,
-        //       // include: [path.resolve(__dirname, "public/resource/js/page"),path.resolve(__dirname, "public/resource/js/common")],
-        //       loader: 'eslint-loader'
-        //     }
-        // ],
+        preLoaders: [
+            {
+              //babel eslint 校验
+              test: /\.(js|jsx)$/,
+              exclude: /node_modules/,
+              // include: [path.resolve(__dirname, "public/resource/js/page"),path.resolve(__dirname, "public/resource/js/common")],
+              loader: 'eslint-loader'
+            }
+        ],
         loaders: [
             // {
             //     test: require.resolve('./public/resource/js/page/home.js'),

@@ -1,12 +1,8 @@
 import React, {Component} from 'react';
 import {render} from 'react-dom';
-import { withRouter } from 'react-router';
 
 export default class extends Component {
 
-	// static contextTypes: {
-	//     router: React.PropTypes.func.isRequired
-	// }
 	static contextTypes = {
 	  router: React.PropTypes.object.isRequired,
 	  location: React.PropTypes.object.isRequired
@@ -20,6 +16,7 @@ export default class extends Component {
 	componentDidMount() {
 		console.log('this.props->', this.props);
 	    console.log('this.context.router', this.context.router);
+	    console.log('this.context.location', this.context.location);
 	}
 
 	render() {
