@@ -2,34 +2,26 @@
 * @Author: lushijie
 * @Date:   2016-02-25 15:33:13
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-09-23 18:40:58
+* @Last Modified time: 2016-09-25 15:09:07
 */
-/**
- * webpack --display-error-details
- * webpack --progress --colors --watch
- *
- */
+
 var webpack = require('webpack');
 var path = require('path');
+var moment = require('moment');
 var Pconf = require('./webpack.plugin.conf.js');
 
 var NODE_ENV = JSON.parse(JSON.stringify(process.env.NODE_ENV || 'development'));
-console.log('current ENV:', NODE_ENV);
+var bannerText = 'This file is modified by lushijie at ' + moment().format('YYYY-MM-DD h:mm:ss');
 
 module.exports = {
-    //dev=cheap-module-eval-source-map
-    //online=cheap-module-source-map
+    //dev = cheap-module-eval-source-map
+    //online = cheap-module-source-map
     devtool: 'cheap-module-eval-source-map',
 
     context: __dirname,
 
     entry: {
         index: './resource/js/index.jsx'
-        //admin: './public/resource/js/page/admin.js',
-        // ventor: [
-        //     // 引入jQuery
-        //     'jquery'
-        // ]
     },
     output: {
         publicPath: '/dist/',
@@ -73,20 +65,18 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.optimize.OccurrenceOrderPlugin(),
-        Pconf.cleanPluginConf,
-        Pconf.commonsChunkPluginConf,
-        Pconf.hotModuleReplacementPluginConf,
-    //     Pconf.definePluginConf,
-    //     Pconf.bannerPluginConf,
-    //     Pconf.uglifyJsPluginConf,
-    //     Pconf.extractTextPluginConf,
-    //     Pconf.minChunkSizePluginConf,
-    //     Pconf.transferWebpackPluginConf,
-    //     Pconf.dedupePluginConf,
-    //     Pconf.providePluginConf,
-    //     Pconf.htmlWebPackPluginConf
-    //     //NODE_ENV ? Pconf.htmlWebPackPluginConf : Pconf.noopPluginConf
+        Pconf.cleanPluginConf(['dist']),
+        Pconf.bannerPluginConf(bannerText),
+        //Pconf.definePluginConf(VAR_INJECT),
+        Pconf.uglifyJsPluginConf(),
+        //Pconf.extractTextPluginConf(),
+        Pconf.commonsChunkPluginConf(),
+        Pconf.minChunkSizePluginConf(),
+        Pconf.hotModuleReplacementPluginConf(),
+        //Pconf.transferWebpackPluginConf(),
+        //Pconf.dedupePluginConf(),
+        //Pconf.providePluginConf({$: 'jquery'}),
+        //Pconf.htmlWebPackPluginConf(htmlPluginOptions)
     ],
     resolve:{
         root: [
