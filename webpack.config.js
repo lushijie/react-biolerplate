@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2016-02-25 15:33:13
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-09-25 15:09:07
+* @Last Modified time: 2016-09-27 15:23:15
 */
 
 var webpack = require('webpack');
@@ -11,12 +11,27 @@ var moment = require('moment');
 var Pconf = require('./webpack.plugin.conf.js');
 
 var NODE_ENV = JSON.parse(JSON.stringify(process.env.NODE_ENV || 'development'));
-var bannerText = 'This file is modified by lushijie at ' + moment().format('YYYY-MM-DD h:mm:ss');
+var DEFINE_INJECT = {
+    ENV:{
+        'process.env': {
+            //Note: by default, React will be in development mode, which is slower, and not advised for production.
+            NODE_ENV: JSON.stringify('development')
+        }
+    },
+    PUB:{
+        'process.env': {
+            NODE_ENV: JSON.stringify('production')
+        }
+    }
+};
+var definePluginOptions = {DEFINE_INJECT: DEFINE_INJECT[NODE_ENV == 'development' ? 'ENV':'PUB']};
+var bannerOptions = 'This file is modified by lushijie at ' + moment().format('YYYY-MM-DD h:mm:ss');
+
 
 module.exports = {
     //dev = cheap-module-eval-source-map
     //online = cheap-module-source-map
-    devtool: 'cheap-module-eval-source-map',
+    devtool: (NODE_ENV == 'development') ? 'cheap-module-eval-source-map' : 'cheap-module-source-map',
 
     context: __dirname,
 
@@ -66,13 +81,13 @@ module.exports = {
     },
     plugins: [
         Pconf.cleanPluginConf(['dist']),
-        Pconf.bannerPluginConf(bannerText),
-        //Pconf.definePluginConf(VAR_INJECT),
+        Pconf.bannerPluginConf(bannerOptions),
+        Pconf.definePluginConf(definePluginOptions),
         Pconf.uglifyJsPluginConf(),
-        //Pconf.extractTextPluginConf(),
         Pconf.commonsChunkPluginConf(),
         Pconf.minChunkSizePluginConf(),
         Pconf.hotModuleReplacementPluginConf(),
+        //Pconf.extractTextPluginConf(),
         //Pconf.transferWebpackPluginConf(),
         //Pconf.dedupePluginConf(),
         //Pconf.providePluginConf({$: 'jquery'}),
