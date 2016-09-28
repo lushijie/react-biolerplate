@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2016-02-25 15:33:13
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-09-28 16:40:30
+* @Last Modified time: 2016-09-28 17:22:21
 */
 
 var webpack = require('webpack');
@@ -112,6 +112,7 @@ module.exports = {
         extensions: ['', '.js', '.jsx'],
         alias:{
             'components': path.join(__dirname, 'src/app/components'),
+            'routes': path.join(__dirname, 'src/app/routes'),
             'images': path.join(__dirname, 'src/images'),
             'styles': path.join(__dirname, 'src/styles')
         }
