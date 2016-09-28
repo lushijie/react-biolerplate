@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2016-02-25 15:33:13
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-09-27 15:23:15
+* @Last Modified time: 2016-09-28 14:13:58
 */
 
 var webpack = require('webpack');
@@ -14,7 +14,6 @@ var NODE_ENV = JSON.parse(JSON.stringify(process.env.NODE_ENV || 'development'))
 var DEFINE_INJECT = {
     ENV:{
         'process.env': {
-            //Note: by default, React will be in development mode, which is slower, and not advised for production.
             NODE_ENV: JSON.stringify('development')
         }
     },
@@ -26,17 +25,30 @@ var DEFINE_INJECT = {
 };
 var definePluginOptions = {DEFINE_INJECT: DEFINE_INJECT[NODE_ENV == 'development' ? 'ENV':'PUB']};
 var bannerOptions = 'This file is modified by lushijie at ' + moment().format('YYYY-MM-DD h:mm:ss');
+var htmlPluginOptions = {
+        filename: 'index.html',// 访问地址 http://127.0.0.1:5050/dist/index.html
+        title: 'react-route',
+        hash: true,
+        inject: true, //此时不注入相关的js,否则如果之前手动引入了js，可能导致重复引入
+        template: path.resolve(__dirname, 'src/app/index.html'),
+        favicon:path.resolve(__dirname, 'src/images/favicon.ico'),
+        minify:{
+            removeComments: false,
+            collapseWhitespace: false,
+            minifyCSS: false
+        },
+        //chunks: ['common','home'],
+        //excludeChunks: ['','']
+};
 
 
 module.exports = {
-    //dev = cheap-module-eval-source-map
-    //online = cheap-module-source-map
     devtool: (NODE_ENV == 'development') ? 'cheap-module-eval-source-map' : 'cheap-module-source-map',
 
     context: __dirname,
 
     entry: {
-        index: './resource/js/index.jsx'
+        index: './src/app/index.jsx',
     },
     output: {
         publicPath: '/dist/',
@@ -89,7 +101,7 @@ module.exports = {
         Pconf.hotModuleReplacementPluginConf(),
         //Pconf.extractTextPluginConf(),
         //Pconf.transferWebpackPluginConf(),
-        //Pconf.dedupePluginConf(),
+        Pconf.dedupePluginConf(),
         //Pconf.providePluginConf({$: 'jquery'}),
         //Pconf.htmlWebPackPluginConf(htmlPluginOptions)
     ],
@@ -99,8 +111,9 @@ module.exports = {
         ],
         extensions: ['', '.js', '.jsx'],
         alias:{
-            'components': __dirname + '/components',
-            'resource': __dirname + '/resource'
+            'components': path.join(__dirname, 'src/components'),
+            'images': path.join(__dirname, 'src/images'),
+            'styles': path.join(__dirname, 'src/styles')
         }
     },
     devServer: {
@@ -115,7 +128,7 @@ module.exports = {
         host: '0.0.0.0',
         //historyApiFallback: true //如果是index.html直接这一项就可以了
         historyApiFallback: {
-            index: '/views/main.html' //warning 这里不要使用__dirname!
+            index: 'src/app/index.html' //warning 这里不要使用__dirname!
             // rewrites: [
             //     { from: /\/soccer/, to: '/soccer.html'}
             // ]
