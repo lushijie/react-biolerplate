@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2016-02-25 15:33:13
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-09-28 14:13:58
+* @Last Modified time: 2016-09-28 15:29:51
 */
 
 var webpack = require('webpack');
@@ -27,7 +27,7 @@ var definePluginOptions = {DEFINE_INJECT: DEFINE_INJECT[NODE_ENV == 'development
 var bannerOptions = 'This file is modified by lushijie at ' + moment().format('YYYY-MM-DD h:mm:ss');
 var htmlPluginOptions = {
         filename: 'index.html',// 访问地址 http://127.0.0.1:5050/dist/index.html
-        title: 'react-route',
+        title: 'route',
         hash: true,
         inject: true, //此时不注入相关的js,否则如果之前手动引入了js，可能导致重复引入
         template: path.resolve(__dirname, 'src/app/index.html'),
@@ -103,7 +103,7 @@ module.exports = {
         //Pconf.transferWebpackPluginConf(),
         Pconf.dedupePluginConf(),
         //Pconf.providePluginConf({$: 'jquery'}),
-        //Pconf.htmlWebPackPluginConf(htmlPluginOptions)
+        Pconf.htmlWebPackPluginConf(htmlPluginOptions)
     ],
     resolve:{
         root: [
@@ -128,7 +128,9 @@ module.exports = {
         host: '0.0.0.0',
         //historyApiFallback: true //如果是index.html直接这一项就可以了
         historyApiFallback: {
-            index: 'src/app/index.html' //warning 这里不要使用__dirname!
+            index: '/dist/index.html'
+            //index : warning 1.这里不要使用__dirname! 2.使用dist要/dist 区别于 不使用htmlWebPackPlugin的 app/src/index.html
+            //
             // rewrites: [
             //     { from: /\/soccer/, to: '/soccer.html'}
             // ]
