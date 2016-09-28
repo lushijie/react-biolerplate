@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2016-02-25 15:33:13
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-09-28 15:29:51
+* @Last Modified time: 2016-09-28 15:37:15
 */
 
 var webpack = require('webpack');
@@ -129,8 +129,7 @@ module.exports = {
         //historyApiFallback: true //如果是index.html直接这一项就可以了
         historyApiFallback: {
             index: '/dist/index.html'
-            //index : warning 1.这里不要使用__dirname! 2.使用dist要/dist 区别于 不使用htmlWebPackPlugin的 app/src/index.html
-            //
+            //index : warning 1.这里不要使用__dirname! 2.使用生成的dist时要/dist，区别于src/app/index.html
             // rewrites: [
             //     { from: /\/soccer/, to: '/soccer.html'}
             // ]
