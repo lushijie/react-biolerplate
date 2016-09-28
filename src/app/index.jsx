@@ -3,7 +3,7 @@ import {render} from 'react-dom';
 import { Router, Route, IndexRoute, Link, IndexLink, browserHistory} from 'react-router';
 
 import './index.scss';
-import {routeConfig} from 'routes';
+import {indexRoute} from 'routes';
 
 // 路由实现方式1
 //render(
@@ -26,6 +26,6 @@ import {routeConfig} from 'routes';
 
 render(
   /*history={browserHistory}*/
-  <Router history={browserHistory} routes={routeConfig} />,
+  <Router history={browserHistory} routes={indexRoute} />,
   document.getElementById('app')
 )
