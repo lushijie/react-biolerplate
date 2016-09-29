@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2016-09-28 17:51:44
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-09-28 17:54:01
+* @Last Modified time: 2016-09-29 15:36:50
 */
 
 //如果about组件使用动态路由，此处不能以这样的方式引入about了，否则about的动态加载失败！
@@ -15,7 +15,7 @@ export const indexAboutRoute = {
     path: 'about',
     indexRoute: { component: AboutDashBoard },//index路由加载项
     getComponent: (nextState, cb) => {
-        require.ensure([], (require) => {
+        require.ensure([], () => {
              cb(null, require('components/about').default)
         },'about');
     },
