@@ -25,7 +25,6 @@ import {indexRoute} from 'routes';
 //);
 
 render(
-  /*history={browserHistory}*/
   <Router history={browserHistory} routes={indexRoute} />,
   document.getElementById('app')
 )
