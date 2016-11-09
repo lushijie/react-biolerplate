@@ -2,14 +2,14 @@
 * @Author: lushijie
 * @Date:   2016-09-28 17:51:44
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-11-09 21:49:19
+* @Last Modified time: 2016-11-09 22:08:20
 */
 
 //如果about组件使用动态路由，此处不能以这样的方式引入about了，否则about的动态加载失败！
 // import About from 'components/about.jsx';
 import AboutDashBoard from 'components/outbox/dashboard.jsx';
 
-export const indexAboutRoute = {
+export default {
     //非动态加载About的时候使用这种方式
     //{ path: 'about', component: About },
     path: 'outbox',

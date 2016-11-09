@@ -3,7 +3,7 @@ import {render} from 'react-dom';
 import { Router, Route, IndexRoute, Link, IndexLink, browserHistory} from 'react-router';
 
 import './index.scss';
-import {indexRoute} from 'routes';
+import indexRoute from 'routes';
 
 // 路由实现方式1
 //render(
