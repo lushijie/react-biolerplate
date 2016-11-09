@@ -2,10 +2,10 @@
 * @Author: lushijie
 * @Date:   2016-09-28 17:36:51
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-11-09 22:08:05
+* @Last Modified time: 2016-11-09 22:27:40
 */
 //如果Inbox组件使用动态路由，此处不能以这样的方式引入inbox了，否则inbox的动态加载失败！
-// import Inbox from 'components/inbox.jsx';
+// import Inbox from 'components/inbox';
 import Message from 'components/inbox/message';
 
 export default {
