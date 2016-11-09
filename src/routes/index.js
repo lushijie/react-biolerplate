@@ -2,12 +2,12 @@
 * @Author: lushijie
 * @Date:   2016-09-28 17:19:43
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-09-28 17:53:27
+* @Last Modified time: 2016-11-09 21:47:53
 */
 
 import App from 'components/app.jsx';
 import Dashboard from 'components/dashboard.jsx';
-import NotFound from 'components/notfound.jsx';
+import NotFound from 'components/common/404.jsx';
 import {indexInboxRoute} from 'routes/index-inbox.js';
 import {indexAboutRoute} from 'routes/index-about.js';
 

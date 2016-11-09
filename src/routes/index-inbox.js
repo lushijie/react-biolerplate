@@ -2,18 +2,18 @@
 * @Author: lushijie
 * @Date:   2016-09-28 17:36:51
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-09-29 15:35:31
+* @Last Modified time: 2016-11-09 21:45:17
 */
 //如果Inbox组件使用动态路由，此处不能以这样的方式引入inbox了，否则inbox的动态加载失败！
 // import Inbox from 'components/inbox.jsx';
-import Message from 'components/message';
+import Message from 'components/inbox/message';
 
 export const indexInboxRoute = {
     path: 'inbox',
     //component: Inbox,//非动态加载Inbox的时候使用这种方式,动态加载使用下面getComponent
     getComponent: (nextState, cb) => {
         require.ensure([], () => {
-             cb(null, require('components/inbox').default)
+             cb(null, require('components/inbox/index').default)
         }, 'inbox');
     },
     onEnter: function(nextState, replaceState){

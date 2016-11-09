@@ -3,6 +3,6 @@ import {render} from 'react-dom';
 
 export default class extends Component {
   render() {
-    return <div>Welcome to the About Dashboard!</div>
+    return <div>Welcome to the Outbox Dashboard!</div>
   }
 }

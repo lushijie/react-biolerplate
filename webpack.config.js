@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2016-02-25 15:33:13
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-09-28 17:22:21
+* @Last Modified time: 2016-11-09 21:26:44
 */
 
 var webpack = require('webpack');
@@ -30,8 +30,8 @@ var htmlPluginOptions = {
         title: 'route',
         hash: true,
         inject: true, //此时不注入相关的js,否则如果之前手动引入了js，可能导致重复引入
-        template: path.resolve(__dirname, 'src/app/index.html'),
-        favicon:path.resolve(__dirname, 'src/images/favicon.ico'),
+        template: path.resolve(__dirname, 'src/index.html'),
+        favicon:path.resolve(__dirname, 'src/public/images/favicon.ico'),
         minify:{
             removeComments: false,
             collapseWhitespace: false,
@@ -48,7 +48,7 @@ module.exports = {
     context: __dirname,
 
     entry: {
-        index: './src/app/index.jsx',
+        index: './src/index.jsx',
     },
     output: {
         publicPath: '/dist/',
@@ -111,10 +111,12 @@ module.exports = {
         ],
         extensions: ['', '.js', '.jsx'],
         alias:{
-            'components': path.join(__dirname, 'src/app/components'),
-            'routes': path.join(__dirname, 'src/app/routes'),
-            'images': path.join(__dirname, 'src/images'),
-            'styles': path.join(__dirname, 'src/styles')
+            'constants': path.join(__dirname, 'src/common'),
+            'common': path.join(__dirname, 'src/common'),
+            'components': path.join(__dirname, 'src/components'),
+            'routes': path.join(__dirname, 'src/routes'),
+            'images': path.join(__dirname, 'src/public/images'),
+            'styles': path.join(__dirname, 'src/public/styles')
         }
     },
     devServer: {
