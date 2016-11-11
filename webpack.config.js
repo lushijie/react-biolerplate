@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2016-02-25 15:33:13
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-11-09 21:26:44
+* @Last Modified time: 2016-11-11 14:18:09
 */
 
 var webpack = require('webpack');
@@ -43,7 +43,8 @@ var htmlPluginOptions = {
 
 
 module.exports = {
-    devtool: (NODE_ENV == 'development') ? 'cheap-module-eval-source-map' : 'cheap-module-source-map',
+    //cheap-module-eval-source-map
+    devtool: (NODE_ENV == 'development') ? 'inline-source-map' : 'cheap-module-source-map',
 
     context: __dirname,
 
