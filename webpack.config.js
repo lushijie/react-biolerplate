@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2016-02-25 15:33:13
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-11-11 14:18:09
+* @Last Modified time: 2016-11-11 17:09:19
 */
 
 var webpack = require('webpack');
@@ -10,26 +10,28 @@ var path = require('path');
 var moment = require('moment');
 var Pconf = require('./webpack.plugin.conf.js');
 
-var NODE_ENV = JSON.parse(JSON.stringify(process.env.NODE_ENV || 'development'));
-var DEFINE_INJECT = {
-    ENV:{
-        'process.env': {
-            NODE_ENV: JSON.stringify('development')
-        }
-    },
-    PUB:{
-        'process.env': {
-            NODE_ENV: JSON.stringify('production')
-        }
-    }
-};
-var definePluginOptions = {DEFINE_INJECT: DEFINE_INJECT[NODE_ENV == 'development' ? 'ENV':'PUB']};
-var bannerOptions = 'This file is modified by lushijie at ' + moment().format('YYYY-MM-DD h:mm:ss');
+var isDev = (JSON.parse(JSON.stringify(process.env.NODE_ENV || 'development')) == 'development');
+
+//definePlugin 根据NODE_ENV注入,不过一般情况下直接设置为 production，防止开发环境下看见warning
+// var DEFINE_INJECT = {
+//     ENV:{
+//         'process.env': {NODE_ENV: JSON.stringify('development')}
+//     },
+//     PUB:{
+//         'process.env': {NODE_ENV: JSON.stringify('production')}
+//     }
+// };
+// var definePluginOptions = {
+//     DEFINE_INJECT: DEFINE_INJECT[isDev ? 'ENV':'PUB']
+// };
+
+var bannerOptions = `This file is modified by lushijie at ${moment().format('YYYY-MM-DD h:mm:ss')}`;
+
 var htmlPluginOptions = {
         filename: 'index.html',// 访问地址 http://127.0.0.1:5050/dist/index.html
         title: 'route',
         hash: true,
-        inject: true, //此时不注入相关的js,否则如果之前手动引入了js，可能导致重复引入
+        inject: false, //此时不注入相关的js,否则如果之前手动引入了js，可能导致重复引入
         template: path.resolve(__dirname, 'src/index.html'),
         favicon:path.resolve(__dirname, 'src/public/images/favicon.ico'),
         minify:{
@@ -43,8 +45,8 @@ var htmlPluginOptions = {
 
 
 module.exports = {
-    //cheap-module-eval-source-map
-    devtool: (NODE_ENV == 'development') ? 'inline-source-map' : 'cheap-module-source-map',
+    //cheap-module-eval-source-map 编译快，但是不利于查看错误
+    devtool: isDev ? 'inline-source-map' : 'cheap-module-source-map',
 
     context: __dirname,
 
@@ -55,7 +57,7 @@ module.exports = {
         publicPath: '/dist/',
         path: 'dist',
         filename: '[name].bundle.js',
-        chunkFilename: '[name].[chunkhash:8].chunk.js'//当时entry使用对象形式时，[hash]不可以使用，[id]、[chunkhash]与[name]可以使用
+        chunkFilename: '[name].[chunkhash:8].chunk.js',//当时entry使用对象形式时，[hash]不可以使用，[id]、[chunkhash]与[name]可以使用
     },
     module: {
         preLoaders: [
@@ -93,18 +95,23 @@ module.exports = {
         ]
     },
     plugins: [
-        Pconf.cleanPluginConf(['dist']),
+        //Pconf.transferWebpackPluginConf(),
+        //Pconf.extractTextPluginConf(),
+        //Pconf.providePluginConf({$: 'jquery'}),
+        //Pconf.cleanPluginConf(['dist']),
         Pconf.bannerPluginConf(bannerOptions),
-        Pconf.definePluginConf(definePluginOptions),
+        //Pconf.definePluginConf(definePluginOptions),
+        Pconf.definePluginConf(),
         Pconf.uglifyJsPluginConf(),
         Pconf.commonsChunkPluginConf(),
         Pconf.minChunkSizePluginConf(),
-        Pconf.hotModuleReplacementPluginConf(),
-        //Pconf.extractTextPluginConf(),
-        //Pconf.transferWebpackPluginConf(),
+        //Pconf.hotModuleReplacementPluginConf(),
         Pconf.dedupePluginConf(),
-        //Pconf.providePluginConf({$: 'jquery'}),
-        Pconf.htmlWebPackPluginConf(htmlPluginOptions)
+        Pconf.htmlWebPackPluginConf(htmlPluginOptions),
+        new webpack.DllReferencePlugin({
+          context: __dirname,
+          manifest: require('./manifest.json'),
+        }),
     ],
     resolve:{
         root: [
@@ -126,14 +133,13 @@ module.exports = {
             colors: true
         },
         contentBase: '.',
-        hot: true,
-        inline: true,
+        //hot: true,
+        //inline: true,
         port: 5050,
         host: '0.0.0.0',
         //historyApiFallback: true //如果是index.html直接这一项就可以了
         historyApiFallback: {
-            index: '/dist/index.html'
-            //index : warning 1.这里不要使用__dirname! 2.使用生成的dist时要/dist，区别于src/app/index.html
+            index: '/dist/index.html', //warning 1.这里不要使用__dirname! 2.使用生成的dist时要/dist，区别于src/app/index.html
             // rewrites: [
             //     { from: /\/soccer/, to: '/soccer.html'}
             // ]

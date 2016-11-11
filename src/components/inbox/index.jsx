@@ -6,7 +6,7 @@ export default class extends Component {
     return (
       <div>
         <h2>Inbox</h2>
-        {this.props.children || "This is Inbox default!"}
+        {this.props.children || "This is Inbox default!!"}
       </div>
     )
   }
