@@ -3,6 +3,7 @@ import {render} from 'react-dom';
 
 export default class extends Component {
   static contextTypes = {
+    history: React.PropTypes.object.isRequired,
     router: React.PropTypes.object.isRequired,
     location: React.PropTypes.object.isRequired
   }
@@ -14,6 +15,7 @@ export default class extends Component {
 
   componentDidMount() {
     console.log('this.props->', this.props);
+    console.log('this.context.history', this.context.history);
     console.log('this.context.router', this.context.router);
     console.log('this.context.location', this.context.location);
 
