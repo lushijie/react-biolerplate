@@ -12,6 +12,7 @@
 //               {/*<Redirect from="messages/:id" to="/messages/:id" /> */}
 //               <Route path="messages/:id" component={Message} />
 //             </Route>
+//             <Route path="*" component={NoMatch}/>
 //         </Route>
 //     </Router>
 // ),document.getElementById('app2')
