@@ -16,6 +16,12 @@ export default class extends Component {
     console.log('this.props->', this.props);
     console.log('this.context.router', this.context.router);
     console.log('this.context.location', this.context.location);
+
+    this.context.router.setRouteLeaveHook(this.props.route, () => {
+      // if (userShouldntLeaveYet) {
+      //     return false
+      // }
+    })
   }
 
   render() {
