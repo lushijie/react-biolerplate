@@ -2,7 +2,7 @@
  * @Author: lushijie
  * @Date:   2016-02-25 15:33:13
  * @Last Modified by:   lushijie
- * @Last Modified time: 2016-11-14 11:55:40
+ * @Last Modified time: 2016-11-14 11:56:14
  */
 
 var webpack = require('webpack');
@@ -80,7 +80,6 @@ module.exports = {
     //inline: true,
     port: 5050,
     host: '0.0.0.0',
-    //historyApiFallback: true //如果是index.html直接这一项就可以了
     historyApiFallback: {
       index: '/dist/index.html',
     }
