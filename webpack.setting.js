@@ -2,7 +2,7 @@
  * @Author: lushijie
  * @Date:   2016-11-11 17:20:12
  * @Last Modified by:   lushijie
- * @Last Modified time: 2016-11-14 11:53:16
+ * @Last Modified time: 2016-11-14 11:55:13
  */
 var path = require('path');
 var moment = require('moment');
@@ -21,8 +21,6 @@ var htmlPluginOptions = {
     collapseWhitespace: false,
     minifyCSS: false
   },
-  //chunks: ['common','home'],
-  //excludeChunks: ['','']
 };
 
 module.exports = {

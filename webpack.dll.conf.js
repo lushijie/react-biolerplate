@@ -2,7 +2,7 @@
  * @Author: lushijie
  * @Date:   2016-11-11 16:28:28
  * @Last Modified by:   lushijie
- * @Last Modified time: 2016-11-14 11:52:29
+ * @Last Modified time: 2016-11-14 11:55:27
  */
 
 var path = require('path');
@@ -18,13 +18,6 @@ var vendors = [
   'react-dom',
   'react-router',
   'reqwest',
-  //'rc-select',
-  //'react-mixin',
-  //'tiny-cookie'
-  //'reflux',
-  //'react-bootstrap',
-  //'react-bootstrap-validation',
-  //'react-datetime',
 ];
 
 module.exports = {

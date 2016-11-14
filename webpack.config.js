@@ -2,7 +2,7 @@
  * @Author: lushijie
  * @Date:   2016-02-25 15:33:13
  * @Last Modified by:   lushijie
- * @Last Modified time: 2016-11-14 11:52:14
+ * @Last Modified time: 2016-11-14 11:55:40
  */
 
 var webpack = require('webpack');
@@ -82,11 +82,7 @@ module.exports = {
     host: '0.0.0.0',
     //historyApiFallback: true //如果是index.html直接这一项就可以了
     historyApiFallback: {
-      //warning 1.这里不要使用__dirname! 2.使用生成的dist时要/dist，区别于src/app/index.html
       index: '/dist/index.html',
-      // rewrites: [
-      //     { from: /\/soccer/, to: '/soccer.html'}
-      // ]
     }
   }
 };
