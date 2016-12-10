@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {render} from 'react-dom';
 import {withRouter} from 'react-router';
-import HomePage from 'app/inbox/home';
+import InboxHome from 'app/inbox/home';
 import './index.css';
 
 export default withRouter(class extends Component {
@@ -13,7 +13,7 @@ export default withRouter(class extends Component {
     return (
       <div>
         <h2>Inbox</h2>
-          {/*{this.props.children || <HomePage />}*/}
+          {/*{this.props.children || <InboxHome />}*/}
           {this.props.children}
       </div>
     )
