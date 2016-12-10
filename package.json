@@ -20,6 +20,7 @@
     "react": "~15.1.0",
     "react-dom": "~15.1.0",
     "react-router": "^2.7.0",
+    "reflux": "^5.0.4",
     "reqwest": "^2.0.5"
   },
   "devDependencies": {

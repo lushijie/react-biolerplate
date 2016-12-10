@@ -2,7 +2,7 @@
  * @Author: lushijie
  * @Date:   2016-02-25 15:33:13
  * @Last Modified by:   lushijie
- * @Last Modified time: 2016-11-14 11:56:14
+ * @Last Modified time: 2016-12-10 11:34:37
  */
 
 var webpack = require('webpack');
@@ -14,7 +14,7 @@ module.exports = {
   devtool: setting.isDev ? 'inline-source-map' : 'cheap-module-source-map',
   context: __dirname,
   entry: {
-    index: './src/index.jsx',
+    index: './src/app/index.jsx',
   },
   output: {
     publicPath: '/dist/',
@@ -62,10 +62,12 @@ module.exports = {
     ],
     extensions: ['', '.js', '.jsx'],
     alias: {
-      'constants': path.join(__dirname, 'src/common'),
-      'common': path.join(__dirname, 'src/common'),
+      'app':  path.join(__dirname, 'src/app'),
       'components': path.join(__dirname, 'src/components'),
+      'constants': path.join(__dirname, 'src/constants'),
+      'common': path.join(__dirname, 'src/common'),
       'routes': path.join(__dirname, 'src/routes'),
+      'models': path.join(__dirname, 'src/models'),
       'images': path.join(__dirname, 'src/public/images'),
       'styles': path.join(__dirname, 'src/public/styles')
     }

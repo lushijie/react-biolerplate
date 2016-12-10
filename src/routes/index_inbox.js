@@ -2,18 +2,21 @@
 * @Author: lushijie
 * @Date:   2016-09-28 17:36:51
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-11-09 22:27:40
+* @Last Modified time: 2016-12-10 13:48:45
 */
 //如果Inbox组件使用动态路由，此处不能以这样的方式引入inbox了，否则inbox的动态加载失败！
-// import Inbox from 'components/inbox';
-import Message from 'components/inbox/message';
+// import Inbox from 'app/inbox';
+import Message from 'app/inbox/message';
+import HomePage from 'app/inbox/home';
 
 export default {
     path: 'inbox',
+    // 1.inbox跟路由的加载组件 2.第二种方式在inbox页面中 {this.props.children || <HomePage />}
+    indexRoute: { component: HomePage },
     //component: Inbox,//非动态加载Inbox的时候使用这种方式,动态加载使用下面getComponent
     getComponent: (nextState, cb) => {
         require.ensure([], () => {
-             cb(null, require('components/inbox/index').default)
+             cb(null, require('app/inbox/index').default)
         }, 'inbox');
     },
     onEnter: function(nextState, replaceState){
@@ -26,7 +29,7 @@ export default {
         path: '/messages/:id',
         component: Message,
         onEnter: function (nextState, replaceState) {
-          console.log('Message Redirect');
+          console.log('Come from Message Redirect');
         }
       },
       {
