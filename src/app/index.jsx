@@ -1,6 +1,7 @@
-import React, {Component} from 'react';
-import {render} from 'react-dom';
-import { Router, Route, IndexRoute, Link, IndexLink, browserHistory} from 'react-router';
+import React, { Component } from 'react';
+import { render } from 'react-dom';
+import { Router, Route, IndexRoute } from 'react-router';
+import { Link, IndexLink, browserHistory } from 'react-router';
 import Layout from 'app/layout';
 import AppHome from 'app/home';
 import NotFound from 'components/404';
@@ -9,7 +10,7 @@ import indexOutboxRoute from 'app/outbox/route';
 
 import './index.css';
 
-
+// 路由配置
 let rootRoute = [
   {
     path: '/',

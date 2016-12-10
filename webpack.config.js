@@ -2,12 +2,12 @@
  * @Author: lushijie
  * @Date:   2016-02-25 15:33:13
  * @Last Modified by:   lushijie
- * @Last Modified time: 2016-12-10 14:34:47
+ * @Last Modified time: 2016-12-10 15:04:14
  */
 
 var webpack = require('webpack');
 var path = require('path');
-var setting = require('./webpack.setting.js');
+var setting = require('./webpack.config.setting.js');
 var Pconf = require('./webpack.plugin.conf.js');
 
 module.exports = {
