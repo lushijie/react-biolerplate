@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {render} from 'react-dom';
 import {withRouter} from 'react-router';
-import {HomeActions, HomeStore} from 'models/home';
 
 export default withRouter(class extends Component {
   static displayName = 'app-home';
