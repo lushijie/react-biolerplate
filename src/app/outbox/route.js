@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2016-09-28 17:51:44
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-12-10 14:04:20
+* @Last Modified time: 2016-12-10 14:47:20
 */
 
 //如果outbox组件使用动态路由，此处不能以下面的方式引入outbox了，否则outbox的动态加载失败！

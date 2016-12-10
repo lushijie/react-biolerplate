@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2016-09-28 17:36:51
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-12-10 14:04:44
+* @Last Modified time: 2016-12-10 14:47:29
 */
 //如果Inbox组件使用动态路由，此处不能以下面的方式引入inbox了，否则inbox的动态加载失败！
 // import Inbox from 'app/inbox';

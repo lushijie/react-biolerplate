@@ -11,7 +11,7 @@ export default class extends Component {
     return (
       <div>
         <h3>Inbox-Message</h3>
-        <h4>This is message {this.props.params.id}</h4>
+        <h4>This is message {this.props.params.id} page!</h4>
       </div>
     )
   }

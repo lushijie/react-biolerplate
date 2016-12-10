@@ -11,7 +11,7 @@ export default withRouter(class extends Component {
     return (
       <div>
         <h3>Inbox-Home</h3>
-        <h4>This is Inbox-Home HomePage</h4>
+        <h4>This is Inbox-Home page!</h4>
       </div>
     )
   }
