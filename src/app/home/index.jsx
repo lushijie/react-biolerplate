@@ -17,12 +17,9 @@ export default withRouter(class extends BaseComponent {
   }
 
   componentWillMount() {
-    // HomeStore.listen(function(type, data) {
+    // this.listen(HomeStore, 'onGetMenuSuccess', function(data, type) {
     //   console.log(type, data);
     // });
-    this.listen(HomeStore, 'onTestSuccess', function(data) {
-      console.log(data);
-    });
     HomeActions.getMenu();
     HomeActions.test();
   }
