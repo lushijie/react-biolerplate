@@ -8,7 +8,6 @@ import NotFound from 'components/404';
 import indexInboxRoute from 'app/inbox/route';
 import indexOutboxRoute from 'app/outbox/route';
 
-import './index.css';
 
 // 路由配置
 let rootRoute = [
