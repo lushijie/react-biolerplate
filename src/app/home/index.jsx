@@ -19,6 +19,7 @@ export default withRouter(class extends Component {
 
   componentDidMount() {
     console.log(this.props);
+    //this.props.router.pushState({test:123},'/inbox');
   }
   render() {
     return (
