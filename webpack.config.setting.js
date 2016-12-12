@@ -2,11 +2,7 @@
  * @Author: lushijie
  * @Date:   2016-11-11 17:20:12
  * @Last Modified by:   lushijie
-<<<<<<< HEAD
- * @Last Modified time: 2016-12-12 10:34:30
-=======
- * @Last Modified time: 2016-12-12 10:30:23
->>>>>>> master
+ * @Last Modified time: 2016-12-12 10:34:55
  */
 var path = require('path');
 var moment = require('moment');
