@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {BaseComponent} from 'common/baseComponent';
+import {BaseComponent} from 'components/baseComponent';
 import {render} from 'react-dom';
 import {withRouter} from 'react-router';
 import {HomeActions, HomeStore} from 'models/home';
