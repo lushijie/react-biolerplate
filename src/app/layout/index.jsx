@@ -4,7 +4,7 @@ import {render} from 'react-dom';
 import {Link, IndexLink} from 'react-router';
 import Menu from 'components/menu';
 
-import './layout.css';
+import './index.css';
 
 
 export default class extends Component {
