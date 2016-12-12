@@ -1,8 +1,11 @@
 import React, {Component} from 'react';
+import {BaseComponent} from 'common/baseComponent';
 import {render} from 'react-dom';
 import {withRouter} from 'react-router';
+import {HomeActions, HomeStore} from 'models/home';
 
-export default withRouter(class extends Component {
+export default withRouter(class extends BaseComponent {
+
   static displayName = 'app-home';
 
   static contextTypes = {
@@ -14,7 +17,14 @@ export default withRouter(class extends Component {
   }
 
   componentWillMount() {
-
+    // HomeStore.listen(function(type, data) {
+    //   console.log(type, data);
+    // });
+    this.listen(HomeStore, 'onTestSuccess', function(data) {
+      console.log(data);
+    });
+    HomeActions.getMenu();
+    HomeActions.test();
   }
 
   componentDidMount() {
