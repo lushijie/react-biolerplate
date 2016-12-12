@@ -18,27 +18,50 @@ export default withRouter(class extends BaseComponent {
 
   componentWillMount() {
 
-    // this.listen(HomeStore, 'onGetMenuSuccess', function(data, type) {
+    //只绑定onGetMenuSuccess事件
+    // this.listen(HomeStore, 'onGetMenu', function(data, type) {
     //   console.log(type, data);
     // });
 
-    // this.listen(HomeStore, 'onTestSuccess onGetMenuSuccess', function(data, type) {
+    //只绑定onGetMenuFailed事件
+    // this.listen(HomeStore, 'onGetMenu', true ,function(data, type) {
     //   console.log(type, data);
     // });
 
-    // this.listen(HomeStore, 'onTestSuccess', function(data, type) {
+    //绑定onGetMenuSuccess事件
+    //默认的onGetMenuFailed事件
+    // this.listen(HomeStore, 'onGetMenu', function(data, type) {
     //   console.log(type, data);
-    // });
+    // }, true);
 
-    // this.listen(HomeStore, 'onTestFailed', function(data, type) {
-    //   console.log(type, data);
-    // });
-
-    // this.listen(HomeStore, 'onTestSuccess', function(data, type) {
+    //绑定onGetMenuSuccess事件
+    //自定义的onGetMenuFailed事件
+    // this.listen(HomeStore, 'onGetMenu', function(data, type) {
     //   console.log(type, data);
     // }, function(data) {
-    //   console.log('失败', data);
+    //   console.log('自定义错误处理', data);
     // });
+
+    //绑定onTestSuccess与onGetMenuSuccess事件
+    // this.listen(HomeStore, 'onTest onGetMenu', function(data, type) {
+    //   console.log(type, data);
+    // });
+    //
+
+    //绑定onTestSuccess与onGetMenuSuccess事件
+    //默认的onTestFailed与onGetMenuFailed
+    // this.listen(HomeStore, 'onTest onGetMenu', function(data, type) {
+    //   console.log(type, data);
+    // }, true);
+
+
+    //绑定onTestSuccess与onGetMenuSuccess事件,
+    //自定义的onTestFailed与onGetMenuFailed
+    this.listen(HomeStore, 'onTest onGetMenu', function(data, type) {
+      console.log(type, data);
+    }, function(data) {
+      console.log(data);
+    });
 
     HomeActions.getMenu();
     HomeActions.test();

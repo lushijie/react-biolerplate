@@ -5,33 +5,34 @@ class BaseComponent extends React.Component {
     super(props);
     this.state = {};
   }
-  listen(store, type, callback, failedCallBack){
+
+  _commonFailedCB(data, type) {
+    console.log('默认错误', type, data);
+  }
+
+  listen(store, type, scb, fcb){
     type = type.split(' ');
-    store.listen((respType, data) => {
-      let stype = respType;
+    type.forEach(t => {
+      let stype = t + 'Success',
+          ftype = t + 'Failed';
 
-      //可能failedCallBack存在的情况下的调用
-      if(respType.indexOf('Failed') > -1) {
-        stype = respType.slice(0, respType.indexOf('Failed')) + 'Success';
-      }
-
-      if( type.indexOf(respType) > -1 || type.indexOf(stype) > -1) {
-        type.forEach(t => {
-          if(respType === t) {
-            callback(data, t);
+      store.listen((respType, data) => {
+        if(respType === stype) {
+          if(typeof scb === 'function') {
+            scb(data, respType);
           }
-          if(t.indexOf('Success') > -1) {
-            let ftype = t.slice(0, t.indexOf('Success')) + 'Failed';
-            if(typeof failedCallBack === 'function') {
-              this.listen(store, ftype, failedCallBack);
-            }else {
-              this.listen(store, ftype, function() {
-                console.log('通用错误处理');
-              });
-            }
+          return;
+        }
+        if(respType == ftype) {
+          if(typeof fcb === 'function') {
+            fcb(data, respType);
+            return;
           }
-        });
-      }
+          if(fcb === true) {
+            this._commonFailedCB(data, respType);
+          }
+        }
+      });
     });
   }
 }
