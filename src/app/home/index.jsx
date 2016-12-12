@@ -17,9 +17,29 @@ export default withRouter(class extends BaseComponent {
   }
 
   componentWillMount() {
+
     // this.listen(HomeStore, 'onGetMenuSuccess', function(data, type) {
     //   console.log(type, data);
     // });
+
+    // this.listen(HomeStore, 'onTestSuccess onGetMenuSuccess', function(data, type) {
+    //   console.log(type, data);
+    // });
+
+    // this.listen(HomeStore, 'onTestSuccess', function(data, type) {
+    //   console.log(type, data);
+    // });
+
+    // this.listen(HomeStore, 'onTestFailed', function(data, type) {
+    //   console.log(type, data);
+    // });
+
+    // this.listen(HomeStore, 'onTestSuccess', function(data, type) {
+    //   console.log(type, data);
+    // }, function(data) {
+    //   console.log('失败', data);
+    // });
+
     HomeActions.getMenu();
     HomeActions.test();
   }
