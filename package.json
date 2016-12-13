@@ -1,7 +1,7 @@
 {
-  "name": "react-route",
-  "version": "1.0.0",
-  "description": "react-route 使用示例",
+  "name": "react-reflux",
+  "version": "1.2.0",
+  "description": "react-reflux 示例",
   "main": "index.js",
   "scripts": {
     "start": "npm run dev",

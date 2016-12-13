@@ -1,6 +1,8 @@
 # react-reflux示例
 =============
-  其中包含了react-route的配置与使用
+  该项目包含：
+    1.react-router 的配置与使用
+    2.react 搭配 reflux 进行数据流管理
 
 ### 安装依赖
     npm install
@@ -9,6 +11,6 @@
     1.    npm start
     2.    http://127.0.0.1:5050/
 ### Express 运行
-    1.    npm run publish
+    1.    npm run release
     2.    node server.js
     3.    http://127.0.0.1:3000/
