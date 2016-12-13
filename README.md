@@ -1,5 +1,6 @@
-# react-router路由示例
+# react-reflux示例
 =============
+  其中包含了react-route的配置与使用
 
 ### 安装依赖
     npm install
