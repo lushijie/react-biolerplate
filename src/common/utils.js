@@ -2,12 +2,15 @@
 * @Author: lushijie
 * @Date:   2016-12-10 11:39:02
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-12-10 11:40:20
+* @Last Modified time: 2016-12-14 10:37:41
 */
 import * as querystring from 'querystring';
 
 export let Utils = {
-  //返回解析赋值的结果
+  /**
+   * 返回解析赋值的结果
+   * let queryObejct = Util.getDestructResult(['houseId', 'item:item1'], this.state);
+  */
   getDestructResult(properties,sourceObject) {
     let destObject = {}, aliasMap = {};
     properties = Array.isArray(properties) ? properties : [properties];
@@ -29,10 +32,15 @@ export let Utils = {
     return destObject;
   },
 
-  //把对象拼接成url参数
+  /**
+   * 把对象拼接成url参数
+   * Util.getQueryJoin(queryObejct)
+  */
   getQueryJoin(queryObject) {
     return querystring.stringify(queryObject);
-  }
+  },
+
+
 }
 
 export {Utils as default};

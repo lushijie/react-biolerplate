@@ -63,7 +63,13 @@ export default withRouter(class extends BaseComponent {
       console.log('自定义错误处理', data);
     });
 
-    HomeActions.getMenu();
+    HomeActions.getMenu({
+      test: '   123',
+      objtest: {
+        a: 'a    ',
+        b: 'b'
+      }
+    });
     HomeActions.test();
   }
 
