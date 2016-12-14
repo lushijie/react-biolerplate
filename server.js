@@ -2,7 +2,7 @@
  * @Author: lushijie
  * @Date:   2016-06-16 18:21:14
  * @Last Modified by:   lushijie
- * @Last Modified time: 2016-09-28 15:13:01
+ * @Last Modified time: 2016-12-14 16:51:52
  */
 var express = require('express')
 var path = require('path')
@@ -21,7 +21,7 @@ app.get('*', function(req, res) {
 	res.sendFile(path.join(__dirname, '/src/app/index.html'))
 })
 
-var PORT = process.env.PORT || 3000
+var PORT = process.env.PORT || 3001
 app.listen(PORT, function() {
 	console.log('Production Express server running at localhost:' + PORT)
 })
