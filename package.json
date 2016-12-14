@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run dev",
-    "json-server": "json-server --config=./json-server/setting.json ./json-server/db.json",
+    "json": "json-server --config=./json-server/setting.json ./json-server/db.json --middlewares=./json-server/middleware1.js",
     "predev": " [ -f dist/vendor.bundle.js ] || webpack --config=./webpack/webpack.dll.conf.js --progress --profile",
     "dev": "export NODE_ENV=development && webpack-dev-server --config=./webpack.config.js",
     "prerelease": "webpack --config=./webpack/webpack.dll.conf.js --progress --profile",

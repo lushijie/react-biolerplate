@@ -9,9 +9,14 @@
 ### 安装依赖
     npm install
 
+### JSON-server
+    1.    npm run json
+    2.    http://127.0.0.1:3000/
+
 ### 开发运行
     1.    npm start
     2.    http://127.0.0.1:5050/
+
 ### Express 运行
     1.    npm run release
     2.    node server.js
