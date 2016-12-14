@@ -2,11 +2,11 @@
 * @Author: lushijie
 * @Date:   2016-12-14 10:38:02
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-12-14 11:51:26
+* @Last Modified time: 2016-12-14 12:13:19
 */
 import reqwest from 'reqwest';
 import path from 'path';
-import API_BASE_URL from 'base/env';
+import {API_BASE_URL} from 'base/env';
 
 function trimObject(obj) {
   Object.keys(obj).forEach(function(key){

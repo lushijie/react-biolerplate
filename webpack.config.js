@@ -2,7 +2,7 @@
  * @Author: lushijie
  * @Date:   2016-02-25 15:33:13
  * @Last Modified by:   lushijie
- * @Last Modified time: 2016-12-14 10:44:09
+ * @Last Modified time: 2016-12-14 11:59:20
  */
 
 var webpack = require('webpack');
@@ -37,7 +37,10 @@ module.exports = {
     }, {
       test: /\.(png|jpg|gif)$/,
       loader: 'url-loader?limit=8192&name=./img/[name].[ext]'
-    }, {
+    },{
+      test: /\.json$/,
+      loader: 'json'
+    },{
       test: /\.jsx?$/,
       loader: 'babel-loader',
       exclude: [
