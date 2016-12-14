@@ -2,9 +2,9 @@
 * @Author: lushijie
 * @Date:   2016-12-14 10:41:05
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-12-14 17:53:09
+* @Last Modified time: 2016-12-14 19:19:33
 */
-let TEST_SERVER_ADDRESS = location.protocol + '127.0.0.1:5050';
+let TEST_SERVER_ADDRESS = location.protocol + '//127.0.0.1:5050';
 let API_SERVER_ADDRESS = 'http://127.0.0.1:3000';
 let CURRENT_SERVER_ADDRESS = location.protocol + '//' + location.host;
 
