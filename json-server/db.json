@@ -1,6 +1,6 @@
 {
   "posts": {
-    "errno": 1,
+    "errno": 0,
     "errmsg": "Success",
     "data": [
       { "id": 1, "title": "json12-server", "author": "typicode" }
