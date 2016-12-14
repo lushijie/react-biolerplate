@@ -1,5 +1,5 @@
 {
-  "name": "vendor_3a1a0ebea64a811c477b",
+  "name": "vendor_0abd2f6115b165f07a25",
   "content": {
     "./node_modules/autobind-decorator/lib/index.js": 1,
     "./node_modules/babel-polyfill/lib/index.js": 2,
@@ -294,7 +294,7 @@
     "./node_modules/core-js/modules/_path.js": 291,
     "./node_modules/core-js/modules/web.immediate.js": 292,
     "./node_modules/core-js/modules/web.dom.iterable.js": 293,
-    "./node_modules/regenerator-runtime/runtime.js": 294,
+    "./node_modules/babel-polyfill/node_modules/regenerator-runtime/runtime.js": 294,
     "./node_modules/process/browser.js": 295,
     "./node_modules/core-js/fn/regexp/escape.js": 296,
     "./node_modules/core-js/modules/core.regexp.escape.js": 297,

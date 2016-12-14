@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2016-12-14 10:38:02
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-12-14 12:13:19
+* @Last Modified time: 2016-12-14 15:58:18
 */
 import reqwest from 'reqwest';
 import path from 'path';
@@ -29,18 +29,16 @@ function request(obj) {
   };
 
   if( typeof(obj) === 'string' ) {
-    if(obj.indexOf('/') != 0) {
+    if(!/^https?/.test(obj) && obj.indexOf('/') != 0) {
       throw '请检查提供的 url 格式';
     }
-    params.url = `${API_BASE_URL}${obj}`;
+    params.url = /^https?/.test(obj) ? obj : `${API_BASE_URL}${obj}`;
   } else if(typeof(obj) === 'object') {
     Object.assign(params, obj);
-
-    console.log(params.url.indexOf('/'))
-    if(params.url.indexOf('/') != 0) {
+    if(!/^https?/.test(params.url) && params.url.indexOf('/') != 0) {
       throw '请检查提供的 url 格式';
     }
-    params.url = `${API_BASE_URL}${params.url}`;
+    params.url = /^https?/.test(params.url) ? params.url : `${API_BASE_URL}${params.url}`;
   }
 
   params.data._t = Date.now();
@@ -56,7 +54,6 @@ function request(obj) {
         if( resp.errno == 0 ) {
           return resolve(resp);
         }else {
-          console.warn(resp.errmsg);
           reject(resp);
         }
       }

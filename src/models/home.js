@@ -2,30 +2,32 @@
 * @Author: lushijie
 * @Date:   2016-12-10 11:17:53
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-12-14 11:51:41
+* @Last Modified time: 2016-12-14 15:54:32
 */
 import Reflux from 'reflux';
 import request from 'common/request';
 
 export const HomeActions = Reflux.createActions([
   'getMenu',
-  'test'
+  'test',
+  'testQuest'
 ]);
 
 export const HomeStore = Reflux.createStore({
   listenables: [HomeActions],
-  onGetMenu({...arg}) {
-    console.log(arg);
+  onGetMenu() {
+   this.trigger('onGetMenuSuccess', {errno: 0, data: 'onGetMenuSuccess'});
+   this.trigger('onGetMenuFailed',  {errno: -1, data: 'onGetMenuFailed'});
+  },
+  onTestQuest({...arg}) {
     request({
-      url: '/market/salesway/addNode',
-      method: 'post',
+      url: 'http://127.0.0.1:3000/posts',
+      method: 'get',
       data: arg
     }).then(
-      resp => this.trigger('onGetMenuSuccess', {errno: 0, data: 'onGetMenuSuccess'}),
-      resp => this.trigger('onGetMenuFailed',  {errno: -1, data: 'onGetMenuFailed'})
+      resp => this.trigger('onTestQuestSuccess', resp),
+      resp => this.trigger('onTestQuestFailed', resp)
     );
-
-
   },
   onTest() {
     this.trigger('onTestSuccess', { errno: 0, data: 'onTestSuccess' });
