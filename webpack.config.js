@@ -2,13 +2,13 @@
  * @Author: lushijie
  * @Date:   2016-02-25 15:33:13
  * @Last Modified by:   lushijie
- * @Last Modified time: 2016-12-14 11:59:20
+ * @Last Modified time: 2016-12-14 16:48:11
  */
 
 var webpack = require('webpack');
 var path = require('path');
-var setting = require('./webpack.config.setting.js');
-var Pconf = require('./webpack.plugin.conf.js');
+var setting = require('./webpack/webpack.config.setting.js');
+var Pconf = require('./webpack/webpack.plugin.conf.js');
 
 module.exports = {
   devtool: setting.isDev ? 'inline-source-map' : 'cheap-module-source-map',
