@@ -46,7 +46,7 @@ export default withRouter(class extends BaseComponent {
     // this.listen(HomeStore, 'onTest onGetMenu', function(data, type) {
     //   console.log(type, data);
     // });
-    //
+
 
     //绑定onTestSuccess与onGetMenuSuccess事件
     //默认的onTestFailed与onGetMenuFailed
@@ -60,7 +60,7 @@ export default withRouter(class extends BaseComponent {
     this.listen(HomeStore, 'onTest onGetMenu', function(data, type) {
       console.log(type, data);
     }, function(data) {
-      console.log(data);
+      console.log('自定义错误处理', data);
     });
 
     HomeActions.getMenu();
