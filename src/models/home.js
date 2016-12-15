@@ -2,27 +2,17 @@
 * @Author: lushijie
 * @Date:   2016-12-10 11:17:53
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-12-15 12:06:01
+* @Last Modified time: 2016-12-15 14:21:03
+* Actions: https://github.com/reflux/refluxjs/tree/master/docs/actions
 */
 import Reflux from 'reflux';
 import request from 'common/request';
-
 
 export const HomeActions = Reflux.createActions([
   'getMenu',
   'test',
   'testQuest'
 ]);
-
-// export const HomeActions = Reflux.createActions({
-//   'getMenu': {},
-//   'test': {},
-//   'testQuest': {
-//     preEmit: function() {
-//       console.log('this is preEmit');
-//     }
-//   }
-// });
 
 export const HomeStore = Reflux.createStore({
   listenables: [HomeActions],
