@@ -23,7 +23,7 @@ class BaseComponent extends React.Component {
           }
           return;
         }
-        if(respType == ftype) {
+        if(respType === ftype) {
           if(typeof fcb === 'function') {
             fcb(data, respType);
             return;
