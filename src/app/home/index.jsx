@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
 import {BaseComponent} from 'components/baseComponent';
 import {render} from 'react-dom';
 import {withRouter} from 'react-router';
 import {HomeActions, HomeStore} from 'models/home';
+import Notification from 'react-notification-system';
 
 //autobind 依赖babel-plugin-transform-decorators-legacy
 @autobind
@@ -15,7 +17,7 @@ export default withRouter(class extends BaseComponent {
   }
 
   state = {
-
+    //_notification: null
   }
 
   componentWillMount() {
@@ -86,18 +88,23 @@ export default withRouter(class extends BaseComponent {
   componentDidMount() {
     console.log('withRouter props:', this.props);
     //this.props.router.pushState({test:123},'/inbox');
+    this._notification = this.refs.notificationDom;
   }
 
   test() {
-    console.log(123132);
+    this._notification.addNotification({
+      message: 'Notification message',
+      level: 'success'
+    });
   }
 
   render() {
     return (
       <div>
+        <Notification ref="notificationDom" />
         <h2>Home</h2>
         <h3>This is Home page!</h3>
-        <button onClick={() => this.test()}>测试</button>
+        <button onClick={() => this.test()}>Notification测试</button>
       </div>
     )
   }
