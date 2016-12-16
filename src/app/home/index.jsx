@@ -88,20 +88,22 @@ export default withRouter(class extends BaseComponent {
   componentDidMount() {
     console.log('withRouter props:', this.props);
     //this.props.router.pushState({test:123},'/inbox');
-    this._notification = this.refs.notificationDom;
+    this._notification = this._notificationRef;
   }
 
   test() {
     this._notification.addNotification({
       message: 'Notification message',
-      level: 'success'
+      level: 'success',
+      position: 'tc',
+      autoDismiss: 5,
     });
   }
 
   render() {
     return (
       <div>
-        <Notification ref="notificationDom" />
+        <Notification ref={(c) => this._notificationRef = c }/>
         <h2>Home</h2>
         <h3>This is Home page!</h3>
         <button onClick={() => this.test()}>Notification测试</button>
