@@ -96,14 +96,14 @@ export default withRouter(class extends BaseComponent {
       message: 'Notification message',
       level: 'success',
       position: 'tc',
-      autoDismiss: 5,
+      autoDismiss: 500,
     });
   }
 
   render() {
     return (
       <div>
-        <Notification ref={(c) => this._notificationRef = c }/>
+        <Notification ref={(c) => this._notificationRef = c}/>
         <h2>Home</h2>
         <h3>This is Home page!</h3>
         <button onClick={() => this.test()}>Notification测试</button>
