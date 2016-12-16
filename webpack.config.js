@@ -2,7 +2,7 @@
  * @Author: lushijie
  * @Date:   2016-02-25 15:33:13
  * @Last Modified by:   lushijie
- * @Last Modified time: 2016-12-14 16:48:11
+ * @Last Modified time: 2016-12-16 09:54:36
  */
 
 var webpack = require('webpack');
@@ -48,7 +48,7 @@ module.exports = {
       ],
       query: {
         cacheDirectory: true,
-        plugins: ['transform-runtime'],
+        plugins: ['transform-runtime', 'transform-decorators-legacy'],
         presets: ['es2015', 'stage-0', 'react']
       }
     }]
@@ -57,6 +57,7 @@ module.exports = {
     setting.isDev ? Pconf.noopPluginConf() : Pconf.uglifyJsPluginConf(),
     Pconf.commonsChunkPluginConf(),
     Pconf.htmlWebPackPluginConf(setting.htmlPluginOptions),
+    Pconf.providePluginConf(setting.providePluginOptions),
     Pconf.dllPluginConf(),
   ],
   resolve: {

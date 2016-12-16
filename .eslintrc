@@ -50,6 +50,7 @@
     "react/wrap-multilines": 1
   },
   "globals": {
-    "React": true
+    "React": true,
+    "autobind": true
   }
 }

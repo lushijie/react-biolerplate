@@ -4,6 +4,8 @@ import {render} from 'react-dom';
 import {withRouter} from 'react-router';
 import {HomeActions, HomeStore} from 'models/home';
 
+//autobind 依赖babel-plugin-transform-decorators-legacy
+@autobind
 export default withRouter(class extends BaseComponent {
 
   static displayName = 'app-home';
@@ -86,11 +88,16 @@ export default withRouter(class extends BaseComponent {
     //this.props.router.pushState({test:123},'/inbox');
   }
 
+  test() {
+    console.log(123132);
+  }
+
   render() {
     return (
       <div>
         <h2>Home</h2>
         <h3>This is Home page!</h3>
+        <button onClick={() => this.test()}>测试</button>
       </div>
     )
   }
