@@ -8,7 +8,6 @@ import Notification from 'react-notification-system';
 //autobind 依赖babel-plugin-transform-decorators-legacy
 @autobind
 export default withRouter(class extends BaseComponent {
-
   // constructor会默认附加
   // constructor(props) {
   //   super(props);
@@ -20,13 +19,13 @@ export default withRouter(class extends BaseComponent {
   // 在调试时相当有用
   static displayName = 'app-home'
 
-  // defaultProps
-  static defaultProps = {
+  // props属性校验
+  static propTypes = {
 
   }
 
-  // props属性校验
-  static propTypes = {
+  // defaultProps
+  static defaultProps = {
 
   }
 
@@ -36,7 +35,6 @@ export default withRouter(class extends BaseComponent {
   }
 
   componentWillMount() {
-
     //只绑定onTestListener1Success事件
     this.listen(HomeStore, 'onTestListener1', function(data, type) {
       console.log(type, data);
@@ -64,13 +62,11 @@ export default withRouter(class extends BaseComponent {
     //   console.log(type, data);
     // });
 
-
     //绑定onTestListener1Success与onTestListener2Success事件
     //默认的onTestListener1Failed与onTestListener2Failed
     // this.listen(HomeStore, 'onTestListener1 onTestListener2', function(data, type) {
     //   console.log(type, data);
     // }, true);
-
 
     //绑定onTestListener1Success与onTestListener2Success事件,
     //自定义的onTestListener1Failed与onTestListener2Failed
@@ -87,7 +83,6 @@ export default withRouter(class extends BaseComponent {
     //   console.log('自定义错误处理', data);
     // });
 
-
     HomeActions.testListener1();
     HomeActions.testListener2();
     HomeActions.testRequest({
@@ -97,12 +92,31 @@ export default withRouter(class extends BaseComponent {
         b: 'b'
       }
     });
-
   }
 
   componentDidMount() {
     console.log('withRouter props:', this.props);
     this._notification = this._notificationRef;
+  }
+
+  componentWillReceiveProps() {
+    //todo
+  }
+
+  shouldComponentUpdate() {
+    //todo
+  }
+
+  componentWillUpdate() {
+    //todo
+  }
+
+  componentDidUpdate() {
+    //todo
+  }
+
+  componentWillUnmount() {
+    //todo
   }
 
   testNotification() {
