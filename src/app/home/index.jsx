@@ -9,12 +9,28 @@ import Notification from 'react-notification-system';
 @autobind
 export default withRouter(class extends BaseComponent {
 
-  static displayName = 'app-home';
+  // constructor会默认附加
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
 
-  static contextTypes = {
-    router: React.PropTypes.object.isRequired
+  //   }
+  // }
+
+  // 在调试时相当有用
+  static displayName = 'app-home'
+
+  // defaultProps
+  static defaultProps = {
+
   }
 
+  // props属性校验
+  static propTypes = {
+
+  }
+
+  // initialState
   state = {
     //_notification: null
   }
