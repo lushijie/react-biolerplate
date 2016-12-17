@@ -119,7 +119,7 @@ export default withRouter(class extends BaseComponent {
     //todo
   }
 
-  testNotification() {
+  handleTestNotification() {
     this._notification.addNotification({
       message: 'Notification message',
       level: 'success',
@@ -128,7 +128,7 @@ export default withRouter(class extends BaseComponent {
     });
   }
 
-  testRouterJump() {
+  handleTestRouterJump() {
     this.props.router.pushState({arg:123},'/inbox');
   }
 
@@ -138,8 +138,8 @@ export default withRouter(class extends BaseComponent {
         <Notification ref={(c) => this._notificationRef = c}/>
         <h2>Home</h2>
         <h3>This is Home page!</h3>
-        <button onClick={() => this.testNotification()}>Notification测试</button>
-        <button onClick={() => this.testRouterJump()}>路由跳转测试</button>
+        <button onClick={() => this.handleTestNotification()}>Notification测试</button>
+        <button onClick={() => this.handleTestRouterJump()}>路由跳转测试</button>
       </div>
     )
   }
