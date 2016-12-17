@@ -2,37 +2,38 @@
 * @Author: lushijie
 * @Date:   2016-12-10 11:17:53
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-12-15 14:21:03
+* @Last Modified time: 2016-12-17 12:52:34
 * Actions: https://github.com/reflux/refluxjs/tree/master/docs/actions
 */
 import Reflux from 'reflux';
 import request from 'common/request';
 
 export const HomeActions = Reflux.createActions([
-  'getMenu',
-  'test',
-  'testQuest'
+  'testListener1',
+  'testListener2',
+  'testRequest'
 ]);
 
 export const HomeStore = Reflux.createStore({
   listenables: [HomeActions],
-  onGetMenu() {
-   this.trigger('onGetMenuSuccess', {errno: 0, data: 'onGetMenuSuccess'});
-   this.trigger('onGetMenuFailed',  {errno: -1, data: 'onGetMenuFailed'});
+  onTestListener1() {
+   this.trigger('onTestListener1Success', {errno: 0, data: 'onTestListener1Success'});
+   this.trigger('onTestListener1Failed',  {errno: -1, data: 'onTestListener1Failed'});
   },
-  onTestQuest({...arg}) {
+
+  onTestListener2() {
+    this.trigger('onTestListener2Success', {errno: 0, data: 'onTestListener2Success'});
+    this.trigger('onTestListener2Failed',  {errno: -1, data: 'onTestListener2Failed'});
+  },
+
+  onTestRequest({...arg}) {
     request({
-      // url: 'http://127.0.0.1:3000/posts',
       url: '/test/profile',
       method: 'get',
       data: arg
     }).then(
-      resp => this.trigger('onTestQuestSuccess', resp),
-      resp => this.trigger('onTestQuestFailed', resp)
+      resp => this.trigger('onTestRequestSuccess', resp),
+      resp => this.trigger('onTestRequestFailed', resp)
     );
   },
-  onTest() {
-    this.trigger('onTestSuccess', { errno: 0, data: 'onTestSuccess' });
-    this.trigger('onTestFailed', { errno: -1, data: 'onTestFailed' });
-  }
 })

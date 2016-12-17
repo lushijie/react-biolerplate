@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import {BaseComponent} from 'components/baseComponent';
-import {render} from 'react-dom';
 import {withRouter} from 'react-router';
 import {HomeActions, HomeStore} from 'models/home';
 import Notification from 'react-notification-system';
@@ -22,67 +21,67 @@ export default withRouter(class extends BaseComponent {
 
   componentWillMount() {
 
-    //只绑定onGetMenuSuccess事件
-    // this.listen(HomeStore, 'onGetMenu', function(data, type) {
+    //只绑定onTestListener1Success事件
+    this.listen(HomeStore, 'onTestListener1', function(data, type) {
+      console.log(type, data);
+    });
+
+    //只绑定onTestListener1Failed事件
+    // this.listen(HomeStore, 'onTestListener1', true ,function(data, type) {
     //   console.log(type, data);
     // });
 
-    //只绑定onGetMenuFailed事件
-    // this.listen(HomeStore, 'onGetMenu', true ,function(data, type) {
-    //   console.log(type, data);
-    // });
-
-    //绑定onGetMenuSuccess事件
-    //默认的onGetMenuFailed事件
-    // this.listen(HomeStore, 'onGetMenu', function(data, type) {
+    //绑定onTestListener1Success事件与默认的onTestListener1Failed事件
+    // this.listen(HomeStore, 'onTestListener1', function(data, type) {
     //   console.log(type, data);
     // }, true);
 
-    //绑定onGetMenuSuccess事件
-    //自定义的onGetMenuFailed事件
-    // this.listen(HomeStore, 'onGetMenu', function(data, type) {
+    //绑定onTestListener1Success事件与自定义的onTestListener1Failed事件
+    // this.listen(HomeStore, 'onTestListener1', function(data, type) {
     //   console.log(type, data);
     // }, function(data) {
     //   console.log('自定义错误处理', data);
     // });
 
-    //绑定onTestSuccess与onGetMenuSuccess事件
-    // this.listen(HomeStore, 'onTest onGetMenu', function(data, type) {
+    //绑定onTestListener1Success与onTestListener2Success事件
+    // this.listen(HomeStore, 'onTestListener1 onTestListener2', function(data, type) {
     //   console.log(type, data);
     // });
 
 
-    //绑定onTestSuccess与onGetMenuSuccess事件
-    //默认的onTestFailed与onGetMenuFailed
-    // this.listen(HomeStore, 'onTest onGetMenu', function(data, type) {
+    //绑定onTestListener1Success与onTestListener2Success事件
+    //默认的onTestListener1Failed与onTestListener2Failed
+    // this.listen(HomeStore, 'onTestListener1 onTestListener2', function(data, type) {
     //   console.log(type, data);
     // }, true);
 
 
-    //绑定onTestSuccess与onGetMenuSuccess事件,
-    //自定义的onTestFailed与onGetMenuFailed
-    this.listen(HomeStore, 'onTest onGetMenu', function(data, type) {
-      console.log(type, data);
-    }, function(data) {
-      console.log('自定义错误处理', data);
-    });
+    //绑定onTestListener1Success与onTestListener2Success事件,
+    //自定义的onTestListener1Failed与onTestListener2Failed
+    // this.listen(HomeStore, 'onTestListener1 onTestListener2', function(data, type) {
+    //   console.log(type, data);
+    // }, function(data) {
+    //   console.log('自定义错误处理', data);
+    // });
 
-    this.listen(HomeStore, 'onTestQuest', function(data, type) {
-      console.log('data', data);
-      console.log('type', type);
-    }, function(data) {
-      console.log('自定义错误处理', data);
-    });
+    //接口请求测试
+    // this.listen(HomeStore, 'onTestRequest', function(data, type) {
+    //   console.log(type, data);
+    // }, function(data) {
+    //   console.log('自定义错误处理', data);
+    // });
 
-    HomeActions.getMenu();
-    HomeActions.testQuest({
-      test: '   123',
-      objtest: {
+
+    HomeActions.testListener1();
+    HomeActions.testListener2();
+    HomeActions.testRequest({
+      str: '   123',
+      obj: {
         a: 'a    ',
         b: 'b'
       }
     });
-    HomeActions.test();
+
   }
 
   componentDidMount() {

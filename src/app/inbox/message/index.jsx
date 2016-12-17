@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
-import {render} from 'react-dom';
+import {withRouter} from 'react-router';
+import {BaseComponent} from 'components/baseComponent';
+
 import './index.css';
 
-export default class extends Component {
+export default withRouter(class extends BaseComponent {
   componentDidMount() {
     //console.info(this.props.params);
     //console.info(this.props);
@@ -15,4 +17,4 @@ export default class extends Component {
       </div>
     )
   }
-}
+})

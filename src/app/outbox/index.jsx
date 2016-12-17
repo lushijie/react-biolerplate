@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
-import {render} from 'react-dom';
+import {BaseComponent} from 'components/baseComponent';
+import {withRouter} from 'react-router';
 import './index.css';
 
-export default class extends Component {
+export default withRouter(class extends BaseComponent {
   static contextTypes = {
     history: React.PropTypes.object.isRequired,
     router: React.PropTypes.object.isRequired,
@@ -35,4 +36,4 @@ export default class extends Component {
       </div>
     )
   }
-}
+})

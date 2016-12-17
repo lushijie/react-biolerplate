@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import {render} from 'react-dom';
+import {BaseComponent} from 'components/baseComponent';
 import {withRouter} from 'react-router';
 import './index.css';
 
-export default withRouter(class extends Component {
+export default withRouter(class extends BaseComponent {
   componentDidMount() {
     console.log(this.props);
   }
