@@ -99,19 +99,19 @@ export default withRouter(class extends BaseComponent {
     this._notification = this._notificationRef;
   }
 
-  componentWillReceiveProps() {
+  componentWillReceiveProps(nextProps) {
     //todo
   }
 
-  shouldComponentUpdate() {
+  shouldComponentUpdate(nextProps, nextState) {
     //todo
   }
 
-  componentWillUpdate() {
+  componentWillUpdate(nextProps, nextState) {
     //todo
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps, prevState) {
     //todo
   }
 
