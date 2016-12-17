@@ -5,7 +5,6 @@ import './index.css';
 
 export default withRouter(class extends BaseComponent {
   componentDidMount() {
-    console.log(this.props);
   }
   render() {
     return (

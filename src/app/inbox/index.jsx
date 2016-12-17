@@ -8,9 +8,9 @@ export default withRouter(class extends BaseComponent {
 
   componentDidMount() {
     console.log(this.props);
+    console.log('location state', this.props.location.state);
   }
   render() {
-    console.log(this.props.children);
     return (
       <div>
         <h2>Inbox</h2>
