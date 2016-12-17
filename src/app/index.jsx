@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute } from 'react-router';
 import { Link, IndexLink, browserHistory } from 'react-router';
 import Layout from 'app/layout';
@@ -29,7 +29,7 @@ let rootRoute = [
 ]
 
 
-render(
+ReactDOM.render(
   <Router history={browserHistory} routes={rootRoute} />,
   document.getElementById('app')
 )
