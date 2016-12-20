@@ -6,14 +6,17 @@ class BaseComponent extends React.Component {
     this.listeners = [];
   }
 
-  commonFailedCB(data, type) {
-    console.log('默认错误', type, data);
+  commonSuccessCB(data, type) {
+    console.log('Default Success:', type, data);
   }
 
-  // 取消监听
+  commonFailedCB(data, type) {
+    console.log('Default Failed:', type, data);
+  }
+
   unsubscribe() {
-    this.listeners.forEach(function (ele) {
-      ele();
+    this.listeners.forEach(function (fn) {
+      fn();
     })
   }
 
@@ -28,20 +31,19 @@ class BaseComponent extends React.Component {
         if(respType === stype) {
           if(typeof scb === 'function') {
             scb(data, respType);
+          } else if(scb === true) {
+            this.commonSuccessCB(data, respType);
           }
-          return;
-        }
-        if(respType === ftype) {
+        } else if(respType === ftype) {
           if(typeof fcb === 'function') {
             fcb(data, respType);
-            return;
-          }
-          if(fcb === true) {
+          } else if(fcb === true) {
             this.commonFailedCB(data, respType);
           }
         }
       });
 
+      // record listeners for unsubscribe
       if(this.listeners.indexOf(listener) == -1) {
         this.listeners.push(listener);
       }
