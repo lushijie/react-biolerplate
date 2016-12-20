@@ -117,6 +117,7 @@ export default withRouter(class extends BaseComponent {
 
   componentWillUnmount() {
     //todo
+    this.unsubscribe();
   }
 
   handleTestNotification(evt) {
