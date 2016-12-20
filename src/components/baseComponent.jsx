@@ -6,7 +6,7 @@ class BaseComponent extends React.Component {
     this.state = {};
   }
 
-  _commonFailedCB(data, type) {
+  commonFailedCB(data, type) {
     console.log('默认错误', type, data);
   }
 
@@ -29,7 +29,7 @@ class BaseComponent extends React.Component {
             return;
           }
           if(fcb === true) {
-            this._commonFailedCB(data, respType);
+            this.commonFailedCB(data, respType);
           }
         }
       });
