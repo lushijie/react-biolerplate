@@ -4,7 +4,7 @@ import {BaseComponent} from 'components/baseComponent';
 import {withRouter} from 'react-router';
 import {HomeActions, HomeStore} from 'models/home';
 import Notification from 'react-notification-system';
-
+import Alert from 'react-s-alert';
 import Rodal from 'rodal';
 import 'rodal/lib/rodal.css';
 
@@ -147,22 +147,29 @@ export default withRouter(class extends BaseComponent {
   handleTestRouterJump() {
     this.props.router.pushState({arg:123},'/inbox');
   }
+  handleShowAlert() {
+    Alert.info('Test message 2');
+  }
 
   render() {
     return (
       <div>
-        <Notification ref={(c) => this._notificationRef = c}/>
         <h2>Home</h2>
         <h3>This is Home page!</h3>
         <button onClick={(evt) => this.handleTestNotification(evt)}>Notification测试</button>
         <button onClick={() => this.handleTestRouterJump()}>路由跳转测试</button>
         <button onClick={() => this.handleShowRodal()}>Rodal测试</button>
+        <button onClick={() => this.handleShowAlert()}>Alert测试</button>
+
+        <Notification ref={(c) => this._notificationRef = c}/>
 
         <Rodal visible={this.state.rodalVisible}
             onClose={() => this.handleHideRodal()}
         >
           <div>Content</div>
         </Rodal>
+
+
       </div>
     )
   }

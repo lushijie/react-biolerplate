@@ -6,6 +6,10 @@ import {render} from 'react-dom';
 import {Link, IndexLink} from 'react-router';
 import Menu from 'components/menu';
 
+import Alert from 'react-s-alert';
+import 'react-s-alert/dist/s-alert-default.css';
+
+
 import './index.css';
 
 // export default class extends BaseComponent {
@@ -15,6 +19,7 @@ export default withRouter(class extends BaseComponent {
     return (
       <div>
         <Menu />
+        <Alert stack={{limit: 3}} />
         {this.props.children}
       </div>
     )
