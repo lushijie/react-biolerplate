@@ -5,6 +5,9 @@ import {withRouter} from 'react-router';
 import {HomeActions, HomeStore} from 'models/home';
 import Notification from 'react-notification-system';
 
+import Rodal from 'rodal';
+import 'rodal/lib/rodal.css';
+
 //autobind 依赖babel-plugin-transform-decorators-legacy
 @autobind
 export default withRouter(class extends BaseComponent {
@@ -32,7 +35,9 @@ export default withRouter(class extends BaseComponent {
   // initialState
   state = {
     //_notification: null
+
   }
+
 
   componentWillMount() {
     //只绑定onTestListener1Success事件
@@ -105,6 +110,7 @@ export default withRouter(class extends BaseComponent {
 
   shouldComponentUpdate(nextProps, nextState) {
     //todo
+    return true;
   }
 
   componentWillUpdate(nextProps, nextState) {
@@ -130,6 +136,14 @@ export default withRouter(class extends BaseComponent {
     });
   }
 
+  handleShowRodal() {
+    this.setState({rodalVisible: true});
+  }
+
+  handleHideRodal() {
+    this.setState({rodalVisible: false});
+  }
+
   handleTestRouterJump() {
     this.props.router.pushState({arg:123},'/inbox');
   }
@@ -142,6 +156,13 @@ export default withRouter(class extends BaseComponent {
         <h3>This is Home page!</h3>
         <button onClick={(evt) => this.handleTestNotification(evt)}>Notification测试</button>
         <button onClick={() => this.handleTestRouterJump()}>路由跳转测试</button>
+        <button onClick={() => this.handleShowRodal()}>Rodal测试</button>
+
+        <Rodal visible={this.state.rodalVisible}
+            onClose={() => this.handleHideRodal()}
+        >
+          <div>Content</div>
+        </Rodal>
       </div>
     )
   }
