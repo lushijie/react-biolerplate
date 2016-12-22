@@ -4,10 +4,10 @@ import {BaseComponent} from 'components/baseComponent';
 import {withRouter} from 'react-router';
 import {render} from 'react-dom';
 import {Link, IndexLink} from 'react-router';
-import Menu from 'components/menu';
+import Menu from 'components/Menu';
 
-import Alert from 'react-s-alert';
-import 'react-s-alert/dist/s-alert-default.css';
+import Alert from 'components/Alert/SAlert';
+import 'components/Alert/s-alert-default.css';
 
 
 import './index.css';

@@ -4,9 +4,9 @@ import {BaseComponent} from 'components/baseComponent';
 import {withRouter} from 'react-router';
 import {HomeActions, HomeStore} from 'models/home';
 import Notification from 'react-notification-system';
-import Alert from 'react-s-alert';
-import Rodal from 'rodal';
-import 'rodal/lib/rodal.css';
+import Alert from 'components/Alert/SAlert';
+import Rodal from 'components/Rodal/rodal';
+import 'components/Rodal/rodal.css';
 
 //autobind 依赖babel-plugin-transform-decorators-legacy
 @autobind
