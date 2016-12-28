@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2016-12-28 18:10:44
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-12-28 19:23:00
+* @Last Modified time: 2016-12-28 19:27:03
 */
 import Layout from 'app/layout';
 import AppHome from 'app/home';
@@ -20,18 +20,19 @@ export let rootRoute = [
         path: 'inbox',
         // indexRoute 1.第一种方式路由中配置indexRoute
         // indexRoute 2.第二种方式在inbox页面中 {this.props.children || <InboxHome />}
-        indexRoute: {
-          //一、非动态加载1
-          //component: require('app/inbox/home').default
-          //二、非动态加载2
-          //component: InboxHome
-          //三、动态加载
-          getComponent: (nextState, cb) => {
-            require.ensure([], () => {
-              cb(null, require('app/inbox/home').default)
-            }, 'inbox_home');
-          },
-        },
+
+        // indexRoute: {
+        //   //一、非动态加载1
+        //   //component: require('app/inbox/home').default
+        //   //二、非动态加载2
+        //   //component: InboxHome
+        //   //三、动态加载
+        //   getComponent: (nextState, cb) => {
+        //     require.ensure([], () => {
+        //       cb(null, require('app/inbox/home').default)
+        //     }, 'inbox_home');
+        //   },
+        // },
 
         //一、非动态加载1
         //component: require('app/inbox').default,
