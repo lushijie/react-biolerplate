@@ -2,12 +2,12 @@
 * @Author: lushijie
 * @Date:   2016-12-28 18:10:44
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-12-28 19:27:03
+* @Last Modified time: 2016-12-28 19:54:12
 */
 import Layout from 'app/layout';
 import AppHome from 'app/home';
 import NotFound from 'components/404';
-import Inbox from 'app/inbox';
+//import Inbox from 'app/inbox';
 
 // 路由配置
 export let rootRoute = [
@@ -35,9 +35,9 @@ export let rootRoute = [
         // },
 
         //一、非动态加载1
-        //component: require('app/inbox').default,
+        component: require('app/inbox').default,
         //二、非动态加载2
-        component: Inbox,
+        //component: Inbox,
         //三、动态加载
         // getComponent: (nextState, cb) => {
         //   require.ensure([], () => {
@@ -47,11 +47,11 @@ export let rootRoute = [
         onEnter: function(nextState, replaceState){
           console.log('Inbox onEnter');
         },
-        childRoutes: require('app/inbox/route').default
+        childRoutes: require('app/inbox/router').default
       },
       {
         path: 'outbox',
-        component: require('app/outbox/index').default,
+        component: require('app/outbox').default,
       }
     ]
   },
