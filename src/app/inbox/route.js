@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2016-09-28 17:36:51
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-12-28 17:38:09
+* @Last Modified time: 2016-12-28 18:02:27
 */
 // 如果动态加载，不能再手动import，否则动态加载失败！
 // import Inbox from 'app/inbox';
@@ -10,8 +10,8 @@
 
 export default {
   path: 'inbox',
-  // 1.inbox跟路由的加载组件
-  // 2.第二种方式在inbox页面中 {this.props.children || <InboxHome />}
+  // indexRoute 1.inbox跟路由的加载组件
+  // indexRoute 2.第二种方式在inbox页面中 {this.props.children || <InboxHome />}
   indexRoute: {
     //一、非动态加载1
     //component: require('app/inbox/home').default
@@ -37,7 +37,7 @@ export default {
   getComponent: (nextState, cb) => {
     require.ensure([], () => {
       cb(null, require('app/inbox').default)
-    }, 'inbox_index');//inbox 可选，是动态加载的文件名
+    }, 'inbox_index');
   },
 
   onEnter: function(nextState, replaceState){
@@ -52,7 +52,7 @@ export default {
       getComponent: (nextState, cb) => {
         require.ensure([], () => {
           cb(null, require('app/inbox/message').default)
-        }, 'inbox_message');//inbox 可选，是动态加载的文件名
+        }, 'inbox_message');
       },
       onEnter: function (nextState, replaceState) {
         console.log('Come from Message Redirect');
