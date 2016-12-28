@@ -2,27 +2,42 @@
 * @Author: lushijie
 * @Date:   2016-09-28 17:36:51
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-12-10 14:47:29
+* @Last Modified time: 2016-12-28 17:38:09
 */
-//如果Inbox组件使用动态路由，此处不能以下面的方式引入inbox了，否则inbox的动态加载失败！
+// 如果动态加载，不能再手动import，否则动态加载失败！
 // import Inbox from 'app/inbox';
-
-import Message from 'app/inbox/message';
-import InboxHome from 'app/inbox/home';
+// import InboxHome from 'app/inbox/home';
 
 export default {
   path: 'inbox',
   // 1.inbox跟路由的加载组件
   // 2.第二种方式在inbox页面中 {this.props.children || <InboxHome />}
-  indexRoute: { component: InboxHome },
+  indexRoute: {
+    //一、非动态加载1
+    //component: require('app/inbox/home').default
 
-  //非动态加载Inbox的时候使用这种方式,动态加载使用下面getComponent
+    //二、非动态加载2
+    //component: InboxHome
+
+    //三、动态加载
+    getComponent: (nextState, cb) => {
+      require.ensure([], () => {
+        cb(null, require('app/inbox/home').default)
+      }, 'inbox_home');
+    },
+  },
+
+  //一、非动态加载1
+  //component: require('app/inbox').default,
+
+  //二、非动态加载2
   //component: Inbox,
 
+  //三、动态加载
   getComponent: (nextState, cb) => {
     require.ensure([], () => {
-      cb(null, require('app/inbox/index').default)
-    }, 'inbox');//inbox 可选，是动态加载的文件名
+      cb(null, require('app/inbox').default)
+    }, 'inbox_index');//inbox 可选，是动态加载的文件名
   },
 
   onEnter: function(nextState, replaceState){
@@ -33,7 +48,12 @@ export default {
     {
       //绝对路径：/messages/id为绝对路径 最终url是 ip:5050/messages/id
       path: '/messages/:id',
-      component: Message,
+      //component: Message,
+      getComponent: (nextState, cb) => {
+        require.ensure([], () => {
+          cb(null, require('app/inbox/message').default)
+        }, 'inbox_message');//inbox 可选，是动态加载的文件名
+      },
       onEnter: function (nextState, replaceState) {
         console.log('Come from Message Redirect');
       }

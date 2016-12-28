@@ -90,13 +90,13 @@ export default withRouter(class extends BaseComponent {
 
     HomeActions.testListener1();
     HomeActions.testListener2();
-    HomeActions.testRequest({
-      str: '   123',
-      obj: {
-        a: 'a    ',
-        b: 'b'
-      }
-    });
+    // HomeActions.testRequest({
+    //   str: '   123',
+    //   obj: {
+    //     a: 'a    ',
+    //     b: 'b'
+    //   }
+    // });
   }
 
   componentDidMount() {
