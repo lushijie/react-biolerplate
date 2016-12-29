@@ -1,8 +1,7 @@
-import React, {Component} from 'react';
-import {render} from 'react-dom';
-import {Link, IndexLink} from 'react-router';
-
-import './index.css';
+import React, {Component} from 'react'
+import {render} from 'react-dom'
+import {Link, IndexLink} from 'react-router'
+import './index.css'
 
 export default class extends Component {
   render(){
