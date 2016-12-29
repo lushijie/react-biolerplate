@@ -2,7 +2,7 @@
  * @Author: lushijie
  * @Date:   2016-02-25 15:33:13
  * @Last Modified by:   lushijie
- * @Last Modified time: 2016-12-16 09:54:36
+ * @Last Modified time: 2016-12-29 11:37:34
  */
 
 var webpack = require('webpack');
@@ -68,12 +68,11 @@ module.exports = {
     alias: {
       'base': path.join(__dirname),
       'app':  path.join(__dirname, 'src/app'),
-      'routes': path.join(__dirname, 'src/app/routes'),
       'common': path.join(__dirname, 'src/common'),
       'components': path.join(__dirname, 'src/components'),
       'constants': path.join(__dirname, 'src/constants'),
       'models': path.join(__dirname, 'src/models'),
-      'resource': path.join(__dirname, 'src/resource'),
+      'resources': path.join(__dirname, 'src/resources'),
     }
   },
   devServer: {
