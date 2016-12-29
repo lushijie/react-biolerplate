@@ -3,6 +3,7 @@
  * =============================== */
 
 import React from 'react';
+import './rodal.css';
 
 const { PropTypes, Component } = React;
 const propTypes = {

@@ -1,12 +1,9 @@
-import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-import {BaseComponent} from 'components/baseComponent';
-import {withRouter} from 'react-router';
-import {HomeActions, HomeStore} from 'models/home';
-import Notification from 'react-notification-system';
-import Alert from 'components/Alert/SAlert';
-import Rodal from 'components/Rodal/rodal';
-import 'components/Rodal/rodal.css';
+import React, {Component} from 'react'
+import ReactDOM from 'react-dom'
+import {withRouter} from 'react-router'
+import Notification from 'react-notification-system'
+import {BaseComponent, Alert, Rodal} from 'components'
+import {HomeActions, HomeStore} from 'models'
 
 //autobind 依赖babel-plugin-transform-decorators-legacy
 @autobind
@@ -15,7 +12,6 @@ export default withRouter(class extends BaseComponent {
   // constructor(props) {
   //   super(props);
   //   this.state = {
-
   //   }
   // }
 

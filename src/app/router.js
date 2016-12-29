@@ -2,14 +2,14 @@
 * @Author: lushijie
 * @Date:   2016-12-28 18:10:44
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-12-29 17:32:19
+* @Last Modified time: 2016-12-29 19:35:36
 */
-import Layout from 'app/layout';
-import IndexHome from 'app/home';
-import Inbox from 'app/inbox';
-import Outbox from 'app/outbox';
-import Page404 from 'components/404';
-import InboxRouter from 'app/inbox/router';
+import Layout from 'app/layout'
+import IndexHome from 'app/home'
+import Inbox from 'app/inbox'
+import Outbox from 'app/outbox'
+import {Page404} from 'components'
+import InboxRouter from 'app/inbox/router'
 
 // 路由配置
 export let rootRoute = [

@@ -1,7 +1,6 @@
-import React, {Component} from 'react';
-import {withRouter} from 'react-router';
-import {BaseComponent} from 'components/baseComponent';
-
+import React, {Component} from 'react'
+import {withRouter} from 'react-router'
+import {BaseComponent} from 'components'
 import './index.css';
 
 export default withRouter(class extends BaseComponent {

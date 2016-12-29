@@ -4,6 +4,8 @@ import sAlertStore from './s-alert-parts/s-alert-store';
 import sAlertTools from './s-alert-parts/s-alert-tools';
 import getAlertData from './s-alert-parts/s-alert-data-prep';
 
+import './s-alert-default.css';
+
 const insertFunc = (msg, data, condition) => {
     let id = sAlertTools.randomId();
     sAlertStore.dispatch({

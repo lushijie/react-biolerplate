@@ -2,9 +2,8 @@
 * @Author: lushijie
 * @Date:   2016-09-28 17:36:51
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-12-28 19:54:58
+* @Last Modified time: 2016-12-29 19:34:58
 */
-
 export default [
   {
     //绝对路径：/messages/id为绝对路径 最终url是 ip:5050/messages/id

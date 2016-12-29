@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
-import {BaseComponent} from 'components/baseComponent';
-import {withRouter} from 'react-router';
-import './index.css';
+import React, {Component} from 'react'
+import {BaseComponent} from 'components'
+import {withRouter} from 'react-router'
+import './index.css'
 
 export default withRouter(class extends BaseComponent {
   static contextTypes = {
