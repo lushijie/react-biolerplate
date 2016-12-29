@@ -2,43 +2,38 @@
 * @Author: lushijie
 * @Date:   2016-12-28 18:10:44
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-12-28 19:54:12
+* @Last Modified time: 2016-12-29 17:32:19
 */
 import Layout from 'app/layout';
-import AppHome from 'app/home';
-import NotFound from 'components/404';
-//import Inbox from 'app/inbox';
+import IndexHome from 'app/home';
+import Inbox from 'app/inbox';
+import Outbox from 'app/outbox';
+import Page404 from 'components/404';
+import InboxRouter from 'app/inbox/router';
 
 // 路由配置
 export let rootRoute = [
   {
     path: '/',
     component: Layout,
-    indexRoute: { component: AppHome },
+    indexRoute: {component: IndexHome},
     childRoutes: [
       {
         path: 'inbox',
-        // indexRoute 1.第一种方式路由中配置indexRoute
-        // indexRoute 2.第二种方式在inbox页面中 {this.props.children || <InboxHome />}
 
+        //第一种indexRoute(推荐)在inbox页面中 {this.props.children || <InboxHome />}
+        //第二种indexRoute方式路由中配置indexRoute
         // indexRoute: {
-        //   //一、非动态加载1
-        //   //component: require('app/inbox/home').default
-        //   //二、非动态加载2
-        //   //component: InboxHome
-        //   //三、动态加载
-        //   getComponent: (nextState, cb) => {
-        //     require.ensure([], () => {
-        //       cb(null, require('app/inbox/home').default)
-        //     }, 'inbox_home');
-        //   },
+            //请参照下方Inbox的定义方式
+            //一、非动态加载 component
+            //二、动态加载 getComponent
+
         // },
 
-        //一、非动态加载1
-        component: require('app/inbox').default,
-        //二、非动态加载2
-        //component: Inbox,
-        //三、动态加载
+        //一、非动态加载
+        //component: require('app/inbox').default,
+        component: Inbox,
+        //二、动态加载
         // getComponent: (nextState, cb) => {
         //   require.ensure([], () => {
         //     cb(null, require('app/inbox').default)
@@ -47,16 +42,16 @@ export let rootRoute = [
         onEnter: function(nextState, replaceState){
           console.log('Inbox onEnter');
         },
-        childRoutes: require('app/inbox/router').default
+        childRoutes: InboxRouter
       },
       {
         path: 'outbox',
-        component: require('app/outbox').default,
+        component: Outbox,
       }
     ]
   },
   {
     path: '*',
-    component: NotFound,
+    component: Page404,
   }
 ]
