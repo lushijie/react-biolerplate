@@ -2,7 +2,7 @@
  * @Author: lushijie
  * @Date:   2016-02-25 15:33:13
  * @Last Modified by:   lushijie
- * @Last Modified time: 2017-01-04 15:41:59
+ * @Last Modified time: 2017-01-04 19:03:23
  */
 
 var webpack = require('webpack');
@@ -97,7 +97,7 @@ module.exports = {
   postcss: function () {
     return [
       //require('autoprefixer'),
-      //require('cssnano'),
+      require('cssnano'),
       require('precss'),
       require('cssnext')
     ];
