@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2017-01-04 17:36:43
 * @Last Modified by:   lushijie
-* @Last Modified time: 2017-01-04 18:00:23
+* @Last Modified time: 2017-01-04 18:17:47
 */
 var webpack = require('webpack');
 var path = require('path');
@@ -25,7 +25,22 @@ module.exports = {
       {
         test: /\.css$/,
         //loader: setting.isDev ? "style!css?sourceMap!postcss?sourceMap" : "style!css!postcss"
-        loader: setting.isDev ? "style-loader!css-loader?sourceMap" : "style-loader!css-loader"
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: () => [
+                //require('autoprefixer'),
+                //require('cssnano'),
+                require('precss'),
+                require('cssnext')
+
+              ]
+            }
+          }
+        ]
       }, {
         test: /\.scss$/,
         //loader: ExtractTextPlugin.extract(['css', 'postcss'])
@@ -70,6 +85,7 @@ module.exports = {
     Pconf.htmlWebPackPluginConf(setting.htmlPluginOptions),
     Pconf.providePluginConf(setting.providePluginOptions),
     Pconf.dllPluginConf(),
+    // new webpack.LoaderOptionsPlugin({ options: { postcss: [ autoprefixer ] } })
     // Pconf.extractTextPluginConf(),
   ],
   devServer: {
