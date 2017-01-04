@@ -2,7 +2,7 @@
  * @Author: lushijie
  * @Date:   2016-02-25 15:33:13
  * @Last Modified by:   lushijie
- * @Last Modified time: 2017-01-04 15:41:59
+ * @Last Modified time: 2017-01-04 17:55:39
  */
 
 var webpack = require('webpack');
@@ -32,18 +32,18 @@ module.exports = {
     loaders: [{
       test: /\.css$/,
       //loader: setting.isDev ? "style!css?sourceMap!postcss?sourceMap" : "style!css!postcss"
-      loader: setting.isDev ? "style!css?sourceMap" : "style!css"
+      loader: setting.isDev ? "style-loader!css-loader?sourceMap" : "style-loader!css-loader"
     }, {
       test: /\.scss$/,
       //loader: ExtractTextPlugin.extract(['css', 'postcss'])
-      loader: setting.isDev ? "style!css?sourceMap!postcss?sourceMap" : "style!css!postcss"
+      loader: setting.isDev ? "style-loader!css-loader?sourceMap!postcss-loader?sourceMap" : "style-loader!css-loader!postcss-loader"
       // loader: setting.isDev ? "style!css?sourceMap!postcss?sourceMap!sass?sourceMap" : "style!css!postcss!sass"
     }, {
       test: /\.(png|jpg|gif)$/,
       loader: 'url-loader?limit=8192&name=./img/[name].[ext]'
     },{
       test: /\.json$/,
-      loader: 'json'
+      loader: 'json-loader'
     },{
       test: /\.jsx?$/,
       loader: 'babel-loader',
