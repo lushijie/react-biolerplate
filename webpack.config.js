@@ -2,14 +2,14 @@
  * @Author: lushijie
  * @Date:   2016-02-25 15:33:13
  * @Last Modified by:   lushijie
- * @Last Modified time: 2017-01-04 15:14:22
+ * @Last Modified time: 2017-01-04 15:41:59
  */
 
 var webpack = require('webpack');
 var path = require('path');
 var setting = require('./webpack/webpack.config.setting.js');
 var Pconf = require('./webpack/webpack.plugin.conf.js');
-//var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   devtool: setting.isDev ? 'inline-source-map' : 'cheap-module-source-map',
@@ -96,8 +96,8 @@ module.exports = {
   },
   postcss: function () {
     return [
-      require('autoprefixer'),
-      require('cssnano'),
+      //require('autoprefixer'),
+      //require('cssnano'),
       require('precss'),
       require('cssnext')
     ];
