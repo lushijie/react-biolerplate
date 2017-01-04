@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2017-01-04 17:36:43
 * @Last Modified by:   lushijie
-* @Last Modified time: 2017-01-04 18:51:57
+* @Last Modified time: 2017-01-04 19:10:07
 */
 var webpack = require('webpack');
 var path = require('path');
@@ -50,7 +50,14 @@ module.exports = {
           {
             loader: 'postcss-loader',
             options: {
-              sourceMap: setting.isDev ? true : false
+              sourceMap: setting.isDev ? true : false,
+              plugins: function() {
+                return [
+                  require('cssnano'),
+                  require('precss'),
+                  require('cssnext')
+                ]
+              }
             }
           },
           {
