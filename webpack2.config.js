@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2017-01-04 17:36:43
 * @Last Modified by:   lushijie
-* @Last Modified time: 2017-01-04 18:47:36
+* @Last Modified time: 2017-01-04 18:51:57
 */
 var webpack = require('webpack');
 var path = require('path');
@@ -125,4 +125,5 @@ module.exports = {
       index: '/dist/index.html',
     }
   },
+  performance: { hints: false }
 }
