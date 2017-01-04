@@ -2,7 +2,7 @@
  * @Author: lushijie
  * @Date:   2016-02-25 15:33:13
  * @Last Modified by:   lushijie
- * @Last Modified time: 2017-01-04 19:03:23
+ * @Last Modified time: 2017-01-04 19:13:25
  */
 
 var webpack = require('webpack');
@@ -29,22 +29,27 @@ module.exports = {
       exclude: /node_modules/,
       loader: 'eslint-loader'
     }],
-    loaders: [{
+    loaders: [
+    {
       test: /\.css$/,
       //loader: setting.isDev ? "style!css?sourceMap!postcss?sourceMap" : "style!css!postcss"
       loader: setting.isDev ? "style!css?sourceMap" : "style!css"
-    }, {
+    },
+    {
       test: /\.scss$/,
       //loader: ExtractTextPlugin.extract(['css', 'postcss'])
       loader: setting.isDev ? "style!css?sourceMap!postcss?sourceMap" : "style!css!postcss"
       // loader: setting.isDev ? "style!css?sourceMap!postcss?sourceMap!sass?sourceMap" : "style!css!postcss!sass"
-    }, {
+    },
+    {
       test: /\.(png|jpg|gif)$/,
       loader: 'url-loader?limit=8192&name=./img/[name].[ext]'
-    },{
+    },
+    {
       test: /\.json$/,
       loader: 'json'
-    },{
+    },
+    {
       test: /\.jsx?$/,
       loader: 'babel-loader',
       exclude: [
@@ -63,7 +68,7 @@ module.exports = {
     Pconf.htmlWebPackPluginConf(setting.htmlPluginOptions),
     Pconf.providePluginConf(setting.providePluginOptions),
     Pconf.dllPluginConf(),
-    Pconf.extractTextPluginConf(),
+    //Pconf.extractTextPluginConf(),
   ],
   resolve: {
     root: [
