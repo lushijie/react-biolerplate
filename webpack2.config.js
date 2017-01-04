@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2017-01-04 17:36:43
 * @Last Modified by:   lushijie
-* @Last Modified time: 2017-01-04 18:34:43
+* @Last Modified time: 2017-01-04 18:45:56
 */
 var webpack = require('webpack');
 var path = require('path');
@@ -29,7 +29,8 @@ module.exports = {
           'css-loader',
           'postcss-loader'
         ]
-      }, {
+      },
+      {
         test: /\.scss$/,
         // loader: ExtractTextPlugin.extract({
         //     fallbackLoader: 'style-loader',
@@ -38,14 +39,22 @@ module.exports = {
         //         'postcss-loader'
         //     ]
         // })
-        loader: setting.isDev ? "style-loader!css-loader?sourceMap!postcss-loader?sourceMap!sass-loader?sourceMap" : "style-loader!css-loader!postcss-loader!sass-loader"
-      }, {
+        use:[
+          'style-loader',
+          'css-loader?sourceMap',
+          'postcss-loader?sourceMap',
+          'sass-loader?sourceMap'
+        ]
+      },
+      {
         test: /\.(png|jpg|gif)$/,
         loader: 'url-loader?limit=8192&name=./img/[name].[ext]'
-      },{
+      },
+      {
         test: /\.json$/,
         loader: 'json-loader'
-      },{
+      },
+      {
         test: /\.jsx?$/,
         loader: 'babel-loader',
         exclude: [
@@ -79,16 +88,15 @@ module.exports = {
     Pconf.providePluginConf(setting.providePluginOptions),
     Pconf.dllPluginConf(),
     //Pconf.extractTextPluginConf(),
-    new webpack.LoaderOptionsPlugin({
-      options: {
-        postcss: [
-          require('cssnano'),
-          require('precss'),
-          require('cssnext')
-        ]
-
-      }
-    }),
+    // new webpack.LoaderOptionsPlugin({
+    //   options: {
+    //     postcss: [
+    //       require('cssnano'),
+    //       require('precss'),
+    //       require('cssnext')
+    //     ]
+    //   }
+    // }),
   ],
   devServer: {
     stats: {
