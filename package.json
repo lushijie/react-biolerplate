@@ -8,8 +8,10 @@
     "json": "json-server --config=./json-server/setting.json ./json-server/db.json --middlewares=./json-server/middleware1.js",
     "predev": " [ -f dist/vendor.bundle.js ] || webpack --config=./webpack/webpack.dll.conf.js --progress --profile",
     "dev": "export NODE_ENV=development && webpack-dev-server --config=./webpack.config.js",
+    "predebug": "[ -f dist/vendor.bundle.js ] || webpack --config=./webpack/webpack.dll.conf.js --progress --profile",
+    "debug": "export NODE_ENV=development && webpack --config=./webpack.config.js",
     "prerelease": "webpack --config=./webpack/webpack.dll.conf.js --progress --profile",
-    "release": "export NODE_ENV=development && webpack --config=./webpack.config.js"
+    "release": "export NODE_ENV=production && webpack --config=./webpack.config.js"
   },
   "author": "lushijie1218@126.com",
   "license": "ISC",
@@ -18,6 +20,8 @@
     "babel-polyfill": "^6.20.0",
     "babel-runtime": "^6.11.6",
     "classnames": "^2.2.5",
+    "cssnext": "~1.8.4",
+    "extract-text-webpack-plugin": "~1.0.1",
     "moment": "^2.15.1",
     "react": "~15.1.0",
     "react-dom": "~15.1.0",
