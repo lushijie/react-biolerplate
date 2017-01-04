@@ -2,14 +2,14 @@
  * @Author: lushijie
  * @Date:   2016-02-25 15:33:13
  * @Last Modified by:   lushijie
- * @Last Modified time: 2017-01-04 14:52:00
+ * @Last Modified time: 2017-01-04 15:14:22
  */
 
 var webpack = require('webpack');
 var path = require('path');
 var setting = require('./webpack/webpack.config.setting.js');
 var Pconf = require('./webpack/webpack.plugin.conf.js');
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
+//var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   devtool: setting.isDev ? 'inline-source-map' : 'cheap-module-source-map',
@@ -35,9 +35,9 @@ module.exports = {
       loader: setting.isDev ? "style!css?sourceMap" : "style!css"
     }, {
       test: /\.scss$/,
-      // loader: ExtractTextPlugin.extract(['css', 'postcss'])
-      // loader: setting.isDev ? "style!css?sourceMap!postcss?sourceMap" : "style!css!postcss"
-      loader: setting.isDev ? "style!css?sourceMap!postcss?sourceMap!sass?sourceMap" : "style!css!postcss!sass"
+      //loader: ExtractTextPlugin.extract(['css', 'postcss'])
+      loader: setting.isDev ? "style!css?sourceMap!postcss?sourceMap" : "style!css!postcss"
+      // loader: setting.isDev ? "style!css?sourceMap!postcss?sourceMap!sass?sourceMap" : "style!css!postcss!sass"
     }, {
       test: /\.(png|jpg|gif)$/,
       loader: 'url-loader?limit=8192&name=./img/[name].[ext]'
@@ -94,7 +94,12 @@ module.exports = {
       index: '/dist/index.html',
     }
   },
-  // postcss: function () {
-  //   return [require('autoprefixer'), require('precss'), require('cssnext')];
-  // }
+  postcss: function () {
+    return [
+      require('autoprefixer'),
+      require('cssnano'),
+      require('precss'),
+      require('cssnext')
+    ];
+  }
 };
