@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2017-01-04 17:36:43
 * @Last Modified by:   lushijie
-* @Last Modified time: 2017-01-04 18:45:56
+* @Last Modified time: 2017-01-04 18:47:36
 */
 var webpack = require('webpack');
 var path = require('path');
@@ -41,9 +41,24 @@ module.exports = {
         // })
         use:[
           'style-loader',
-          'css-loader?sourceMap',
-          'postcss-loader?sourceMap',
-          'sass-loader?sourceMap'
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: setting.isDev ? true : false
+            }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: setting.isDev ? true : false
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: setting.isDev ? true : false
+            }
+          }
         ]
       },
       {
