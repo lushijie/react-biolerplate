@@ -2,7 +2,7 @@
  * @Author: lushijie
  * @Date:   2016-03-04 11:28:41
  * @Last Modified by:   lushijie
- * @Last Modified time: 2016-11-14 11:52:38
+ * @Last Modified time: 2017-01-04 18:27:55
  */
 var webpack = require('webpack');
 var path = require('path');
@@ -88,9 +88,9 @@ module.exports = {
   //css 以文件类型引入而不再内嵌到HTML中
   'extractTextPluginConf': function(fileName, options) {
     fileName = fileName || "[name].bundle.css";
-    options = objectAssign({}, options);
+    //options = objectAssign({}, options);
     return (
-      new ExtractTextPlugin(fileName, options)
+      new ExtractTextPlugin(fileName)
     )
   },
 

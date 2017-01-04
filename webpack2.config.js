@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2017-01-04 17:36:43
 * @Last Modified by:   lushijie
-* @Last Modified time: 2017-01-04 18:17:47
+* @Last Modified time: 2017-01-04 18:34:43
 */
 var webpack = require('webpack');
 var path = require('path');
@@ -24,27 +24,20 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        //loader: setting.isDev ? "style!css?sourceMap!postcss?sourceMap" : "style!css!postcss"
         use: [
           'style-loader',
           'css-loader',
-          {
-            loader: 'postcss-loader',
-            options: {
-              plugins: () => [
-                //require('autoprefixer'),
-                //require('cssnano'),
-                require('precss'),
-                require('cssnext')
-
-              ]
-            }
-          }
+          'postcss-loader'
         ]
       }, {
         test: /\.scss$/,
-        //loader: ExtractTextPlugin.extract(['css', 'postcss'])
-        //loader: setting.isDev ? "style!css?sourceMap!postcss?sourceMap" : "style!css!postcss"
+        // loader: ExtractTextPlugin.extract({
+        //     fallbackLoader: 'style-loader',
+        //     loader: [
+        //         'css-loader',
+        //         'postcss-loader'
+        //     ]
+        // })
         loader: setting.isDev ? "style-loader!css-loader?sourceMap!postcss-loader?sourceMap!sass-loader?sourceMap" : "style-loader!css-loader!postcss-loader!sass-loader"
       }, {
         test: /\.(png|jpg|gif)$/,
@@ -85,8 +78,17 @@ module.exports = {
     Pconf.htmlWebPackPluginConf(setting.htmlPluginOptions),
     Pconf.providePluginConf(setting.providePluginOptions),
     Pconf.dllPluginConf(),
-    // new webpack.LoaderOptionsPlugin({ options: { postcss: [ autoprefixer ] } })
-    // Pconf.extractTextPluginConf(),
+    //Pconf.extractTextPluginConf(),
+    new webpack.LoaderOptionsPlugin({
+      options: {
+        postcss: [
+          require('cssnano'),
+          require('precss'),
+          require('cssnext')
+        ]
+
+      }
+    }),
   ],
   devServer: {
     stats: {
@@ -94,8 +96,6 @@ module.exports = {
       colors: true
     },
     contentBase: '.',
-    //hot: true,
-    //inline: true,
     port: 5050,
     host: '0.0.0.0',
     historyApiFallback: {
