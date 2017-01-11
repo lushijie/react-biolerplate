@@ -2,7 +2,7 @@
  * @Author: lushijie
  * @Date:   2016-02-25 15:33:13
  * @Last Modified by:   lushijie
- * @Last Modified time: 2017-01-04 19:13:25
+ * @Last Modified time: 2017-01-11 14:56:27
  */
 
 var webpack = require('webpack');
@@ -12,7 +12,7 @@ var Pconf = require('./webpack/webpack.plugin.conf.js');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
-  devtool: setting.isDev ? 'inline-source-map' : 'cheap-module-source-map',
+  devtool: setting.IS_DEV ? 'inline-source-map' : 'cheap-module-source-map',
   context: __dirname,
   entry: {
     index: './src/app/index.jsx',
@@ -32,14 +32,14 @@ module.exports = {
     loaders: [
     {
       test: /\.css$/,
-      //loader: setting.isDev ? "style!css?sourceMap!postcss?sourceMap" : "style!css!postcss"
-      loader: setting.isDev ? "style!css?sourceMap" : "style!css"
+      //loader: setting.IS_DEV ? "style!css?sourceMap!postcss?sourceMap" : "style!css!postcss"
+      loader: setting.IS_DEV ? "style!css?sourceMap" : "style!css"
     },
     {
       test: /\.scss$/,
       //loader: ExtractTextPlugin.extract(['css', 'postcss'])
-      loader: setting.isDev ? "style!css?sourceMap!postcss?sourceMap" : "style!css!postcss"
-      // loader: setting.isDev ? "style!css?sourceMap!postcss?sourceMap!sass?sourceMap" : "style!css!postcss!sass"
+      loader: setting.IS_DEV ? "style!css?sourceMap!postcss?sourceMap" : "style!css!postcss"
+      // loader: setting.IS_DEV ? "style!css?sourceMap!postcss?sourceMap!sass?sourceMap" : "style!css!postcss!sass"
     },
     {
       test: /\.(png|jpg|gif)$/,
@@ -63,7 +63,7 @@ module.exports = {
     }]
   },
   plugins: [
-    setting.isDev ? Pconf.noopPluginConf() : Pconf.uglifyJsPluginConf(),
+    setting.IS_DEV ? Pconf.noopPluginConf() : Pconf.uglifyJsPluginConf(),
     Pconf.commonsChunkPluginConf(),
     Pconf.htmlWebPackPluginConf(setting.htmlPluginOptions),
     Pconf.providePluginConf(setting.providePluginOptions),

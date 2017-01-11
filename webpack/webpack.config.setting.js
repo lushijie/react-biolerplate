@@ -2,12 +2,12 @@
  * @Author: lushijie
  * @Date:   2016-11-11 17:20:12
  * @Last Modified by:   lushijie
- * @Last Modified time: 2016-12-16 09:52:06
+ * @Last Modified time: 2017-01-11 14:56:47
  */
 var path = require('path');
 var moment = require('moment');
 
-var isDev = JSON.parse(JSON.stringify(process.env.NODE_ENV || 'development')) == 'development';
+var IS_DEV = JSON.parse(JSON.stringify(process.env.NODE_ENV || 'development')) == 'development';
 var htmlPluginOptions = {
   filename: 'index.html',
   title: 'route',
@@ -27,7 +27,7 @@ var providePluginOptions = {
 }
 
 module.exports = {
-  isDev: isDev,
+  IS_DEV: IS_DEV,
   htmlPluginOptions: htmlPluginOptions,
   providePluginOptions
 };
