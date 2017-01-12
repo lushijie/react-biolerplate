@@ -2,7 +2,7 @@
  * @Author: lushijie
  * @Date:   2016-02-25 15:33:13
  * @Last Modified by:   lushijie
- * @Last Modified time: 2017-01-11 14:56:27
+ * @Last Modified time: 2017-01-12 09:51:48
  */
 
 var webpack = require('webpack');
@@ -69,6 +69,9 @@ module.exports = {
     Pconf.providePluginConf(setting.providePluginOptions),
     Pconf.dllPluginConf(),
     //Pconf.extractTextPluginConf(),
+    Pconf.occurrenceOrderPluginConf(),
+    new webpack.optimize.LimitChunkCountPlugin({maxChunks: 15}),
+    new webpack.optimize.MinChunkSizePlugin({minChunkSize: 10000})
   ],
   resolve: {
     root: [
