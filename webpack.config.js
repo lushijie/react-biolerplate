@@ -2,7 +2,7 @@
  * @Author: lushijie
  * @Date:   2016-02-25 15:33:13
  * @Last Modified by:   lushijie
- * @Last Modified time: 2017-01-12 09:51:48
+ * @Last Modified time: 2017-01-16 09:49:32
  */
 
 var webpack = require('webpack');
@@ -15,7 +15,7 @@ module.exports = {
   devtool: setting.IS_DEV ? 'inline-source-map' : 'cheap-module-source-map',
   context: __dirname,
   entry: {
-    index: './src/app/index.jsx',
+    index: './src/app/app.jsx',
   },
   output: {
     publicPath: '/dist/',
