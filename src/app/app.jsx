@@ -7,7 +7,7 @@ import {Link, IndexLink, browserHistory} from 'react-router'
 let rootRoute = [
   {
     path: '/',
-    component: require('./layout').default,
+    component: require('./').default,
     indexRoute: {
       component: require('./home').default
     },
@@ -15,7 +15,7 @@ let rootRoute = [
   },
   {
     path: '*',
-    component: require('./page404/').default,
+    component: require('./page404').default,
   }
 ]
 

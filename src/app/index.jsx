@@ -3,7 +3,7 @@ import {withRouter} from 'react-router'
 import {render} from 'react-dom'
 import {Link, IndexLink} from 'react-router'
 import {BaseComponent, Menu, Alert} from 'components'
-import './index.scss'
+import './index.css'
 
 // export default class extends BaseComponent {
 export default withRouter(class extends BaseComponent {

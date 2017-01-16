@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2016-12-28 18:10:44
 * @Last Modified by:   lushijie
-* @Last Modified time: 2017-01-16 10:02:03
+* @Last Modified time: 2017-01-16 10:18:28
 */
 // import Inbox from 'app/inbox'
 // import Outbox from 'app/outbox'
@@ -15,11 +15,11 @@ export default [
 
     //第一种indexRoute在inbox页面中 {this.props.children || <InboxHome />}
     //第二种indexRoute方式路由中配置indexRoute
-    // indexRoute: {
-        //请参照下方Inbox的定义方式
-        //一、非动态加载 component
-        //二、动态加载 getComponent
-    // },
+    indexRoute: {
+      //一、非动态加载 component
+      component: require('./inbox/home').default
+      //二、动态加载 getComponent
+    },
 
     //一、非动态加载
     component: require('./inbox').default,
