@@ -31,9 +31,7 @@ export default withRouter(class extends BaseComponent {
   // initialState
   state = {
     //_notification: null
-
   }
-
 
   componentWillMount() {
     //只绑定onTestListener1Success事件
@@ -143,6 +141,7 @@ export default withRouter(class extends BaseComponent {
   handleTestRouterJump() {
     this.props.router.pushState({arg:123},'/inbox');
   }
+
   handleShowAlert() {
     Alert.info('Test message 2');
   }
@@ -156,16 +155,12 @@ export default withRouter(class extends BaseComponent {
         <button onClick={() => this.handleTestRouterJump()}>路由跳转测试</button>
         <button onClick={() => this.handleShowRodal()}>Rodal测试</button>
         <button onClick={() => this.handleShowAlert()}>Alert测试</button>
-
         <Notification ref={(c) => this._notificationRef = c}/>
-
         <Rodal visible={this.state.rodalVisible}
             onClose={() => this.handleHideRodal()}
         >
           <div>Content</div>
         </Rodal>
-
-
       </div>
     )
   }
