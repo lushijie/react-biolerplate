@@ -11,7 +11,7 @@
     "predebug": "[ -f dist/vendor.bundle.js ] || webpack --config=./webpack/webpack.dll.conf.js --progress --profile",
     "debug": "export NODE_ENV=development && webpack --config=./webpack2.config.js",
     "prerelease": "webpack --config=./webpack/webpack.dll.conf.js --progress --profile",
-    "release": "export NODE_ENV=production && webpack --config=./webpack.config.js"
+    "release": "export NODE_ENV=production && webpack --config=./webpack2.config.js"
   },
   "author": "lushijie1218@126.com",
   "license": "ISC",
@@ -32,7 +32,7 @@
     "reflux": "^5.0.4",
     "reqwest": "^2.0.5",
     "rodal": "^1.3.5",
-    "webpack": "~2.2.0-rc.3"
+    "webpack": "~2.2.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.1",
