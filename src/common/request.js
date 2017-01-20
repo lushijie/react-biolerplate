@@ -2,11 +2,10 @@
 * @Author: lushijie
 * @Date:   2016-12-14 10:38:02
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-12-14 15:58:18
+* @Last Modified time: 2017-01-20 15:11:42
 */
-import reqwest from 'reqwest';
-import path from 'path';
-import {API_BASE_URL} from 'base/env';
+import reqwest from 'reqwest'
+import {API_BASE_URL} from 'base/env'
 
 function trimObject(obj) {
   Object.keys(obj).forEach(function(key){
@@ -20,7 +19,7 @@ function trimObject(obj) {
 }
 
 function request(obj) {
-  var params = {
+  let params = {
     data: {},
     method: 'get',
     type: 'json',
@@ -29,13 +28,13 @@ function request(obj) {
   };
 
   if( typeof(obj) === 'string' ) {
-    if(!/^https?/.test(obj) && obj.indexOf('/') != 0) {
+    if(!/^https?/.test(obj) && obj.indexOf('/') !== 0) {
       throw '请检查提供的 url 格式';
     }
     params.url = /^https?/.test(obj) ? obj : `${API_BASE_URL}${obj}`;
   } else if(typeof(obj) === 'object') {
     Object.assign(params, obj);
-    if(!/^https?/.test(params.url) && params.url.indexOf('/') != 0) {
+    if(!/^https?/.test(params.url) && params.url.indexOf('/') !== 0) {
       throw '请检查提供的 url 格式';
     }
     params.url = /^https?/.test(params.url) ? params.url : `${API_BASE_URL}${params.url}`;
@@ -51,12 +50,12 @@ function request(obj) {
   return new Promise((resolve, reject) => {
     reqwest({url: params.url, ...params}).then(
      resp => {
-        if( resp.errno == 0 ) {
-          return resolve(resp);
-        }else {
-          reject(resp);
-        }
-      }
+       if( resp.errno === 0 ) {
+         return resolve(resp);
+       }else {
+         reject(resp);
+       }
+     }
     );
   });
 }

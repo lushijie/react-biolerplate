@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React from 'react'
 import {BaseComponent} from 'components'
 import {withRouter} from 'react-router'
 import './index.css'

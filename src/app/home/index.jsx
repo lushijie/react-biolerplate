@@ -1,5 +1,4 @@
-import React, {Component} from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react'
 import {withRouter} from 'react-router'
 import Notification from 'react-notification-system'
 import {BaseComponent, Alert, Rodal} from 'components'
@@ -98,22 +97,22 @@ export default withRouter(class extends BaseComponent {
     this._notification = this._notificationRef;
   }
 
-  componentWillReceiveProps(nextProps) {
-    //todo
-  }
+  // componentWillReceiveProps(nextProps) {
+  //   //todo
+  // }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    //todo
-    return true;
-  }
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   //todo
+  //   return true;
+  // }
 
-  componentWillUpdate(nextProps, nextState) {
-    //todo
-  }
+  // componentWillUpdate(nextProps, nextState) {
+  //   //todo
+  // }
 
-  componentDidUpdate(prevProps, prevState) {
-    //todo
-  }
+  // componentDidUpdate(prevProps, prevState) {
+  //   //todo
+  // }
 
   componentWillUnmount() {
     //todo
@@ -126,7 +125,7 @@ export default withRouter(class extends BaseComponent {
       message: 'Notification message',
       level: 'success',
       position: 'tc',
-      autoDismiss: 500,
+      autoDismiss: 500
     });
   }
 

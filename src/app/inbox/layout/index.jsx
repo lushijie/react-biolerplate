@@ -1,7 +1,6 @@
-import React, {Component} from 'react'
+import React from 'react'
 import {withRouter} from 'react-router'
 import {BaseComponent} from 'components'
-import InboxHome from 'app/inbox/home'
 import './index.css'
 
 export default withRouter(class extends BaseComponent {

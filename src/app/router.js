@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2016-12-28 18:10:44
 * @Last Modified by:   lushijie
-* @Last Modified time: 2017-01-16 10:27:40
+* @Last Modified time: 2017-01-20 15:23:10
 */
 // import Inbox from 'app/inbox'
 // import Outbox from 'app/outbox'
@@ -30,15 +30,15 @@ export default [
       component: require('./inbox/home').default
       //二、动态加载 getComponent
     },
-
     childRoutes: require('./inbox/router').default,
 
-    onEnter: function(nextState, replaceState){
+    onEnter: function(){
+      // arg < nextState, replaceState >
       console.log('Inbox onEnter');
-    },
+    }
   },
   {
     path: 'outbox',
-    component: require('./outbox').default,
+    component: require('./outbox').default
   }
 ]

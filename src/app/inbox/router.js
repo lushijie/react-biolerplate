@@ -2,14 +2,14 @@
 * @Author: lushijie
 * @Date:   2016-09-28 17:36:51
 * @Last Modified by:   lushijie
-* @Last Modified time: 2017-01-16 10:20:09
+* @Last Modified time: 2017-01-20 15:19:15
 */
 export default [
   {
     //绝对路径：/messages/id为绝对路径 最终url是 ip:5050/messages/id
     path: '/messages/:id',
-    component: require('./message').default,
-    onEnter: function (nextState, replaceState) {
+    component: require('app/inbox/message').default,
+    onEnter: function () {
       console.log('Come from Message Redirect');
     }
   },
