@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2017-01-04 17:36:43
 * @Last Modified by:   lushijie
-* @Last Modified time: 2017-01-20 17:03:05
+* @Last Modified time: 2017-01-20 17:11:29
 */
 var webpack = require('webpack')
 var path = require('path')
@@ -47,9 +47,9 @@ module.exports = {
               sourceMap: Settings.ISDEV ? true : false,
               plugins: function() {
                 return [
-                  // require('cssnano'),
-                  // require('precss'),
-                  // require('cssnext')
+                  require('cssnano'),
+                  require('precss'),
+                  require('cssnext')
                 ]
               }
             }
@@ -98,8 +98,7 @@ module.exports = {
     Pconf.commonsChunkPluginConf(),
     Pconf.htmlWebPackPluginConf(Settings.htmlPluginOptions),
     Pconf.providePluginConf(Settings.providePluginOptions),
-    Pconf.dllPluginConf(),
-    //Pconf.bundleAnalyzerPluginConf()
+    Pconf.dllReferencePluginConf()
   ],
   devServer: {
     stats: {

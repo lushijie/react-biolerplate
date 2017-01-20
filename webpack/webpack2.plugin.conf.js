@@ -2,7 +2,7 @@
  * @Author: lushijie
  * @Date:   2016-03-04 11:28:41
  * @Last Modified by:   lushijie
- * @Last Modified time: 2017-01-20 16:43:13
+ * @Last Modified time: 2017-01-20 17:21:33
  */
 var webpack = require('webpack')
 var path = require('path')
@@ -12,45 +12,29 @@ var CleanPlugin = require('clean-webpack-plugin')
 var ExtractTextPlugin = require("extract-text-webpack-plugin")
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var TransferWebpackPlugin = require('transfer-webpack-plugin')
-var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 module.exports = {
 
   //为打包之后的各个文件添加说明头部
   'bannerPluginConf': function(options) {
-    let optionsDefault = {
+    options = objectAssign({
       banner: 'This file last modified is at ' + moment().format('YYYY-MM-DD h:mm:ss'),
       raw: true,
       entryOnly: true
-    }
-    options = objectAssign(optionsDefault, options);
+    }, options);
     return (
       new webpack.BannerPlugin(bannerText)
     )
   },
 
-  'bundleAnalyzerPluginConf': function()  {
-    return new BundleAnalyzerPlugin({
-      analyzerMode: 'server',
-      analyzerPort: 8888,
-      reportFilename: 'report.html',
-      openAnalyzer: true,
-      generateStatsFile: false,
-      statsFilename: 'stats.json',
-      statsOptions: null,
-      logLevel: 'info'
-    })
-  },
-
   //下次打包清除上一次打包文件
   'cleanPluginConf': function(paths, options) {
-    var optionsDefault = {
+    paths = paths || ['dist'];
+    options = objectAssign({
       root: __dirname,
       verbose: true,
       dry: false
-    };
-    paths = paths || ['dist'];
-    options = objectAssign(optionsDefault, options);
+    }, options);
     return (
       new CleanPlugin(paths, options)
     )
@@ -58,16 +42,15 @@ module.exports = {
 
   //提取common文件模块
   'commonsChunkPluginConf': function(options) {
-    var optionsDefault = {
+    options = objectAssign({
       //1.如果不存在 chunk 为 common 的模块，则从所有模块提取公共到 common 这一公共模块;
       //2.如果存在 chunk 的 name 为 common 的模块，
       //则以common 为基础，提取其他模块和common相同的部分并合并到 common 模块
       name: "common",
       filename: "common.bundle.js",
-      minChunks: 2, //最少两个模块中存在才进行抽离common
+      minChunks: 2 //最少两个模块中存在才进行抽离common
       // chunks:['home','admin']//指定只从哪些chunks中提取common
-    };
-    options = objectAssign(optionsDefault, options);
+    }, options);
     return (
       new webpack.optimize.CommonsChunkPlugin(options)
     )
@@ -93,8 +76,21 @@ module.exports = {
     )
   },
 
-  //常用并且不常变化的打包成dll引入
   'dllPluginConf': function(options) {
+    options = objectAssign({
+      path: path.join(__dirname, 'manifest.json'),
+      name: '[name]_[chunkhash]',
+      context: __dirname,
+    }, options);
+    return new webpack.DllPlugin({
+      path: path.join(__dirname, 'manifest.json'),
+      name: '[name]_[chunkhash]',
+      context: __dirname,
+    })
+  },
+
+  //常用并且不常变化的打包成dll引入
+  'dllReferencePluginConf': function(options) {
     options = objectAssign({
       context: __dirname,
       manifest: require('./manifest.json'),
@@ -166,14 +162,13 @@ module.exports = {
 
   //js压缩组件
   'uglifyJsPluginConf': function(options) {
-    var optionsDefault = {
+    options = objectAssign({
       //sourceMap: true,
       compress: {
         warnings: false
       },
       except: ['$super', '$', 'exports', 'require']
-    };
-    options = objectAssign(optionsDefault, options);
+    }, options);
     return (
       new webpack.optimize.UglifyJsPlugin(options)
     )

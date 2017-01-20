@@ -1,9 +1,18 @@
 {
   "errors": [],
-  "warnings": [],
+  "warnings": [
+    "./src/app/app.jsx\n\n/Users/lushijie/github/react-reflux/src/app/app.jsx\n  1:8  warning  'React' is defined but never used   no-unused-vars\n  3:9  warning  'Router' is defined but never used  no-unused-vars\n\n✖ 2 problems (0 errors, 2 warnings)\n",
+    "./src/app/layout/index.jsx\n\n/Users/lushijie/github/react-reflux/src/app/layout/index.jsx\n  1:8   warning  'React' is defined but never used  no-unused-vars\n  3:24  warning  'Menu' is defined but never used   no-unused-vars\n  3:30  warning  'Alert' is defined but never used  no-unused-vars\n\n✖ 3 problems (0 errors, 3 warnings)\n\n @ ./src/app/app.jsx 18:13-32",
+    "./src/app/home/index.jsx\n\n/Users/lushijie/github/react-reflux/src/app/home/index.jsx\n  1:8   warning  'React' is defined but never used         no-unused-vars\n  3:8   warning  'Notification' is defined but never used  no-unused-vars\n  4:31  warning  'Rodal' is defined but never used         no-unused-vars\n\n✖ 3 problems (0 errors, 3 warnings)\n\n @ ./src/app/app.jsx 20:15-32",
+    "./src/app/page404/index.jsx\n\n/Users/lushijie/github/react-reflux/src/app/page404/index.jsx\n  1:8  warning  'React' is defined but never used  no-unused-vars\n\n✖ 1 problem (0 errors, 1 warning)\n\n @ ./src/app/app.jsx 26:13-33",
+    "./src/app/inbox/layout/index.jsx\n\n/Users/lushijie/github/react-reflux/src/app/inbox/layout/index.jsx\n  1:8  warning  'React' is defined but never used  no-unused-vars\n\n✖ 1 problem (0 errors, 1 warning)\n\n @ ./src/app/router.js 21:13-38\n @ ./src/app/app.jsx",
+    "./src/app/inbox/home/index.jsx\n\n/Users/lushijie/github/react-reflux/src/app/inbox/home/index.jsx\n  1:8  warning  'React' is defined but never used  no-unused-vars\n\n✖ 1 problem (0 errors, 1 warning)\n\n @ ./src/app/router.js 34:15-38\n @ ./src/app/app.jsx",
+    "./src/app/inbox/message/index.jsx\n\n/Users/lushijie/github/react-reflux/src/app/inbox/message/index.jsx\n  1:8  warning  'React' is defined but never used  no-unused-vars\n\n✖ 1 problem (0 errors, 1 warning)\n\n @ ./src/app/inbox/router.js 15:13-41\n @ ./src/app/router.js\n @ ./src/app/app.jsx",
+    "./src/components/Menu/index.jsx\n\n/Users/lushijie/github/react-reflux/src/components/Menu/index.jsx\n  1:8   warning  'React' is defined but never used      no-unused-vars\n  2:9   warning  'Link' is defined but never used       no-unused-vars\n  2:15  warning  'IndexLink' is defined but never used  no-unused-vars\n\n✖ 3 problems (0 errors, 3 warnings)\n\n @ ./src/components/index.js 12:13-30\n @ ./src/app/layout/index.jsx\n @ ./src/app/app.jsx"
+  ],
   "version": "2.2.0",
   "hash": "e57a1bdf84ca17d2c7bf",
-  "time": 6153,
+  "time": 4638,
   "publicPath": "/dist/",
   "assetsByChunkName": {
     "index": "index.bundle.js",
@@ -87,12 +96,12 @@
             0
           ],
           "assets": [],
-          "issuer": "delegated 12 from dll-reference vendor_c84c854fb7f3f8db7c11",
-          "issuerId": 1,
-          "issuerName": "delegated ../node_modules/react/react.js from dll-reference vendor_c84c854fb7f3f8db7c11",
+          "issuer": "delegated 243 from dll-reference vendor_c84c854fb7f3f8db7c11",
+          "issuerId": 26,
+          "issuerName": "delegated ../node_modules/react-dom/index.js from dll-reference vendor_c84c854fb7f3f8db7c11",
           "profile": {
             "factory": 0,
-            "building": 1
+            "building": 0
           },
           "failed": false,
           "errors": 0,
@@ -434,8 +443,9 @@
           "issuerId": 185,
           "issuerName": "./src/app/app.jsx",
           "profile": {
-            "factory": 98,
-            "building": 0
+            "factory": 86,
+            "building": 0,
+            "dependencies": 1
           },
           "failed": false,
           "errors": 0,
@@ -636,8 +646,8 @@
           "issuerId": 80,
           "issuerName": "./src/app/layout/index.jsx",
           "profile": {
-            "factory": 188,
-            "building": 1020
+            "factory": 68,
+            "building": 635
           },
           "failed": false,
           "errors": 0,
@@ -785,8 +795,8 @@
           "issuerId": 80,
           "issuerName": "./src/app/layout/index.jsx",
           "profile": {
-            "factory": 181,
-            "building": 1014
+            "factory": 65,
+            "building": 633
           },
           "failed": false,
           "errors": 0,
@@ -934,8 +944,8 @@
           "issuerId": 80,
           "issuerName": "./src/app/layout/index.jsx",
           "profile": {
-            "factory": 183,
-            "building": 1014
+            "factory": 66,
+            "building": 633
           },
           "failed": false,
           "errors": 0,
@@ -1083,9 +1093,9 @@
           "issuerId": 80,
           "issuerName": "./src/app/layout/index.jsx",
           "profile": {
-            "factory": 187,
-            "building": 1018,
-            "dependencies": 34
+            "factory": 68,
+            "building": 634,
+            "dependencies": 15
           },
           "failed": false,
           "errors": 0,
@@ -1233,8 +1243,8 @@
           "issuerId": 80,
           "issuerName": "./src/app/layout/index.jsx",
           "profile": {
-            "factory": 186,
-            "building": 1014
+            "factory": 67,
+            "building": 633
           },
           "failed": false,
           "errors": 0,
@@ -1382,9 +1392,9 @@
           "issuerId": 64,
           "issuerName": "./~/core-js/library/modules/web.dom.iterable.js",
           "profile": {
-            "factory": 76,
-            "building": 356,
-            "dependencies": 1
+            "factory": 54,
+            "building": 273,
+            "dependencies": 0
           },
           "failed": false,
           "errors": 0,
@@ -1532,9 +1542,9 @@
           "issuerId": 109,
           "issuerName": "./~/core-js/library/fn/object/get-prototype-of.js",
           "profile": {
-            "factory": 68,
+            "factory": 72,
             "building": 0,
-            "dependencies": 1
+            "dependencies": 0
           },
           "failed": false,
           "errors": 0,
@@ -1672,8 +1682,8 @@
           "issuerId": 163,
           "issuerName": "./~/reflux/src/connect.js",
           "profile": {
-            "factory": 37,
-            "building": 59
+            "factory": 28,
+            "building": 40
           },
           "failed": false,
           "errors": 0,
@@ -1794,8 +1804,8 @@
           "issuerId": 149,
           "issuerName": "./~/css-loader?{\"sourceMap\":false}!./~/postcss-loader?{\"sourceMap\":false}!./~/sass-loader?{\"sourceMap\":false}!./src/app/page404/index.css",
           "profile": {
-            "factory": 144,
-            "building": 82
+            "factory": 58,
+            "building": 93
           },
           "failed": false,
           "errors": 0,
@@ -1907,8 +1917,8 @@
           "issuerId": 172,
           "issuerName": "./src/app/layout/index.css",
           "profile": {
-            "factory": 836,
-            "building": 102
+            "factory": 510,
+            "building": 32
           },
           "failed": false,
           "errors": 0,
@@ -2020,7 +2030,7 @@
           "issuerId": 64,
           "issuerName": "./~/core-js/library/modules/web.dom.iterable.js",
           "profile": {
-            "factory": 73,
+            "factory": 52,
             "building": 0,
             "dependencies": 0
           },
@@ -2133,7 +2143,7 @@
           "issuerId": 185,
           "issuerName": "./src/app/app.jsx",
           "profile": {
-            "factory": 402,
+            "factory": 176,
             "building": 0,
             "dependencies": 0
           },
@@ -2237,9 +2247,9 @@
           "issuerId": 163,
           "issuerName": "./~/reflux/src/connect.js",
           "profile": {
-            "factory": 36,
-            "building": 56,
-            "dependencies": 23
+            "factory": 27,
+            "building": 46,
+            "dependencies": 4
           },
           "failed": false,
           "errors": 0,
@@ -2329,11 +2339,11 @@
             0
           ],
           "assets": [],
-          "issuer": "/Users/lushijie/github/react-reflux/node_modules/core-js/library/modules/es6.object.set-prototype-of.js",
-          "issuerId": 139,
-          "issuerName": "./~/core-js/library/modules/es6.object.set-prototype-of.js",
+          "issuer": "/Users/lushijie/github/react-reflux/node_modules/core-js/library/modules/es6.object.create.js",
+          "issuerId": 136,
+          "issuerName": "./~/core-js/library/modules/es6.object.create.js",
           "profile": {
-            "factory": 61,
+            "factory": 57,
             "building": 0,
             "dependencies": 0
           },
@@ -2428,7 +2438,7 @@
           "issuerId": 141,
           "issuerName": "./~/core-js/library/modules/es6.symbol.js",
           "profile": {
-            "factory": 161,
+            "factory": 107,
             "building": 0,
             "dependencies": 0
           },
@@ -2523,7 +2533,7 @@
           "issuerId": 141,
           "issuerName": "./~/core-js/library/modules/es6.symbol.js",
           "profile": {
-            "factory": 159,
+            "factory": 105,
             "building": 0,
             "dependencies": 0
           },
@@ -2618,8 +2628,8 @@
           "issuerId": 80,
           "issuerName": "./src/app/layout/index.jsx",
           "profile": {
-            "factory": 97,
-            "building": 1342
+            "factory": 51,
+            "building": 706
           },
           "failed": false,
           "errors": 0,
@@ -2704,9 +2714,9 @@
           "issuerId": 141,
           "issuerName": "./~/core-js/library/modules/es6.symbol.js",
           "profile": {
-            "factory": 152,
+            "factory": 99,
             "building": 0,
-            "dependencies": 1
+            "dependencies": 0
           },
           "failed": false,
           "errors": 0,
@@ -2790,8 +2800,8 @@
           "issuerId": 64,
           "issuerName": "./~/core-js/library/modules/web.dom.iterable.js",
           "profile": {
-            "factory": 74,
-            "building": 0,
+            "factory": 52,
+            "building": 1,
             "dependencies": 0
           },
           "failed": false,
@@ -2876,8 +2886,8 @@
           "issuerId": 6,
           "issuerName": "./~/babel-runtime/helpers/possibleConstructorReturn.js",
           "profile": {
-            "factory": 38,
-            "building": 211
+            "factory": 17,
+            "building": 88
           },
           "failed": false,
           "errors": 0,
@@ -2953,8 +2963,8 @@
           "issuerId": 64,
           "issuerName": "./~/core-js/library/modules/web.dom.iterable.js",
           "profile": {
-            "factory": 75,
-            "building": 355
+            "factory": 53,
+            "building": 273
           },
           "failed": false,
           "errors": 0,
@@ -3030,7 +3040,7 @@
           "issuerId": 141,
           "issuerName": "./~/core-js/library/modules/es6.symbol.js",
           "profile": {
-            "factory": 160,
+            "factory": 105,
             "building": 0,
             "dependencies": 0
           },
@@ -3107,7 +3117,7 @@
           "issuerId": 130,
           "issuerName": "./~/core-js/library/modules/_set-proto.js",
           "profile": {
-            "factory": 110,
+            "factory": 79,
             "building": 0,
             "dependencies": 0
           },
@@ -3184,7 +3194,7 @@
           "issuerId": 141,
           "issuerName": "./~/core-js/library/modules/es6.symbol.js",
           "profile": {
-            "factory": 161,
+            "factory": 107,
             "building": 0,
             "dependencies": 0
           },
@@ -3261,9 +3271,8 @@
           "issuerId": 185,
           "issuerName": "./src/app/app.jsx",
           "profile": {
-            "factory": 99,
-            "building": 1,
-            "dependencies": 0
+            "factory": 84,
+            "building": 1
           },
           "failed": false,
           "errors": 0,
@@ -3329,8 +3338,8 @@
           "issuerId": 141,
           "issuerName": "./~/core-js/library/modules/es6.symbol.js",
           "profile": {
-            "factory": 162,
-            "building": 263
+            "factory": 109,
+            "building": 207
           },
           "failed": false,
           "errors": 0,
@@ -3397,9 +3406,9 @@
           "issuerId": 141,
           "issuerName": "./~/core-js/library/modules/es6.symbol.js",
           "profile": {
-            "factory": 157,
-            "building": 251,
-            "dependencies": 1
+            "factory": 102,
+            "building": 203,
+            "dependencies": 0
           },
           "failed": false,
           "errors": 0,
@@ -3466,7 +3475,7 @@
           "issuerId": 95,
           "issuerName": "./src/components/Rodal/rodal.js",
           "profile": {
-            "factory": 53,
+            "factory": 64,
             "building": 0,
             "dependencies": 0
           },
@@ -3534,7 +3543,7 @@
           "issuerId": 121,
           "issuerName": "./~/core-js/library/modules/_is-array.js",
           "profile": {
-            "factory": 20,
+            "factory": 14,
             "building": 0,
             "dependencies": 0
           },
@@ -3602,7 +3611,7 @@
           "issuerId": 141,
           "issuerName": "./~/core-js/library/modules/es6.symbol.js",
           "profile": {
-            "factory": 160,
+            "factory": 106,
             "building": 0,
             "dependencies": 0
           },
@@ -3670,7 +3679,7 @@
           "issuerId": 137,
           "issuerName": "./~/core-js/library/modules/es6.object.get-prototype-of.js",
           "profile": {
-            "factory": 61,
+            "factory": 57,
             "building": 0,
             "dependencies": 0
           },
@@ -3738,8 +3747,8 @@
           "issuerId": 141,
           "issuerName": "./~/core-js/library/modules/es6.symbol.js",
           "profile": {
-            "factory": 154,
-            "building": 0,
+            "factory": 99,
+            "building": 1,
             "dependencies": 0
           },
           "failed": false,
@@ -3807,7 +3816,7 @@
           "issuerName": "./src/components/Alert/SAlert.js",
           "profile": {
             "factory": 48,
-            "building": 493
+            "building": 357
           },
           "failed": false,
           "errors": 0,
@@ -3866,8 +3875,8 @@
           "issuerName": "./src/components/Alert/SAlert.js",
           "profile": {
             "factory": 49,
-            "building": 494,
-            "dependencies": 19
+            "building": 352,
+            "dependencies": 18
           },
           "failed": false,
           "errors": 0,
@@ -3925,9 +3934,9 @@
           "issuerId": 136,
           "issuerName": "./~/core-js/library/modules/es6.object.create.js",
           "profile": {
-            "factory": 44,
-            "building": 129,
-            "dependencies": 108
+            "factory": 57,
+            "building": 99,
+            "dependencies": 78
           },
           "failed": false,
           "errors": 0,
@@ -3985,9 +3994,9 @@
           "issuerId": 141,
           "issuerName": "./~/core-js/library/modules/es6.symbol.js",
           "profile": {
-            "factory": 158,
-            "building": 254,
-            "dependencies": 2
+            "factory": 103,
+            "building": 203,
+            "dependencies": 0
           },
           "failed": false,
           "errors": 0,
@@ -4045,9 +4054,9 @@
           "issuerId": 114,
           "issuerName": "./~/core-js/library/fn/symbol/iterator.js",
           "profile": {
-            "factory": 43,
-            "building": 109,
-            "dependencies": 73
+            "factory": 21,
+            "building": 101,
+            "dependencies": 53
           },
           "failed": false,
           "errors": 0,
@@ -4105,8 +4114,8 @@
           "issuerId": 114,
           "issuerName": "./~/core-js/library/fn/symbol/iterator.js",
           "profile": {
-            "factory": 42,
-            "building": 105
+            "factory": 20,
+            "building": 99
           },
           "failed": false,
           "errors": 0,
@@ -4164,8 +4173,8 @@
           "issuerId": 156,
           "issuerName": "./~/react-notification-system/dist/NotificationSystem.js",
           "profile": {
-            "factory": 31,
-            "building": 238
+            "factory": 10,
+            "building": 116
           },
           "failed": false,
           "errors": 0,
@@ -4223,8 +4232,8 @@
           "issuerId": 43,
           "issuerName": "./~/reflux-core/lib/index.js",
           "profile": {
-            "factory": 32,
-            "building": 32
+            "factory": 15,
+            "building": 16
           },
           "failed": false,
           "errors": 0,
@@ -4282,9 +4291,9 @@
           "issuerId": 43,
           "issuerName": "./~/reflux-core/lib/index.js",
           "profile": {
-            "factory": 17,
-            "building": 30,
-            "dependencies": 1
+            "factory": 13,
+            "building": 10,
+            "dependencies": 0
           },
           "failed": false,
           "errors": 0,
@@ -4342,9 +4351,9 @@
           "issuerId": 166,
           "issuerName": "./~/reflux/src/index.js",
           "profile": {
-            "factory": 108,
-            "building": 48,
-            "dependencies": 3
+            "factory": 61,
+            "building": 37,
+            "dependencies": 2
           },
           "failed": false,
           "errors": 0,
@@ -4402,9 +4411,9 @@
           "issuerId": 166,
           "issuerName": "./~/reflux/src/index.js",
           "profile": {
-            "factory": 25,
-            "building": 52,
-            "dependencies": 33
+            "factory": 10,
+            "building": 25,
+            "dependencies": 27
           },
           "failed": false,
           "errors": 0,
@@ -4462,8 +4471,8 @@
           "issuerId": 141,
           "issuerName": "./~/core-js/library/modules/es6.symbol.js",
           "profile": {
-            "factory": 156,
-            "building": 0,
+            "factory": 101,
+            "building": 1,
             "dependencies": 0
           },
           "failed": false,
@@ -4521,8 +4530,8 @@
           "issuerId": 130,
           "issuerName": "./~/core-js/library/modules/_set-proto.js",
           "profile": {
-            "factory": 110,
-            "building": 0,
+            "factory": 78,
+            "building": 1,
             "dependencies": 0
           },
           "failed": false,
@@ -4580,7 +4589,7 @@
           "issuerId": 141,
           "issuerName": "./~/core-js/library/modules/es6.symbol.js",
           "profile": {
-            "factory": 162,
+            "factory": 108,
             "building": 0,
             "dependencies": 0
           },
@@ -4639,7 +4648,7 @@
           "issuerId": 141,
           "issuerName": "./~/core-js/library/modules/es6.symbol.js",
           "profile": {
-            "factory": 157,
+            "factory": 103,
             "building": 0,
             "dependencies": 0
           },
@@ -4698,8 +4707,8 @@
           "issuerId": 90,
           "issuerName": "./src/components/Alert/SAlert.js",
           "profile": {
-            "factory": 34,
-            "building": 504,
+            "factory": 35,
+            "building": 375,
             "dependencies": 2
           },
           "failed": false,
@@ -4749,9 +4758,9 @@
           "issuerId": 140,
           "issuerName": "./~/core-js/library/modules/es6.promise.js",
           "profile": {
-            "factory": 11,
-            "building": 23,
-            "dependencies": 0
+            "factory": 7,
+            "building": 13,
+            "dependencies": 1
           },
           "failed": false,
           "errors": 0,
@@ -4800,9 +4809,9 @@
           "issuerId": 36,
           "issuerName": "./~/core-js/library/modules/_object-create.js",
           "profile": {
-            "factory": 111,
-            "building": 262,
-            "dependencies": 0
+            "factory": 79,
+            "building": 211,
+            "dependencies": 1
           },
           "failed": false,
           "errors": 0,
@@ -4851,7 +4860,7 @@
           "issuerId": 119,
           "issuerName": "./~/core-js/library/modules/_for-of.js",
           "profile": {
-            "factory": 15,
+            "factory": 8,
             "building": 5,
             "dependencies": 0
           },
@@ -4902,8 +4911,8 @@
           "issuerId": 119,
           "issuerName": "./~/core-js/library/modules/_for-of.js",
           "profile": {
-            "factory": 15,
-            "building": 2,
+            "factory": 8,
+            "building": 4,
             "dependencies": 0
           },
           "failed": false,
@@ -4953,9 +4962,9 @@
           "issuerId": 39,
           "issuerName": "./~/core-js/library/modules/es6.string.iterator.js",
           "profile": {
-            "factory": 74,
-            "building": 351,
-            "dependencies": 3
+            "factory": 38,
+            "building": 285,
+            "dependencies": 1
           },
           "failed": false,
           "errors": 0,
@@ -5004,8 +5013,8 @@
           "issuerId": 140,
           "issuerName": "./~/core-js/library/modules/es6.promise.js",
           "profile": {
-            "factory": 14,
-            "building": 36,
+            "factory": 9,
+            "building": 19,
             "dependencies": 0
           },
           "failed": false,
@@ -5055,9 +5064,9 @@
           "issuerId": 141,
           "issuerName": "./~/core-js/library/modules/es6.symbol.js",
           "profile": {
-            "factory": 161,
-            "building": 263,
-            "dependencies": 0
+            "factory": 107,
+            "building": 207,
+            "dependencies": 1
           },
           "failed": false,
           "errors": 0,
@@ -5106,9 +5115,9 @@
           "issuerId": 141,
           "issuerName": "./~/core-js/library/modules/es6.symbol.js",
           "profile": {
-            "factory": 161,
-            "building": 264,
-            "dependencies": 0
+            "factory": 108,
+            "building": 207,
+            "dependencies": 1
           },
           "failed": false,
           "errors": 0,
@@ -5157,9 +5166,9 @@
           "issuerId": 137,
           "issuerName": "./~/core-js/library/modules/es6.object.get-prototype-of.js",
           "profile": {
-            "factory": 61,
-            "building": 122,
-            "dependencies": 108
+            "factory": 58,
+            "building": 96,
+            "dependencies": 72
           },
           "failed": false,
           "errors": 0,
@@ -5208,9 +5217,9 @@
           "issuerId": 137,
           "issuerName": "./~/core-js/library/modules/es6.object.get-prototype-of.js",
           "profile": {
-            "factory": 62,
-            "building": 126,
-            "dependencies": 106
+            "factory": 58,
+            "building": 97,
+            "dependencies": 74
           },
           "failed": false,
           "errors": 0,
@@ -5259,8 +5268,8 @@
           "issuerId": 141,
           "issuerName": "./~/core-js/library/modules/es6.symbol.js",
           "profile": {
-            "factory": 155,
-            "building": 248,
+            "factory": 100,
+            "building": 203,
             "dependencies": 0
           },
           "failed": false,
@@ -5310,9 +5319,9 @@
           "issuerId": 140,
           "issuerName": "./~/core-js/library/modules/es6.promise.js",
           "profile": {
-            "factory": 13,
-            "building": 30,
-            "dependencies": 1
+            "factory": 8,
+            "building": 19,
+            "dependencies": 0
           },
           "failed": false,
           "errors": 0,
@@ -5361,8 +5370,8 @@
           "issuerId": 119,
           "issuerName": "./~/core-js/library/modules/_for-of.js",
           "profile": {
-            "factory": 15,
-            "building": 3,
+            "factory": 9,
+            "building": 4,
             "dependencies": 1
           },
           "failed": false,
@@ -5412,8 +5421,8 @@
           "issuerId": 113,
           "issuerName": "./~/core-js/library/fn/symbol/index.js",
           "profile": {
-            "factory": 67,
-            "building": 116
+            "factory": 61,
+            "building": 78
           },
           "failed": false,
           "errors": 0,
@@ -5462,8 +5471,8 @@
           "issuerId": 114,
           "issuerName": "./~/core-js/library/fn/symbol/iterator.js",
           "profile": {
-            "factory": 42,
-            "building": 107
+            "factory": 21,
+            "building": 100
           },
           "failed": false,
           "errors": 0,
@@ -5512,8 +5521,8 @@
           "issuerId": 43,
           "issuerName": "./~/reflux-core/lib/index.js",
           "profile": {
-            "factory": 17,
-            "building": 31
+            "factory": 13,
+            "building": 8
           },
           "failed": false,
           "errors": 0,
@@ -5562,8 +5571,8 @@
           "issuerId": 43,
           "issuerName": "./~/reflux-core/lib/index.js",
           "profile": {
-            "factory": 17,
-            "building": 27
+            "factory": 13,
+            "building": 15
           },
           "failed": false,
           "errors": 0,
@@ -5612,8 +5621,8 @@
           "issuerId": 43,
           "issuerName": "./~/reflux-core/lib/index.js",
           "profile": {
-            "factory": 32,
-            "building": 28,
+            "factory": 14,
+            "building": 13,
             "dependencies": 1
           },
           "failed": false,
@@ -5663,9 +5672,9 @@
           "issuerId": 43,
           "issuerName": "./~/reflux-core/lib/index.js",
           "profile": {
-            "factory": 17,
-            "building": 39,
-            "dependencies": 1
+            "factory": 13,
+            "building": 18,
+            "dependencies": 0
           },
           "failed": false,
           "errors": 0,
@@ -5714,7 +5723,7 @@
           "issuerId": 95,
           "issuerName": "./src/components/Rodal/rodal.js",
           "profile": {
-            "factory": 53,
+            "factory": 63,
             "building": 0,
             "dependencies": 0
           },
@@ -5764,7 +5773,7 @@
           "issuerId": 140,
           "issuerName": "./~/core-js/library/modules/es6.promise.js",
           "profile": {
-            "factory": 12,
+            "factory": 7,
             "building": 0,
             "dependencies": 0
           },
@@ -5814,8 +5823,8 @@
           "issuerId": 36,
           "issuerName": "./~/core-js/library/modules/_object-create.js",
           "profile": {
-            "factory": 109,
-            "building": 1,
+            "factory": 79,
+            "building": 0,
             "dependencies": 0
           },
           "failed": false,
@@ -5864,7 +5873,7 @@
           "issuerId": 36,
           "issuerName": "./~/core-js/library/modules/_object-create.js",
           "profile": {
-            "factory": 109,
+            "factory": 79,
             "building": 0,
             "dependencies": 0
           },
@@ -5914,7 +5923,7 @@
           "issuerId": 141,
           "issuerName": "./~/core-js/library/modules/es6.symbol.js",
           "profile": {
-            "factory": 162,
+            "factory": 108,
             "building": 0,
             "dependencies": 0
           },
@@ -5964,7 +5973,7 @@
           "issuerId": 58,
           "issuerName": "./~/core-js/library/modules/_object-gpo.js",
           "profile": {
-            "factory": 118,
+            "factory": 82,
             "building": 0,
             "dependencies": 0
           },
@@ -6014,7 +6023,7 @@
           "issuerId": 141,
           "issuerName": "./~/core-js/library/modules/es6.symbol.js",
           "profile": {
-            "factory": 156,
+            "factory": 102,
             "building": 0,
             "dependencies": 0
           },
@@ -6064,7 +6073,7 @@
           "issuerId": 119,
           "issuerName": "./~/core-js/library/modules/_for-of.js",
           "profile": {
-            "factory": 15,
+            "factory": 9,
             "building": 0,
             "dependencies": 0
           },
@@ -6114,7 +6123,7 @@
           "issuerId": 141,
           "issuerName": "./~/core-js/library/modules/es6.symbol.js",
           "profile": {
-            "factory": 160,
+            "factory": 106,
             "building": 0,
             "dependencies": 0
           },
@@ -6164,7 +6173,7 @@
           "issuerId": 156,
           "issuerName": "./~/react-notification-system/dist/NotificationSystem.js",
           "profile": {
-            "factory": 293,
+            "factory": 135,
             "building": 0,
             "dependencies": 0
           },
@@ -6214,13 +6223,13 @@
           "issuerId": 185,
           "issuerName": "./src/app/app.jsx",
           "profile": {
-            "factory": 49,
-            "building": 437,
-            "dependencies": 129
+            "factory": 50,
+            "building": 156,
+            "dependencies": 49
           },
           "failed": false,
           "errors": 0,
-          "warnings": 0,
+          "warnings": 1,
           "reasons": [
             {
               "moduleId": 185,
@@ -6256,13 +6265,13 @@
           "issuerId": 185,
           "issuerName": "./src/app/app.jsx",
           "profile": {
-            "factory": 13,
-            "building": 413,
-            "dependencies": 75
+            "factory": 50,
+            "building": 137,
+            "dependencies": 26
           },
           "failed": false,
           "errors": 0,
-          "warnings": 0,
+          "warnings": 1,
           "reasons": [
             {
               "moduleId": 185,
@@ -6298,13 +6307,13 @@
           "issuerId": 185,
           "issuerName": "./src/app/app.jsx",
           "profile": {
-            "factory": 50,
-            "building": 389,
-            "dependencies": 176
+            "factory": 51,
+            "building": 170,
+            "dependencies": 33
           },
           "failed": false,
           "errors": 0,
-          "warnings": 0,
+          "warnings": 1,
           "reasons": [
             {
               "moduleId": 185,
@@ -6340,8 +6349,8 @@
           "issuerId": 185,
           "issuerName": "./src/app/app.jsx",
           "profile": {
-            "factory": 8,
-            "building": 400
+            "factory": 46,
+            "building": 134
           },
           "failed": false,
           "errors": 0,
@@ -6381,8 +6390,8 @@
           "issuerId": 89,
           "issuerName": "./src/common/request.js",
           "profile": {
-            "factory": 24,
-            "building": 144
+            "factory": 7,
+            "building": 98
           },
           "failed": false,
           "errors": 0,
@@ -6422,13 +6431,13 @@
           "issuerId": 82,
           "issuerName": "./src/app/router.js",
           "profile": {
-            "factory": 114,
-            "building": 1327,
-            "dependencies": 25
+            "factory": 62,
+            "building": 713,
+            "dependencies": 47
           },
           "failed": false,
           "errors": 0,
-          "warnings": 0,
+          "warnings": 1,
           "reasons": [
             {
               "moduleId": 82,
@@ -6464,13 +6473,13 @@
           "issuerId": 82,
           "issuerName": "./src/app/router.js",
           "profile": {
-            "factory": 113,
-            "building": 1255,
-            "dependencies": 84
+            "factory": 62,
+            "building": 705,
+            "dependencies": 53
           },
           "failed": false,
           "errors": 0,
-          "warnings": 0,
+          "warnings": 1,
           "reasons": [
             {
               "moduleId": 82,
@@ -6506,13 +6515,13 @@
           "issuerId": 87,
           "issuerName": "./src/app/inbox/router.js",
           "profile": {
-            "factory": 233,
-            "building": 294,
-            "dependencies": 13
+            "factory": 112,
+            "building": 237,
+            "dependencies": 31
           },
           "failed": false,
           "errors": 0,
-          "warnings": 0,
+          "warnings": 1,
           "reasons": [
             {
               "moduleId": 87,
@@ -6548,8 +6557,8 @@
           "issuerId": 82,
           "issuerName": "./src/app/router.js",
           "profile": {
-            "factory": 99,
-            "building": 1162
+            "factory": 54,
+            "building": 691
           },
           "failed": false,
           "errors": 0,
@@ -6589,9 +6598,9 @@
           "issuerId": 82,
           "issuerName": "./src/app/router.js",
           "profile": {
-            "factory": 111,
-            "building": 1288,
-            "dependencies": 56
+            "factory": 57,
+            "building": 691,
+            "dependencies": 66
           },
           "failed": false,
           "errors": 0,
@@ -6631,9 +6640,9 @@
           "issuerId": 96,
           "issuerName": "./src/models/home.js",
           "profile": {
-            "factory": 101,
-            "building": 489,
-            "dependencies": 16
+            "factory": 94,
+            "building": 379,
+            "dependencies": 4
           },
           "failed": false,
           "errors": 0,
@@ -6673,9 +6682,9 @@
           "issuerId": 18,
           "issuerName": "./src/components/index.js",
           "profile": {
-            "factory": 83,
-            "building": 359,
-            "dependencies": 17
+            "factory": 91,
+            "building": 262,
+            "dependencies": 20
           },
           "failed": false,
           "errors": 0,
@@ -6715,9 +6724,9 @@
           "issuerId": 49,
           "issuerName": "./src/components/Alert/SAlertContent.js",
           "profile": {
-            "factory": 42,
-            "building": 118,
-            "dependencies": 1
+            "factory": 28,
+            "building": 75,
+            "dependencies": 0
           },
           "failed": false,
           "errors": 0,
@@ -6757,9 +6766,9 @@
           "issuerId": 90,
           "issuerName": "./src/components/Alert/SAlert.js",
           "profile": {
-            "factory": 50,
-            "building": 518,
-            "dependencies": 4
+            "factory": 49,
+            "building": 373,
+            "dependencies": 11
           },
           "failed": false,
           "errors": 0,
@@ -6799,9 +6808,9 @@
           "issuerId": 18,
           "issuerName": "./src/components/index.js",
           "profile": {
-            "factory": 52,
-            "building": 299,
-            "dependencies": 44
+            "factory": 65,
+            "building": 214,
+            "dependencies": 17
           },
           "failed": false,
           "errors": 0,
@@ -6841,13 +6850,13 @@
           "issuerId": 18,
           "issuerName": "./src/components/index.js",
           "profile": {
-            "factory": 94,
-            "building": 327,
-            "dependencies": 28
+            "factory": 96,
+            "building": 242,
+            "dependencies": 25
           },
           "failed": false,
           "errors": 0,
-          "warnings": 0,
+          "warnings": 1,
           "reasons": [
             {
               "moduleId": 18,
@@ -6883,9 +6892,9 @@
           "issuerId": 18,
           "issuerName": "./src/components/index.js",
           "profile": {
-            "factory": 84,
-            "building": 320,
-            "dependencies": 20
+            "factory": 91,
+            "building": 218,
+            "dependencies": 50
           },
           "failed": false,
           "errors": 0,
@@ -6925,8 +6934,8 @@
           "issuerId": 97,
           "issuerName": "./src/models/index.js",
           "profile": {
-            "factory": 51,
-            "building": 302
+            "factory": 65,
+            "building": 207
           },
           "failed": false,
           "errors": 0,
@@ -6966,8 +6975,8 @@
           "issuerId": 79,
           "issuerName": "./src/app/home/index.jsx",
           "profile": {
-            "factory": 39,
-            "building": 1345
+            "factory": 34,
+            "building": 703
           },
           "failed": false,
           "errors": 0,
@@ -7007,8 +7016,8 @@
           "issuerId": 106,
           "issuerName": "./~/babel-runtime/helpers/toConsumableArray.js",
           "profile": {
-            "factory": 46,
-            "building": 33
+            "factory": 20,
+            "building": 9
           },
           "failed": false,
           "errors": 0,
@@ -7048,8 +7057,8 @@
           "issuerId": 5,
           "issuerName": "./~/babel-runtime/helpers/inherits.js",
           "profile": {
-            "factory": 35,
-            "building": 213
+            "factory": 16,
+            "building": 90
           },
           "failed": false,
           "errors": 0,
@@ -7089,8 +7098,8 @@
           "issuerId": 89,
           "issuerName": "./src/common/request.js",
           "profile": {
-            "factory": 24,
-            "building": 58
+            "factory": 7,
+            "building": 43
           },
           "failed": false,
           "errors": 0,
@@ -7130,8 +7139,8 @@
           "issuerId": 5,
           "issuerName": "./~/babel-runtime/helpers/inherits.js",
           "profile": {
-            "factory": 34,
-            "building": 212
+            "factory": 15,
+            "building": 92
           },
           "failed": false,
           "errors": 0,
@@ -7171,8 +7180,8 @@
           "issuerId": 89,
           "issuerName": "./src/common/request.js",
           "profile": {
-            "factory": 23,
-            "building": 61
+            "factory": 7,
+            "building": 66
           },
           "failed": false,
           "errors": 0,
@@ -7212,8 +7221,8 @@
           "issuerId": 21,
           "issuerName": "./~/babel-runtime/helpers/typeof.js",
           "profile": {
-            "factory": 65,
-            "building": 166
+            "factory": 39,
+            "building": 88
           },
           "failed": false,
           "errors": 0,
@@ -7253,8 +7262,8 @@
           "issuerId": 21,
           "issuerName": "./~/babel-runtime/helpers/typeof.js",
           "profile": {
-            "factory": 66,
-            "building": 164
+            "factory": 40,
+            "building": 88
           },
           "failed": false,
           "errors": 0,
@@ -7294,8 +7303,8 @@
           "issuerId": 96,
           "issuerName": "./src/models/home.js",
           "profile": {
-            "factory": 68,
-            "building": 68
+            "factory": 70,
+            "building": 62
           },
           "failed": false,
           "errors": 0,
@@ -7335,8 +7344,8 @@
           "issuerId": 34,
           "issuerName": "./src/components/Alert/s-alert-parts/s-alert-store.js",
           "profile": {
-            "factory": 40,
-            "building": 36
+            "factory": 32,
+            "building": 31
           },
           "failed": false,
           "errors": 0,
@@ -7376,9 +7385,9 @@
           "issuerId": 98,
           "issuerName": "./~/babel-runtime/core-js/array/from.js",
           "profile": {
-            "factory": 17,
-            "building": 25,
-            "dependencies": 2
+            "factory": 18,
+            "building": 34,
+            "dependencies": 1
           },
           "failed": false,
           "errors": 0,
@@ -7418,9 +7427,9 @@
           "issuerId": 99,
           "issuerName": "./~/babel-runtime/core-js/object/create.js",
           "profile": {
-            "factory": 79,
-            "building": 162,
-            "dependencies": 66
+            "factory": 44,
+            "building": 115,
+            "dependencies": 53
           },
           "failed": false,
           "errors": 0,
@@ -7460,8 +7469,8 @@
           "issuerId": 2,
           "issuerName": "./~/babel-runtime/core-js/object/get-prototype-of.js",
           "profile": {
-            "factory": 321,
-            "building": 162
+            "factory": 149,
+            "building": 96
           },
           "failed": false,
           "errors": 0,
@@ -7501,9 +7510,9 @@
           "issuerId": 100,
           "issuerName": "./~/babel-runtime/core-js/object/keys.js",
           "profile": {
-            "factory": 27,
-            "building": 51,
-            "dependencies": 1
+            "factory": 26,
+            "building": 24,
+            "dependencies": 0
           },
           "failed": false,
           "errors": 0,
@@ -7543,9 +7552,9 @@
           "issuerId": 101,
           "issuerName": "./~/babel-runtime/core-js/object/set-prototype-of.js",
           "profile": {
-            "factory": 80,
-            "building": 162,
-            "dependencies": 67
+            "factory": 43,
+            "building": 116,
+            "dependencies": 52
           },
           "failed": false,
           "errors": 0,
@@ -7585,8 +7594,8 @@
           "issuerId": 102,
           "issuerName": "./~/babel-runtime/core-js/promise.js",
           "profile": {
-            "factory": 26,
-            "building": 52,
+            "factory": 3,
+            "building": 25,
             "dependencies": 2
           },
           "failed": false,
@@ -7627,8 +7636,8 @@
           "issuerId": 103,
           "issuerName": "./~/babel-runtime/core-js/symbol.js",
           "profile": {
-            "factory": 78,
-            "building": 41,
+            "factory": 87,
+            "building": 20,
             "dependencies": 2
           },
           "failed": false,
@@ -7669,8 +7678,8 @@
           "issuerId": 104,
           "issuerName": "./~/babel-runtime/core-js/symbol/iterator.js",
           "profile": {
-            "factory": 71,
-            "building": 12
+            "factory": 82,
+            "building": 7
           },
           "failed": false,
           "errors": 0,
@@ -7710,8 +7719,8 @@
           "issuerId": 135,
           "issuerName": "./~/core-js/library/modules/es6.array.iterator.js",
           "profile": {
-            "factory": 32,
-            "building": 37
+            "factory": 23,
+            "building": 16
           },
           "failed": false,
           "errors": 0,
@@ -7751,8 +7760,8 @@
           "issuerId": 140,
           "issuerName": "./~/core-js/library/modules/es6.promise.js",
           "profile": {
-            "factory": 12,
-            "building": 23
+            "factory": 8,
+            "building": 13
           },
           "failed": false,
           "errors": 0,
@@ -7792,9 +7801,9 @@
           "issuerId": 134,
           "issuerName": "./~/core-js/library/modules/es6.array.from.js",
           "profile": {
-            "factory": 3,
-            "building": 1,
-            "dependencies": 0
+            "factory": 2,
+            "building": 4,
+            "dependencies": 1
           },
           "failed": false,
           "errors": 0,
@@ -7834,9 +7843,9 @@
           "issuerId": 141,
           "issuerName": "./~/core-js/library/modules/es6.symbol.js",
           "profile": {
-            "factory": 159,
-            "building": 256,
-            "dependencies": 1
+            "factory": 104,
+            "building": 205,
+            "dependencies": 0
           },
           "failed": false,
           "errors": 0,
@@ -7876,9 +7885,9 @@
           "issuerId": 140,
           "issuerName": "./~/core-js/library/modules/es6.promise.js",
           "profile": {
-            "factory": 12,
-            "building": 25,
-            "dependencies": 1
+            "factory": 8,
+            "building": 14,
+            "dependencies": 0
           },
           "failed": false,
           "errors": 0,
@@ -7918,8 +7927,8 @@
           "issuerId": 61,
           "issuerName": "./~/core-js/library/modules/_task.js",
           "profile": {
-            "factory": 10,
-            "building": 5
+            "factory": 4,
+            "building": 6
           },
           "failed": false,
           "errors": 0,
@@ -7959,8 +7968,8 @@
           "issuerId": 141,
           "issuerName": "./~/core-js/library/modules/es6.symbol.js",
           "profile": {
-            "factory": 159,
-            "building": 257
+            "factory": 104,
+            "building": 207
           },
           "failed": false,
           "errors": 0,
@@ -8000,8 +8009,8 @@
           "issuerId": 54,
           "issuerName": "./~/core-js/library/modules/_iter-define.js",
           "profile": {
-            "factory": 36,
-            "building": 36,
+            "factory": 27,
+            "building": 15,
             "dependencies": 1
           },
           "failed": false,
@@ -8042,8 +8051,8 @@
           "issuerId": 135,
           "issuerName": "./~/core-js/library/modules/es6.array.iterator.js",
           "profile": {
-            "factory": 33,
-            "building": 36
+            "factory": 23,
+            "building": 16
           },
           "failed": false,
           "errors": 0,
@@ -8083,9 +8092,9 @@
           "issuerId": 141,
           "issuerName": "./~/core-js/library/modules/es6.symbol.js",
           "profile": {
-            "factory": 158,
-            "building": 256,
-            "dependencies": 1
+            "factory": 104,
+            "building": 203,
+            "dependencies": 0
           },
           "failed": false,
           "errors": 0,
@@ -8125,9 +8134,9 @@
           "issuerId": 141,
           "issuerName": "./~/core-js/library/modules/es6.symbol.js",
           "profile": {
-            "factory": 155,
-            "building": 251,
-            "dependencies": 2
+            "factory": 101,
+            "building": 203,
+            "dependencies": 0
           },
           "failed": false,
           "errors": 0,
@@ -8167,8 +8176,8 @@
           "issuerId": 140,
           "issuerName": "./~/core-js/library/modules/es6.promise.js",
           "profile": {
-            "factory": 13,
-            "building": 33,
+            "factory": 9,
+            "building": 16,
             "dependencies": 0
           },
           "failed": false,
@@ -8209,9 +8218,9 @@
           "issuerId": 36,
           "issuerName": "./~/core-js/library/modules/_object-create.js",
           "profile": {
-            "factory": 108,
-            "building": 264,
-            "dependencies": 1
+            "factory": 78,
+            "building": 212,
+            "dependencies": 0
           },
           "failed": false,
           "errors": 0,
@@ -8251,9 +8260,9 @@
           "issuerId": 141,
           "issuerName": "./~/core-js/library/modules/es6.symbol.js",
           "profile": {
-            "factory": 160,
-            "building": 260,
-            "dependencies": 0
+            "factory": 106,
+            "building": 204,
+            "dependencies": 1
           },
           "failed": false,
           "errors": 0,
@@ -8293,8 +8302,8 @@
           "issuerId": 140,
           "issuerName": "./~/core-js/library/modules/es6.promise.js",
           "profile": {
-            "factory": 13,
-            "building": 32,
+            "factory": 9,
+            "building": 14,
             "dependencies": 0
           },
           "failed": false,
@@ -8335,9 +8344,9 @@
           "issuerId": 139,
           "issuerName": "./~/core-js/library/modules/es6.object.set-prototype-of.js",
           "profile": {
-            "factory": 62,
-            "building": 127,
-            "dependencies": 108
+            "factory": 55,
+            "building": 101,
+            "dependencies": 74
           },
           "failed": false,
           "errors": 0,
@@ -8377,8 +8386,8 @@
           "issuerId": 140,
           "issuerName": "./~/core-js/library/modules/es6.promise.js",
           "profile": {
-            "factory": 13,
-            "building": 34,
+            "factory": 9,
+            "building": 15,
             "dependencies": 0
           },
           "failed": false,
@@ -8419,9 +8428,9 @@
           "issuerId": 140,
           "issuerName": "./~/core-js/library/modules/es6.promise.js",
           "profile": {
-            "factory": 12,
-            "building": 28,
-            "dependencies": 1
+            "factory": 8,
+            "building": 18,
+            "dependencies": 0
           },
           "failed": false,
           "errors": 0,
@@ -8461,8 +8470,8 @@
           "issuerId": 39,
           "issuerName": "./~/core-js/library/modules/es6.string.iterator.js",
           "profile": {
-            "factory": 74,
-            "building": 345
+            "factory": 38,
+            "building": 283
           },
           "failed": false,
           "errors": 0,
@@ -8502,9 +8511,9 @@
           "issuerId": 107,
           "issuerName": "./~/core-js/library/fn/array/from.js",
           "profile": {
-            "factory": 20,
-            "building": 8,
-            "dependencies": 2
+            "factory": 2,
+            "building": 13,
+            "dependencies": 1
           },
           "failed": false,
           "errors": 0,
@@ -8544,9 +8553,9 @@
           "issuerId": 64,
           "issuerName": "./~/core-js/library/modules/web.dom.iterable.js",
           "profile": {
-            "factory": 73,
-            "building": 354,
-            "dependencies": 2
+            "factory": 37,
+            "building": 288,
+            "dependencies": 0
           },
           "failed": false,
           "errors": 0,
@@ -8586,9 +8595,8 @@
           "issuerId": 108,
           "issuerName": "./~/core-js/library/fn/object/create.js",
           "profile": {
-            "factory": 66,
-            "building": 66,
-            "dependencies": 43
+            "factory": 54,
+            "building": 25
           },
           "failed": false,
           "errors": 0,
@@ -8628,8 +8636,8 @@
           "issuerId": 109,
           "issuerName": "./~/core-js/library/fn/object/get-prototype-of.js",
           "profile": {
-            "factory": 67,
-            "building": 48
+            "factory": 72,
+            "building": 24
           },
           "failed": false,
           "errors": 0,
@@ -8669,9 +8677,9 @@
           "issuerId": 110,
           "issuerName": "./~/core-js/library/fn/object/keys.js",
           "profile": {
-            "factory": 6,
-            "building": 40,
-            "dependencies": 1
+            "factory": 4,
+            "building": 20,
+            "dependencies": 0
           },
           "failed": false,
           "errors": 0,
@@ -8711,8 +8719,9 @@
           "issuerId": 111,
           "issuerName": "./~/core-js/library/fn/object/set-prototype-of.js",
           "profile": {
-            "factory": 67,
-            "building": 48
+            "factory": 53,
+            "building": 27,
+            "dependencies": 55
           },
           "failed": false,
           "errors": 0,
@@ -8752,8 +8761,8 @@
           "issuerId": 112,
           "issuerName": "./~/core-js/library/fn/promise.js",
           "profile": {
-            "factory": 5,
-            "building": 34,
+            "factory": 4,
+            "building": 37,
             "dependencies": 1
           },
           "failed": false,
@@ -8794,9 +8803,9 @@
           "issuerId": 113,
           "issuerName": "./~/core-js/library/fn/symbol/index.js",
           "profile": {
-            "factory": 66,
-            "building": 79,
-            "dependencies": 43
+            "factory": 60,
+            "building": 72,
+            "dependencies": 26
           },
           "failed": false,
           "errors": 0,
@@ -8836,9 +8845,9 @@
           "issuerId": 113,
           "issuerName": "./~/core-js/library/fn/symbol/index.js",
           "profile": {
-            "factory": 67,
-            "building": 116,
-            "dependencies": 120
+            "factory": 61,
+            "building": 78,
+            "dependencies": 96
           },
           "failed": false,
           "errors": 0,
@@ -8878,9 +8887,9 @@
           "issuerId": 113,
           "issuerName": "./~/core-js/library/fn/symbol/index.js",
           "profile": {
-            "factory": 67,
-            "building": 116,
-            "dependencies": 120
+            "factory": 62,
+            "building": 78,
+            "dependencies": 95
           },
           "failed": false,
           "errors": 0,
@@ -8920,8 +8929,8 @@
           "issuerId": 169,
           "issuerName": "./src/app/inbox/home/index.css",
           "profile": {
-            "factory": 5,
-            "building": 201,
+            "factory": 3,
+            "building": 107,
             "dependencies": 1
           },
           "failed": false,
@@ -8963,7 +8972,7 @@
           "issuerName": "./src/app/inbox/layout/index.css",
           "profile": {
             "factory": 4,
-            "building": 216,
+            "building": 106,
             "dependencies": 1
           },
           "failed": false,
@@ -9004,8 +9013,8 @@
           "issuerId": 171,
           "issuerName": "./src/app/inbox/message/index.css",
           "profile": {
-            "factory": 4,
-            "building": 169,
+            "factory": 3,
+            "building": 156,
             "dependencies": 1
           },
           "failed": false,
@@ -9046,9 +9055,9 @@
           "issuerId": 172,
           "issuerName": "./src/app/layout/index.css",
           "profile": {
-            "factory": 11,
-            "building": 1046,
-            "dependencies": 75
+            "factory": 5,
+            "building": 602,
+            "dependencies": 47
           },
           "failed": false,
           "errors": 0,
@@ -9088,8 +9097,8 @@
           "issuerId": 173,
           "issuerName": "./src/app/outbox/index.css",
           "profile": {
-            "factory": 7,
-            "building": 210,
+            "factory": 2,
+            "building": 116,
             "dependencies": 1
           },
           "failed": false,
@@ -9130,8 +9139,8 @@
           "issuerId": 174,
           "issuerName": "./src/app/page404/index.css",
           "profile": {
-            "factory": 830,
-            "building": 154
+            "factory": 499,
+            "building": 95
           },
           "failed": false,
           "errors": 0,
@@ -9172,8 +9181,8 @@
           "issuerName": "./src/components/Alert/s-alert-default.css",
           "profile": {
             "factory": 3,
-            "building": 405,
-            "dependencies": 1
+            "building": 306,
+            "dependencies": 2
           },
           "failed": false,
           "errors": 0,
@@ -9213,8 +9222,8 @@
           "issuerId": 176,
           "issuerName": "./src/components/Menu/index.css",
           "profile": {
-            "factory": 4,
-            "building": 377,
+            "factory": 2,
+            "building": 148,
             "dependencies": 1
           },
           "failed": false,
@@ -9255,9 +9264,9 @@
           "issuerId": 177,
           "issuerName": "./src/components/Rodal/rodal.css",
           "profile": {
-            "factory": 6,
-            "building": 384,
-            "dependencies": 3
+            "factory": 3,
+            "building": 298,
+            "dependencies": 1
           },
           "failed": false,
           "errors": 0,
@@ -9297,8 +9306,8 @@
           "issuerId": 9,
           "issuerName": "./~/reflux-core/lib/utils.js",
           "profile": {
-            "factory": 58,
-            "building": 32
+            "factory": 31,
+            "building": 37
           },
           "failed": false,
           "errors": 0,
@@ -9338,9 +9347,9 @@
           "issuerId": 156,
           "issuerName": "./~/react-notification-system/dist/NotificationSystem.js",
           "profile": {
-            "factory": 30,
-            "building": 235,
-            "dependencies": 2
+            "factory": 10,
+            "building": 115,
+            "dependencies": 1
           },
           "failed": false,
           "errors": 0,
@@ -9380,8 +9389,8 @@
           "issuerId": 154,
           "issuerName": "./~/react-notification-system/dist/NotificationContainer.js",
           "profile": {
-            "factory": 35,
-            "building": 214,
+            "factory": 14,
+            "building": 158,
             "dependencies": 2
           },
           "failed": false,
@@ -9422,9 +9431,9 @@
           "issuerId": 79,
           "issuerName": "./src/app/home/index.jsx",
           "profile": {
-            "factory": 291,
-            "building": 883,
-            "dependencies": 12
+            "factory": 138,
+            "building": 558,
+            "dependencies": 4
           },
           "failed": false,
           "errors": 0,
@@ -9464,8 +9473,8 @@
           "issuerId": 155,
           "issuerName": "./~/react-notification-system/dist/NotificationItem.js",
           "profile": {
-            "factory": 9,
-            "building": 46
+            "factory": 7,
+            "building": 23
           },
           "failed": false,
           "errors": 0,
@@ -9505,8 +9514,8 @@
           "issuerId": 156,
           "issuerName": "./~/react-notification-system/dist/NotificationSystem.js",
           "profile": {
-            "factory": 34,
-            "building": 245
+            "factory": 11,
+            "building": 117
           },
           "failed": false,
           "errors": 0,
@@ -9547,7 +9556,7 @@
           "issuerName": "./~/reflux-core/lib/createStore.js",
           "profile": {
             "factory": 11,
-            "building": 35
+            "building": 37
           },
           "failed": false,
           "errors": 0,
@@ -9587,9 +9596,9 @@
           "issuerId": 43,
           "issuerName": "./~/reflux-core/lib/index.js",
           "profile": {
-            "factory": 32,
-            "building": 30,
-            "dependencies": 1
+            "factory": 14,
+            "building": 19,
+            "dependencies": 0
           },
           "failed": false,
           "errors": 0,
@@ -9629,8 +9638,8 @@
           "issuerId": 67,
           "issuerName": "./~/reflux-core/lib/createStore.js",
           "profile": {
-            "factory": 10,
-            "building": 23,
+            "factory": 11,
+            "building": 35,
             "dependencies": 0
           },
           "failed": false,
@@ -9671,9 +9680,9 @@
           "issuerId": 166,
           "issuerName": "./~/reflux/src/index.js",
           "profile": {
-            "factory": 25,
-            "building": 59,
-            "dependencies": 25
+            "factory": 10,
+            "building": 30,
+            "dependencies": 21
           },
           "failed": false,
           "errors": 0,
@@ -9713,9 +9722,9 @@
           "issuerId": 166,
           "issuerName": "./~/reflux/src/index.js",
           "profile": {
-            "factory": 24,
-            "building": 49,
-            "dependencies": 0
+            "factory": 9,
+            "building": 25,
+            "dependencies": 1
           },
           "failed": false,
           "errors": 0,
@@ -9755,9 +9764,9 @@
           "issuerId": 166,
           "issuerName": "./~/reflux/src/index.js",
           "profile": {
-            "factory": 24,
-            "building": 55,
-            "dependencies": 32
+            "factory": 10,
+            "building": 27,
+            "dependencies": 26
           },
           "failed": false,
           "errors": 0,
@@ -9797,8 +9806,8 @@
           "issuerId": 162,
           "issuerName": "./~/reflux/src/addES6.js",
           "profile": {
-            "factory": 24,
-            "building": 41,
+            "factory": 20,
+            "building": 34,
             "dependencies": 0
           },
           "failed": false,
@@ -9839,8 +9848,8 @@
           "issuerId": 96,
           "issuerName": "./src/models/home.js",
           "profile": {
-            "factory": 299,
-            "building": 259
+            "factory": 241,
+            "building": 219
           },
           "failed": false,
           "errors": 0,
@@ -9880,9 +9889,9 @@
           "issuerId": 166,
           "issuerName": "./~/reflux/src/index.js",
           "profile": {
-            "factory": 25,
-            "building": 58,
-            "dependencies": 26
+            "factory": 10,
+            "building": 29,
+            "dependencies": 23
           },
           "failed": false,
           "errors": 0,
@@ -9922,9 +9931,9 @@
           "issuerId": 166,
           "issuerName": "./~/reflux/src/index.js",
           "profile": {
-            "factory": 25,
-            "building": 61,
-            "dependencies": 23
+            "factory": 10,
+            "building": 28,
+            "dependencies": 24
           },
           "failed": false,
           "errors": 0,
@@ -9964,9 +9973,9 @@
           "issuerId": 84,
           "issuerName": "./src/app/inbox/home/index.jsx",
           "profile": {
-            "factory": 56,
-            "building": 4,
-            "dependencies": 5
+            "factory": 66,
+            "building": 1,
+            "dependencies": 3
           },
           "failed": false,
           "errors": 0,
@@ -10006,9 +10015,9 @@
           "issuerId": 85,
           "issuerName": "./src/app/inbox/layout/index.jsx",
           "profile": {
-            "factory": 107,
-            "building": 2,
-            "dependencies": 5
+            "factory": 63,
+            "building": 6,
+            "dependencies": 4
           },
           "failed": false,
           "errors": 0,
@@ -10048,9 +10057,9 @@
           "issuerId": 86,
           "issuerName": "./src/app/inbox/message/index.jsx",
           "profile": {
-            "factory": 58,
-            "building": 2,
-            "dependencies": 5
+            "factory": 43,
+            "building": 1,
+            "dependencies": 3
           },
           "failed": false,
           "errors": 0,
@@ -10090,8 +10099,8 @@
           "issuerId": 80,
           "issuerName": "./src/app/layout/index.jsx",
           "profile": {
-            "factory": 353,
-            "building": 5
+            "factory": 192,
+            "building": 3
           },
           "failed": false,
           "errors": 0,
@@ -10131,9 +10140,9 @@
           "issuerId": 88,
           "issuerName": "./src/app/outbox/index.jsx",
           "profile": {
-            "factory": 84,
-            "building": 2,
-            "dependencies": 8
+            "factory": 76,
+            "building": 1,
+            "dependencies": 2
           },
           "failed": false,
           "errors": 0,
@@ -10173,9 +10182,9 @@
           "issuerId": 81,
           "issuerName": "./src/app/page404/index.jsx",
           "profile": {
-            "factory": 347,
+            "factory": 160,
             "building": 2,
-            "dependencies": 834
+            "dependencies": 508
           },
           "failed": false,
           "errors": 0,
@@ -10215,9 +10224,9 @@
           "issuerId": 90,
           "issuerName": "./src/components/Alert/SAlert.js",
           "profile": {
-            "factory": 36,
+            "factory": 39,
             "building": 1,
-            "dependencies": 4
+            "dependencies": 3
           },
           "failed": false,
           "errors": 0,
@@ -10259,7 +10268,7 @@
           "profile": {
             "factory": 40,
             "building": 2,
-            "dependencies": 4
+            "dependencies": 2
           },
           "failed": false,
           "errors": 0,
@@ -10299,9 +10308,9 @@
           "issuerId": 95,
           "issuerName": "./src/components/Rodal/rodal.js",
           "profile": {
-            "factory": 45,
+            "factory": 59,
             "building": 1,
-            "dependencies": 6
+            "dependencies": 3
           },
           "failed": false,
           "errors": 0,
@@ -10341,7 +10350,7 @@
           "issuerId": 133,
           "issuerName": "./~/core-js/library/modules/_string-at.js",
           "profile": {
-            "factory": 42,
+            "factory": 28,
             "building": 0,
             "dependencies": 0
           },
@@ -10382,7 +10391,7 @@
           "issuerId": 133,
           "issuerName": "./~/core-js/library/modules/_string-at.js",
           "profile": {
-            "factory": 42,
+            "factory": 28,
             "building": 0,
             "dependencies": 0
           },
@@ -10423,8 +10432,8 @@
           "issuerId": 79,
           "issuerName": "./src/app/home/index.jsx",
           "profile": {
-            "factory": 291,
-            "building": 1,
+            "factory": 126,
+            "building": 0,
             "dependencies": 0
           },
           "failed": false,
@@ -10464,7 +10473,7 @@
           "issuerId": 89,
           "issuerName": "./src/common/request.js",
           "profile": {
-            "factory": 109,
+            "factory": 75,
             "building": 0,
             "dependencies": 0
           },
@@ -10505,8 +10514,8 @@
           "issuerId": 4,
           "issuerName": "./~/babel-runtime/helpers/createClass.js",
           "profile": {
-            "factory": 40,
-            "building": 1,
+            "factory": 18,
+            "building": 0,
             "dependencies": 0
           },
           "failed": false,
@@ -10546,7 +10555,7 @@
           "issuerId": 56,
           "issuerName": "./~/core-js/library/modules/_object-gopd.js",
           "profile": {
-            "factory": 12,
+            "factory": 11,
             "building": 0,
             "dependencies": 1
           },
@@ -10587,7 +10596,7 @@
           "issuerId": 57,
           "issuerName": "./~/core-js/library/modules/_object-gopn.js",
           "profile": {
-            "factory": 12,
+            "factory": 11,
             "building": 0,
             "dependencies": 0
           },
@@ -10628,12 +10637,12 @@
           "issuerId": null,
           "issuerName": null,
           "profile": {
-            "factory": 58,
-            "building": 1132
+            "factory": 51,
+            "building": 1050
           },
           "failed": false,
           "errors": 0,
-          "warnings": 0,
+          "warnings": 1,
           "reasons": [],
           "usedExports": true,
           "providedExports": null,
@@ -10690,12 +10699,12 @@
         0
       ],
       "assets": [],
-      "issuer": "delegated 12 from dll-reference vendor_c84c854fb7f3f8db7c11",
-      "issuerId": 1,
-      "issuerName": "delegated ../node_modules/react/react.js from dll-reference vendor_c84c854fb7f3f8db7c11",
+      "issuer": "delegated 243 from dll-reference vendor_c84c854fb7f3f8db7c11",
+      "issuerId": 26,
+      "issuerName": "delegated ../node_modules/react-dom/index.js from dll-reference vendor_c84c854fb7f3f8db7c11",
       "profile": {
         "factory": 0,
-        "building": 1
+        "building": 0
       },
       "failed": false,
       "errors": 0,
@@ -11037,8 +11046,9 @@
       "issuerId": 185,
       "issuerName": "./src/app/app.jsx",
       "profile": {
-        "factory": 98,
-        "building": 0
+        "factory": 86,
+        "building": 0,
+        "dependencies": 1
       },
       "failed": false,
       "errors": 0,
@@ -11239,8 +11249,8 @@
       "issuerId": 80,
       "issuerName": "./src/app/layout/index.jsx",
       "profile": {
-        "factory": 188,
-        "building": 1020
+        "factory": 68,
+        "building": 635
       },
       "failed": false,
       "errors": 0,
@@ -11388,8 +11398,8 @@
       "issuerId": 80,
       "issuerName": "./src/app/layout/index.jsx",
       "profile": {
-        "factory": 181,
-        "building": 1014
+        "factory": 65,
+        "building": 633
       },
       "failed": false,
       "errors": 0,
@@ -11537,8 +11547,8 @@
       "issuerId": 80,
       "issuerName": "./src/app/layout/index.jsx",
       "profile": {
-        "factory": 183,
-        "building": 1014
+        "factory": 66,
+        "building": 633
       },
       "failed": false,
       "errors": 0,
@@ -11686,9 +11696,9 @@
       "issuerId": 80,
       "issuerName": "./src/app/layout/index.jsx",
       "profile": {
-        "factory": 187,
-        "building": 1018,
-        "dependencies": 34
+        "factory": 68,
+        "building": 634,
+        "dependencies": 15
       },
       "failed": false,
       "errors": 0,
@@ -11836,8 +11846,8 @@
       "issuerId": 80,
       "issuerName": "./src/app/layout/index.jsx",
       "profile": {
-        "factory": 186,
-        "building": 1014
+        "factory": 67,
+        "building": 633
       },
       "failed": false,
       "errors": 0,
@@ -11985,9 +11995,9 @@
       "issuerId": 64,
       "issuerName": "./~/core-js/library/modules/web.dom.iterable.js",
       "profile": {
-        "factory": 76,
-        "building": 356,
-        "dependencies": 1
+        "factory": 54,
+        "building": 273,
+        "dependencies": 0
       },
       "failed": false,
       "errors": 0,
@@ -12135,9 +12145,9 @@
       "issuerId": 109,
       "issuerName": "./~/core-js/library/fn/object/get-prototype-of.js",
       "profile": {
-        "factory": 68,
+        "factory": 72,
         "building": 0,
-        "dependencies": 1
+        "dependencies": 0
       },
       "failed": false,
       "errors": 0,
@@ -12275,8 +12285,8 @@
       "issuerId": 163,
       "issuerName": "./~/reflux/src/connect.js",
       "profile": {
-        "factory": 37,
-        "building": 59
+        "factory": 28,
+        "building": 40
       },
       "failed": false,
       "errors": 0,
@@ -12397,8 +12407,8 @@
       "issuerId": 149,
       "issuerName": "./~/css-loader?{\"sourceMap\":false}!./~/postcss-loader?{\"sourceMap\":false}!./~/sass-loader?{\"sourceMap\":false}!./src/app/page404/index.css",
       "profile": {
-        "factory": 144,
-        "building": 82
+        "factory": 58,
+        "building": 93
       },
       "failed": false,
       "errors": 0,
@@ -12510,8 +12520,8 @@
       "issuerId": 172,
       "issuerName": "./src/app/layout/index.css",
       "profile": {
-        "factory": 836,
-        "building": 102
+        "factory": 510,
+        "building": 32
       },
       "failed": false,
       "errors": 0,
@@ -12623,7 +12633,7 @@
       "issuerId": 64,
       "issuerName": "./~/core-js/library/modules/web.dom.iterable.js",
       "profile": {
-        "factory": 73,
+        "factory": 52,
         "building": 0,
         "dependencies": 0
       },
@@ -12736,7 +12746,7 @@
       "issuerId": 185,
       "issuerName": "./src/app/app.jsx",
       "profile": {
-        "factory": 402,
+        "factory": 176,
         "building": 0,
         "dependencies": 0
       },
@@ -12840,9 +12850,9 @@
       "issuerId": 163,
       "issuerName": "./~/reflux/src/connect.js",
       "profile": {
-        "factory": 36,
-        "building": 56,
-        "dependencies": 23
+        "factory": 27,
+        "building": 46,
+        "dependencies": 4
       },
       "failed": false,
       "errors": 0,
@@ -12932,11 +12942,11 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/lushijie/github/react-reflux/node_modules/core-js/library/modules/es6.object.set-prototype-of.js",
-      "issuerId": 139,
-      "issuerName": "./~/core-js/library/modules/es6.object.set-prototype-of.js",
+      "issuer": "/Users/lushijie/github/react-reflux/node_modules/core-js/library/modules/es6.object.create.js",
+      "issuerId": 136,
+      "issuerName": "./~/core-js/library/modules/es6.object.create.js",
       "profile": {
-        "factory": 61,
+        "factory": 57,
         "building": 0,
         "dependencies": 0
       },
@@ -13031,7 +13041,7 @@
       "issuerId": 141,
       "issuerName": "./~/core-js/library/modules/es6.symbol.js",
       "profile": {
-        "factory": 161,
+        "factory": 107,
         "building": 0,
         "dependencies": 0
       },
@@ -13126,7 +13136,7 @@
       "issuerId": 141,
       "issuerName": "./~/core-js/library/modules/es6.symbol.js",
       "profile": {
-        "factory": 159,
+        "factory": 105,
         "building": 0,
         "dependencies": 0
       },
@@ -13221,8 +13231,8 @@
       "issuerId": 80,
       "issuerName": "./src/app/layout/index.jsx",
       "profile": {
-        "factory": 97,
-        "building": 1342
+        "factory": 51,
+        "building": 706
       },
       "failed": false,
       "errors": 0,
@@ -13307,9 +13317,9 @@
       "issuerId": 141,
       "issuerName": "./~/core-js/library/modules/es6.symbol.js",
       "profile": {
-        "factory": 152,
+        "factory": 99,
         "building": 0,
-        "dependencies": 1
+        "dependencies": 0
       },
       "failed": false,
       "errors": 0,
@@ -13393,8 +13403,8 @@
       "issuerId": 64,
       "issuerName": "./~/core-js/library/modules/web.dom.iterable.js",
       "profile": {
-        "factory": 74,
-        "building": 0,
+        "factory": 52,
+        "building": 1,
         "dependencies": 0
       },
       "failed": false,
@@ -13479,8 +13489,8 @@
       "issuerId": 6,
       "issuerName": "./~/babel-runtime/helpers/possibleConstructorReturn.js",
       "profile": {
-        "factory": 38,
-        "building": 211
+        "factory": 17,
+        "building": 88
       },
       "failed": false,
       "errors": 0,
@@ -13556,8 +13566,8 @@
       "issuerId": 64,
       "issuerName": "./~/core-js/library/modules/web.dom.iterable.js",
       "profile": {
-        "factory": 75,
-        "building": 355
+        "factory": 53,
+        "building": 273
       },
       "failed": false,
       "errors": 0,
@@ -13633,7 +13643,7 @@
       "issuerId": 141,
       "issuerName": "./~/core-js/library/modules/es6.symbol.js",
       "profile": {
-        "factory": 160,
+        "factory": 105,
         "building": 0,
         "dependencies": 0
       },
@@ -13710,7 +13720,7 @@
       "issuerId": 130,
       "issuerName": "./~/core-js/library/modules/_set-proto.js",
       "profile": {
-        "factory": 110,
+        "factory": 79,
         "building": 0,
         "dependencies": 0
       },
@@ -13787,7 +13797,7 @@
       "issuerId": 141,
       "issuerName": "./~/core-js/library/modules/es6.symbol.js",
       "profile": {
-        "factory": 161,
+        "factory": 107,
         "building": 0,
         "dependencies": 0
       },
@@ -13864,9 +13874,8 @@
       "issuerId": 185,
       "issuerName": "./src/app/app.jsx",
       "profile": {
-        "factory": 99,
-        "building": 1,
-        "dependencies": 0
+        "factory": 84,
+        "building": 1
       },
       "failed": false,
       "errors": 0,
@@ -13932,8 +13941,8 @@
       "issuerId": 141,
       "issuerName": "./~/core-js/library/modules/es6.symbol.js",
       "profile": {
-        "factory": 162,
-        "building": 263
+        "factory": 109,
+        "building": 207
       },
       "failed": false,
       "errors": 0,
@@ -14000,9 +14009,9 @@
       "issuerId": 141,
       "issuerName": "./~/core-js/library/modules/es6.symbol.js",
       "profile": {
-        "factory": 157,
-        "building": 251,
-        "dependencies": 1
+        "factory": 102,
+        "building": 203,
+        "dependencies": 0
       },
       "failed": false,
       "errors": 0,
@@ -14069,7 +14078,7 @@
       "issuerId": 95,
       "issuerName": "./src/components/Rodal/rodal.js",
       "profile": {
-        "factory": 53,
+        "factory": 64,
         "building": 0,
         "dependencies": 0
       },
@@ -14137,7 +14146,7 @@
       "issuerId": 121,
       "issuerName": "./~/core-js/library/modules/_is-array.js",
       "profile": {
-        "factory": 20,
+        "factory": 14,
         "building": 0,
         "dependencies": 0
       },
@@ -14205,7 +14214,7 @@
       "issuerId": 141,
       "issuerName": "./~/core-js/library/modules/es6.symbol.js",
       "profile": {
-        "factory": 160,
+        "factory": 106,
         "building": 0,
         "dependencies": 0
       },
@@ -14273,7 +14282,7 @@
       "issuerId": 137,
       "issuerName": "./~/core-js/library/modules/es6.object.get-prototype-of.js",
       "profile": {
-        "factory": 61,
+        "factory": 57,
         "building": 0,
         "dependencies": 0
       },
@@ -14341,8 +14350,8 @@
       "issuerId": 141,
       "issuerName": "./~/core-js/library/modules/es6.symbol.js",
       "profile": {
-        "factory": 154,
-        "building": 0,
+        "factory": 99,
+        "building": 1,
         "dependencies": 0
       },
       "failed": false,
@@ -14410,7 +14419,7 @@
       "issuerName": "./src/components/Alert/SAlert.js",
       "profile": {
         "factory": 48,
-        "building": 493
+        "building": 357
       },
       "failed": false,
       "errors": 0,
@@ -14469,8 +14478,8 @@
       "issuerName": "./src/components/Alert/SAlert.js",
       "profile": {
         "factory": 49,
-        "building": 494,
-        "dependencies": 19
+        "building": 352,
+        "dependencies": 18
       },
       "failed": false,
       "errors": 0,
@@ -14528,9 +14537,9 @@
       "issuerId": 136,
       "issuerName": "./~/core-js/library/modules/es6.object.create.js",
       "profile": {
-        "factory": 44,
-        "building": 129,
-        "dependencies": 108
+        "factory": 57,
+        "building": 99,
+        "dependencies": 78
       },
       "failed": false,
       "errors": 0,
@@ -14588,9 +14597,9 @@
       "issuerId": 141,
       "issuerName": "./~/core-js/library/modules/es6.symbol.js",
       "profile": {
-        "factory": 158,
-        "building": 254,
-        "dependencies": 2
+        "factory": 103,
+        "building": 203,
+        "dependencies": 0
       },
       "failed": false,
       "errors": 0,
@@ -14648,9 +14657,9 @@
       "issuerId": 114,
       "issuerName": "./~/core-js/library/fn/symbol/iterator.js",
       "profile": {
-        "factory": 43,
-        "building": 109,
-        "dependencies": 73
+        "factory": 21,
+        "building": 101,
+        "dependencies": 53
       },
       "failed": false,
       "errors": 0,
@@ -14708,8 +14717,8 @@
       "issuerId": 114,
       "issuerName": "./~/core-js/library/fn/symbol/iterator.js",
       "profile": {
-        "factory": 42,
-        "building": 105
+        "factory": 20,
+        "building": 99
       },
       "failed": false,
       "errors": 0,
@@ -14767,8 +14776,8 @@
       "issuerId": 156,
       "issuerName": "./~/react-notification-system/dist/NotificationSystem.js",
       "profile": {
-        "factory": 31,
-        "building": 238
+        "factory": 10,
+        "building": 116
       },
       "failed": false,
       "errors": 0,
@@ -14826,8 +14835,8 @@
       "issuerId": 43,
       "issuerName": "./~/reflux-core/lib/index.js",
       "profile": {
-        "factory": 32,
-        "building": 32
+        "factory": 15,
+        "building": 16
       },
       "failed": false,
       "errors": 0,
@@ -14885,9 +14894,9 @@
       "issuerId": 43,
       "issuerName": "./~/reflux-core/lib/index.js",
       "profile": {
-        "factory": 17,
-        "building": 30,
-        "dependencies": 1
+        "factory": 13,
+        "building": 10,
+        "dependencies": 0
       },
       "failed": false,
       "errors": 0,
@@ -14945,9 +14954,9 @@
       "issuerId": 166,
       "issuerName": "./~/reflux/src/index.js",
       "profile": {
-        "factory": 108,
-        "building": 48,
-        "dependencies": 3
+        "factory": 61,
+        "building": 37,
+        "dependencies": 2
       },
       "failed": false,
       "errors": 0,
@@ -15005,9 +15014,9 @@
       "issuerId": 166,
       "issuerName": "./~/reflux/src/index.js",
       "profile": {
-        "factory": 25,
-        "building": 52,
-        "dependencies": 33
+        "factory": 10,
+        "building": 25,
+        "dependencies": 27
       },
       "failed": false,
       "errors": 0,
@@ -15065,8 +15074,8 @@
       "issuerId": 141,
       "issuerName": "./~/core-js/library/modules/es6.symbol.js",
       "profile": {
-        "factory": 156,
-        "building": 0,
+        "factory": 101,
+        "building": 1,
         "dependencies": 0
       },
       "failed": false,
@@ -15124,8 +15133,8 @@
       "issuerId": 130,
       "issuerName": "./~/core-js/library/modules/_set-proto.js",
       "profile": {
-        "factory": 110,
-        "building": 0,
+        "factory": 78,
+        "building": 1,
         "dependencies": 0
       },
       "failed": false,
@@ -15183,7 +15192,7 @@
       "issuerId": 141,
       "issuerName": "./~/core-js/library/modules/es6.symbol.js",
       "profile": {
-        "factory": 162,
+        "factory": 108,
         "building": 0,
         "dependencies": 0
       },
@@ -15242,7 +15251,7 @@
       "issuerId": 141,
       "issuerName": "./~/core-js/library/modules/es6.symbol.js",
       "profile": {
-        "factory": 157,
+        "factory": 103,
         "building": 0,
         "dependencies": 0
       },
@@ -15301,8 +15310,8 @@
       "issuerId": 90,
       "issuerName": "./src/components/Alert/SAlert.js",
       "profile": {
-        "factory": 34,
-        "building": 504,
+        "factory": 35,
+        "building": 375,
         "dependencies": 2
       },
       "failed": false,
@@ -15352,9 +15361,9 @@
       "issuerId": 140,
       "issuerName": "./~/core-js/library/modules/es6.promise.js",
       "profile": {
-        "factory": 11,
-        "building": 23,
-        "dependencies": 0
+        "factory": 7,
+        "building": 13,
+        "dependencies": 1
       },
       "failed": false,
       "errors": 0,
@@ -15403,9 +15412,9 @@
       "issuerId": 36,
       "issuerName": "./~/core-js/library/modules/_object-create.js",
       "profile": {
-        "factory": 111,
-        "building": 262,
-        "dependencies": 0
+        "factory": 79,
+        "building": 211,
+        "dependencies": 1
       },
       "failed": false,
       "errors": 0,
@@ -15454,7 +15463,7 @@
       "issuerId": 119,
       "issuerName": "./~/core-js/library/modules/_for-of.js",
       "profile": {
-        "factory": 15,
+        "factory": 8,
         "building": 5,
         "dependencies": 0
       },
@@ -15505,8 +15514,8 @@
       "issuerId": 119,
       "issuerName": "./~/core-js/library/modules/_for-of.js",
       "profile": {
-        "factory": 15,
-        "building": 2,
+        "factory": 8,
+        "building": 4,
         "dependencies": 0
       },
       "failed": false,
@@ -15556,9 +15565,9 @@
       "issuerId": 39,
       "issuerName": "./~/core-js/library/modules/es6.string.iterator.js",
       "profile": {
-        "factory": 74,
-        "building": 351,
-        "dependencies": 3
+        "factory": 38,
+        "building": 285,
+        "dependencies": 1
       },
       "failed": false,
       "errors": 0,
@@ -15607,8 +15616,8 @@
       "issuerId": 140,
       "issuerName": "./~/core-js/library/modules/es6.promise.js",
       "profile": {
-        "factory": 14,
-        "building": 36,
+        "factory": 9,
+        "building": 19,
         "dependencies": 0
       },
       "failed": false,
@@ -15658,9 +15667,9 @@
       "issuerId": 141,
       "issuerName": "./~/core-js/library/modules/es6.symbol.js",
       "profile": {
-        "factory": 161,
-        "building": 263,
-        "dependencies": 0
+        "factory": 107,
+        "building": 207,
+        "dependencies": 1
       },
       "failed": false,
       "errors": 0,
@@ -15709,9 +15718,9 @@
       "issuerId": 141,
       "issuerName": "./~/core-js/library/modules/es6.symbol.js",
       "profile": {
-        "factory": 161,
-        "building": 264,
-        "dependencies": 0
+        "factory": 108,
+        "building": 207,
+        "dependencies": 1
       },
       "failed": false,
       "errors": 0,
@@ -15760,9 +15769,9 @@
       "issuerId": 137,
       "issuerName": "./~/core-js/library/modules/es6.object.get-prototype-of.js",
       "profile": {
-        "factory": 61,
-        "building": 122,
-        "dependencies": 108
+        "factory": 58,
+        "building": 96,
+        "dependencies": 72
       },
       "failed": false,
       "errors": 0,
@@ -15811,9 +15820,9 @@
       "issuerId": 137,
       "issuerName": "./~/core-js/library/modules/es6.object.get-prototype-of.js",
       "profile": {
-        "factory": 62,
-        "building": 126,
-        "dependencies": 106
+        "factory": 58,
+        "building": 97,
+        "dependencies": 74
       },
       "failed": false,
       "errors": 0,
@@ -15862,8 +15871,8 @@
       "issuerId": 141,
       "issuerName": "./~/core-js/library/modules/es6.symbol.js",
       "profile": {
-        "factory": 155,
-        "building": 248,
+        "factory": 100,
+        "building": 203,
         "dependencies": 0
       },
       "failed": false,
@@ -15913,9 +15922,9 @@
       "issuerId": 140,
       "issuerName": "./~/core-js/library/modules/es6.promise.js",
       "profile": {
-        "factory": 13,
-        "building": 30,
-        "dependencies": 1
+        "factory": 8,
+        "building": 19,
+        "dependencies": 0
       },
       "failed": false,
       "errors": 0,
@@ -15964,8 +15973,8 @@
       "issuerId": 119,
       "issuerName": "./~/core-js/library/modules/_for-of.js",
       "profile": {
-        "factory": 15,
-        "building": 3,
+        "factory": 9,
+        "building": 4,
         "dependencies": 1
       },
       "failed": false,
@@ -16015,8 +16024,8 @@
       "issuerId": 113,
       "issuerName": "./~/core-js/library/fn/symbol/index.js",
       "profile": {
-        "factory": 67,
-        "building": 116
+        "factory": 61,
+        "building": 78
       },
       "failed": false,
       "errors": 0,
@@ -16065,8 +16074,8 @@
       "issuerId": 114,
       "issuerName": "./~/core-js/library/fn/symbol/iterator.js",
       "profile": {
-        "factory": 42,
-        "building": 107
+        "factory": 21,
+        "building": 100
       },
       "failed": false,
       "errors": 0,
@@ -16115,8 +16124,8 @@
       "issuerId": 43,
       "issuerName": "./~/reflux-core/lib/index.js",
       "profile": {
-        "factory": 17,
-        "building": 31
+        "factory": 13,
+        "building": 8
       },
       "failed": false,
       "errors": 0,
@@ -16165,8 +16174,8 @@
       "issuerId": 43,
       "issuerName": "./~/reflux-core/lib/index.js",
       "profile": {
-        "factory": 17,
-        "building": 27
+        "factory": 13,
+        "building": 15
       },
       "failed": false,
       "errors": 0,
@@ -16215,8 +16224,8 @@
       "issuerId": 43,
       "issuerName": "./~/reflux-core/lib/index.js",
       "profile": {
-        "factory": 32,
-        "building": 28,
+        "factory": 14,
+        "building": 13,
         "dependencies": 1
       },
       "failed": false,
@@ -16266,9 +16275,9 @@
       "issuerId": 43,
       "issuerName": "./~/reflux-core/lib/index.js",
       "profile": {
-        "factory": 17,
-        "building": 39,
-        "dependencies": 1
+        "factory": 13,
+        "building": 18,
+        "dependencies": 0
       },
       "failed": false,
       "errors": 0,
@@ -16317,7 +16326,7 @@
       "issuerId": 95,
       "issuerName": "./src/components/Rodal/rodal.js",
       "profile": {
-        "factory": 53,
+        "factory": 63,
         "building": 0,
         "dependencies": 0
       },
@@ -16367,7 +16376,7 @@
       "issuerId": 140,
       "issuerName": "./~/core-js/library/modules/es6.promise.js",
       "profile": {
-        "factory": 12,
+        "factory": 7,
         "building": 0,
         "dependencies": 0
       },
@@ -16417,8 +16426,8 @@
       "issuerId": 36,
       "issuerName": "./~/core-js/library/modules/_object-create.js",
       "profile": {
-        "factory": 109,
-        "building": 1,
+        "factory": 79,
+        "building": 0,
         "dependencies": 0
       },
       "failed": false,
@@ -16467,7 +16476,7 @@
       "issuerId": 36,
       "issuerName": "./~/core-js/library/modules/_object-create.js",
       "profile": {
-        "factory": 109,
+        "factory": 79,
         "building": 0,
         "dependencies": 0
       },
@@ -16517,7 +16526,7 @@
       "issuerId": 141,
       "issuerName": "./~/core-js/library/modules/es6.symbol.js",
       "profile": {
-        "factory": 162,
+        "factory": 108,
         "building": 0,
         "dependencies": 0
       },
@@ -16567,7 +16576,7 @@
       "issuerId": 58,
       "issuerName": "./~/core-js/library/modules/_object-gpo.js",
       "profile": {
-        "factory": 118,
+        "factory": 82,
         "building": 0,
         "dependencies": 0
       },
@@ -16617,7 +16626,7 @@
       "issuerId": 141,
       "issuerName": "./~/core-js/library/modules/es6.symbol.js",
       "profile": {
-        "factory": 156,
+        "factory": 102,
         "building": 0,
         "dependencies": 0
       },
@@ -16667,7 +16676,7 @@
       "issuerId": 119,
       "issuerName": "./~/core-js/library/modules/_for-of.js",
       "profile": {
-        "factory": 15,
+        "factory": 9,
         "building": 0,
         "dependencies": 0
       },
@@ -16717,7 +16726,7 @@
       "issuerId": 141,
       "issuerName": "./~/core-js/library/modules/es6.symbol.js",
       "profile": {
-        "factory": 160,
+        "factory": 106,
         "building": 0,
         "dependencies": 0
       },
@@ -16767,7 +16776,7 @@
       "issuerId": 156,
       "issuerName": "./~/react-notification-system/dist/NotificationSystem.js",
       "profile": {
-        "factory": 293,
+        "factory": 135,
         "building": 0,
         "dependencies": 0
       },
@@ -16817,13 +16826,13 @@
       "issuerId": 185,
       "issuerName": "./src/app/app.jsx",
       "profile": {
-        "factory": 49,
-        "building": 437,
-        "dependencies": 129
+        "factory": 50,
+        "building": 156,
+        "dependencies": 49
       },
       "failed": false,
       "errors": 0,
-      "warnings": 0,
+      "warnings": 1,
       "reasons": [
         {
           "moduleId": 185,
@@ -16859,13 +16868,13 @@
       "issuerId": 185,
       "issuerName": "./src/app/app.jsx",
       "profile": {
-        "factory": 13,
-        "building": 413,
-        "dependencies": 75
+        "factory": 50,
+        "building": 137,
+        "dependencies": 26
       },
       "failed": false,
       "errors": 0,
-      "warnings": 0,
+      "warnings": 1,
       "reasons": [
         {
           "moduleId": 185,
@@ -16901,13 +16910,13 @@
       "issuerId": 185,
       "issuerName": "./src/app/app.jsx",
       "profile": {
-        "factory": 50,
-        "building": 389,
-        "dependencies": 176
+        "factory": 51,
+        "building": 170,
+        "dependencies": 33
       },
       "failed": false,
       "errors": 0,
-      "warnings": 0,
+      "warnings": 1,
       "reasons": [
         {
           "moduleId": 185,
@@ -16943,8 +16952,8 @@
       "issuerId": 185,
       "issuerName": "./src/app/app.jsx",
       "profile": {
-        "factory": 8,
-        "building": 400
+        "factory": 46,
+        "building": 134
       },
       "failed": false,
       "errors": 0,
@@ -16984,8 +16993,8 @@
       "issuerId": 89,
       "issuerName": "./src/common/request.js",
       "profile": {
-        "factory": 24,
-        "building": 144
+        "factory": 7,
+        "building": 98
       },
       "failed": false,
       "errors": 0,
@@ -17025,13 +17034,13 @@
       "issuerId": 82,
       "issuerName": "./src/app/router.js",
       "profile": {
-        "factory": 114,
-        "building": 1327,
-        "dependencies": 25
+        "factory": 62,
+        "building": 713,
+        "dependencies": 47
       },
       "failed": false,
       "errors": 0,
-      "warnings": 0,
+      "warnings": 1,
       "reasons": [
         {
           "moduleId": 82,
@@ -17067,13 +17076,13 @@
       "issuerId": 82,
       "issuerName": "./src/app/router.js",
       "profile": {
-        "factory": 113,
-        "building": 1255,
-        "dependencies": 84
+        "factory": 62,
+        "building": 705,
+        "dependencies": 53
       },
       "failed": false,
       "errors": 0,
-      "warnings": 0,
+      "warnings": 1,
       "reasons": [
         {
           "moduleId": 82,
@@ -17109,13 +17118,13 @@
       "issuerId": 87,
       "issuerName": "./src/app/inbox/router.js",
       "profile": {
-        "factory": 233,
-        "building": 294,
-        "dependencies": 13
+        "factory": 112,
+        "building": 237,
+        "dependencies": 31
       },
       "failed": false,
       "errors": 0,
-      "warnings": 0,
+      "warnings": 1,
       "reasons": [
         {
           "moduleId": 87,
@@ -17151,8 +17160,8 @@
       "issuerId": 82,
       "issuerName": "./src/app/router.js",
       "profile": {
-        "factory": 99,
-        "building": 1162
+        "factory": 54,
+        "building": 691
       },
       "failed": false,
       "errors": 0,
@@ -17192,9 +17201,9 @@
       "issuerId": 82,
       "issuerName": "./src/app/router.js",
       "profile": {
-        "factory": 111,
-        "building": 1288,
-        "dependencies": 56
+        "factory": 57,
+        "building": 691,
+        "dependencies": 66
       },
       "failed": false,
       "errors": 0,
@@ -17234,9 +17243,9 @@
       "issuerId": 96,
       "issuerName": "./src/models/home.js",
       "profile": {
-        "factory": 101,
-        "building": 489,
-        "dependencies": 16
+        "factory": 94,
+        "building": 379,
+        "dependencies": 4
       },
       "failed": false,
       "errors": 0,
@@ -17276,9 +17285,9 @@
       "issuerId": 18,
       "issuerName": "./src/components/index.js",
       "profile": {
-        "factory": 83,
-        "building": 359,
-        "dependencies": 17
+        "factory": 91,
+        "building": 262,
+        "dependencies": 20
       },
       "failed": false,
       "errors": 0,
@@ -17318,9 +17327,9 @@
       "issuerId": 49,
       "issuerName": "./src/components/Alert/SAlertContent.js",
       "profile": {
-        "factory": 42,
-        "building": 118,
-        "dependencies": 1
+        "factory": 28,
+        "building": 75,
+        "dependencies": 0
       },
       "failed": false,
       "errors": 0,
@@ -17360,9 +17369,9 @@
       "issuerId": 90,
       "issuerName": "./src/components/Alert/SAlert.js",
       "profile": {
-        "factory": 50,
-        "building": 518,
-        "dependencies": 4
+        "factory": 49,
+        "building": 373,
+        "dependencies": 11
       },
       "failed": false,
       "errors": 0,
@@ -17402,9 +17411,9 @@
       "issuerId": 18,
       "issuerName": "./src/components/index.js",
       "profile": {
-        "factory": 52,
-        "building": 299,
-        "dependencies": 44
+        "factory": 65,
+        "building": 214,
+        "dependencies": 17
       },
       "failed": false,
       "errors": 0,
@@ -17444,13 +17453,13 @@
       "issuerId": 18,
       "issuerName": "./src/components/index.js",
       "profile": {
-        "factory": 94,
-        "building": 327,
-        "dependencies": 28
+        "factory": 96,
+        "building": 242,
+        "dependencies": 25
       },
       "failed": false,
       "errors": 0,
-      "warnings": 0,
+      "warnings": 1,
       "reasons": [
         {
           "moduleId": 18,
@@ -17486,9 +17495,9 @@
       "issuerId": 18,
       "issuerName": "./src/components/index.js",
       "profile": {
-        "factory": 84,
-        "building": 320,
-        "dependencies": 20
+        "factory": 91,
+        "building": 218,
+        "dependencies": 50
       },
       "failed": false,
       "errors": 0,
@@ -17528,8 +17537,8 @@
       "issuerId": 97,
       "issuerName": "./src/models/index.js",
       "profile": {
-        "factory": 51,
-        "building": 302
+        "factory": 65,
+        "building": 207
       },
       "failed": false,
       "errors": 0,
@@ -17569,8 +17578,8 @@
       "issuerId": 79,
       "issuerName": "./src/app/home/index.jsx",
       "profile": {
-        "factory": 39,
-        "building": 1345
+        "factory": 34,
+        "building": 703
       },
       "failed": false,
       "errors": 0,
@@ -17610,8 +17619,8 @@
       "issuerId": 106,
       "issuerName": "./~/babel-runtime/helpers/toConsumableArray.js",
       "profile": {
-        "factory": 46,
-        "building": 33
+        "factory": 20,
+        "building": 9
       },
       "failed": false,
       "errors": 0,
@@ -17651,8 +17660,8 @@
       "issuerId": 5,
       "issuerName": "./~/babel-runtime/helpers/inherits.js",
       "profile": {
-        "factory": 35,
-        "building": 213
+        "factory": 16,
+        "building": 90
       },
       "failed": false,
       "errors": 0,
@@ -17692,8 +17701,8 @@
       "issuerId": 89,
       "issuerName": "./src/common/request.js",
       "profile": {
-        "factory": 24,
-        "building": 58
+        "factory": 7,
+        "building": 43
       },
       "failed": false,
       "errors": 0,
@@ -17733,8 +17742,8 @@
       "issuerId": 5,
       "issuerName": "./~/babel-runtime/helpers/inherits.js",
       "profile": {
-        "factory": 34,
-        "building": 212
+        "factory": 15,
+        "building": 92
       },
       "failed": false,
       "errors": 0,
@@ -17774,8 +17783,8 @@
       "issuerId": 89,
       "issuerName": "./src/common/request.js",
       "profile": {
-        "factory": 23,
-        "building": 61
+        "factory": 7,
+        "building": 66
       },
       "failed": false,
       "errors": 0,
@@ -17815,8 +17824,8 @@
       "issuerId": 21,
       "issuerName": "./~/babel-runtime/helpers/typeof.js",
       "profile": {
-        "factory": 65,
-        "building": 166
+        "factory": 39,
+        "building": 88
       },
       "failed": false,
       "errors": 0,
@@ -17856,8 +17865,8 @@
       "issuerId": 21,
       "issuerName": "./~/babel-runtime/helpers/typeof.js",
       "profile": {
-        "factory": 66,
-        "building": 164
+        "factory": 40,
+        "building": 88
       },
       "failed": false,
       "errors": 0,
@@ -17897,8 +17906,8 @@
       "issuerId": 96,
       "issuerName": "./src/models/home.js",
       "profile": {
-        "factory": 68,
-        "building": 68
+        "factory": 70,
+        "building": 62
       },
       "failed": false,
       "errors": 0,
@@ -17938,8 +17947,8 @@
       "issuerId": 34,
       "issuerName": "./src/components/Alert/s-alert-parts/s-alert-store.js",
       "profile": {
-        "factory": 40,
-        "building": 36
+        "factory": 32,
+        "building": 31
       },
       "failed": false,
       "errors": 0,
@@ -17979,9 +17988,9 @@
       "issuerId": 98,
       "issuerName": "./~/babel-runtime/core-js/array/from.js",
       "profile": {
-        "factory": 17,
-        "building": 25,
-        "dependencies": 2
+        "factory": 18,
+        "building": 34,
+        "dependencies": 1
       },
       "failed": false,
       "errors": 0,
@@ -18021,9 +18030,9 @@
       "issuerId": 99,
       "issuerName": "./~/babel-runtime/core-js/object/create.js",
       "profile": {
-        "factory": 79,
-        "building": 162,
-        "dependencies": 66
+        "factory": 44,
+        "building": 115,
+        "dependencies": 53
       },
       "failed": false,
       "errors": 0,
@@ -18063,8 +18072,8 @@
       "issuerId": 2,
       "issuerName": "./~/babel-runtime/core-js/object/get-prototype-of.js",
       "profile": {
-        "factory": 321,
-        "building": 162
+        "factory": 149,
+        "building": 96
       },
       "failed": false,
       "errors": 0,
@@ -18104,9 +18113,9 @@
       "issuerId": 100,
       "issuerName": "./~/babel-runtime/core-js/object/keys.js",
       "profile": {
-        "factory": 27,
-        "building": 51,
-        "dependencies": 1
+        "factory": 26,
+        "building": 24,
+        "dependencies": 0
       },
       "failed": false,
       "errors": 0,
@@ -18146,9 +18155,9 @@
       "issuerId": 101,
       "issuerName": "./~/babel-runtime/core-js/object/set-prototype-of.js",
       "profile": {
-        "factory": 80,
-        "building": 162,
-        "dependencies": 67
+        "factory": 43,
+        "building": 116,
+        "dependencies": 52
       },
       "failed": false,
       "errors": 0,
@@ -18188,8 +18197,8 @@
       "issuerId": 102,
       "issuerName": "./~/babel-runtime/core-js/promise.js",
       "profile": {
-        "factory": 26,
-        "building": 52,
+        "factory": 3,
+        "building": 25,
         "dependencies": 2
       },
       "failed": false,
@@ -18230,8 +18239,8 @@
       "issuerId": 103,
       "issuerName": "./~/babel-runtime/core-js/symbol.js",
       "profile": {
-        "factory": 78,
-        "building": 41,
+        "factory": 87,
+        "building": 20,
         "dependencies": 2
       },
       "failed": false,
@@ -18272,8 +18281,8 @@
       "issuerId": 104,
       "issuerName": "./~/babel-runtime/core-js/symbol/iterator.js",
       "profile": {
-        "factory": 71,
-        "building": 12
+        "factory": 82,
+        "building": 7
       },
       "failed": false,
       "errors": 0,
@@ -18313,8 +18322,8 @@
       "issuerId": 135,
       "issuerName": "./~/core-js/library/modules/es6.array.iterator.js",
       "profile": {
-        "factory": 32,
-        "building": 37
+        "factory": 23,
+        "building": 16
       },
       "failed": false,
       "errors": 0,
@@ -18354,8 +18363,8 @@
       "issuerId": 140,
       "issuerName": "./~/core-js/library/modules/es6.promise.js",
       "profile": {
-        "factory": 12,
-        "building": 23
+        "factory": 8,
+        "building": 13
       },
       "failed": false,
       "errors": 0,
@@ -18395,9 +18404,9 @@
       "issuerId": 134,
       "issuerName": "./~/core-js/library/modules/es6.array.from.js",
       "profile": {
-        "factory": 3,
-        "building": 1,
-        "dependencies": 0
+        "factory": 2,
+        "building": 4,
+        "dependencies": 1
       },
       "failed": false,
       "errors": 0,
@@ -18437,9 +18446,9 @@
       "issuerId": 141,
       "issuerName": "./~/core-js/library/modules/es6.symbol.js",
       "profile": {
-        "factory": 159,
-        "building": 256,
-        "dependencies": 1
+        "factory": 104,
+        "building": 205,
+        "dependencies": 0
       },
       "failed": false,
       "errors": 0,
@@ -18479,9 +18488,9 @@
       "issuerId": 140,
       "issuerName": "./~/core-js/library/modules/es6.promise.js",
       "profile": {
-        "factory": 12,
-        "building": 25,
-        "dependencies": 1
+        "factory": 8,
+        "building": 14,
+        "dependencies": 0
       },
       "failed": false,
       "errors": 0,
@@ -18521,8 +18530,8 @@
       "issuerId": 61,
       "issuerName": "./~/core-js/library/modules/_task.js",
       "profile": {
-        "factory": 10,
-        "building": 5
+        "factory": 4,
+        "building": 6
       },
       "failed": false,
       "errors": 0,
@@ -18562,8 +18571,8 @@
       "issuerId": 141,
       "issuerName": "./~/core-js/library/modules/es6.symbol.js",
       "profile": {
-        "factory": 159,
-        "building": 257
+        "factory": 104,
+        "building": 207
       },
       "failed": false,
       "errors": 0,
@@ -18603,8 +18612,8 @@
       "issuerId": 54,
       "issuerName": "./~/core-js/library/modules/_iter-define.js",
       "profile": {
-        "factory": 36,
-        "building": 36,
+        "factory": 27,
+        "building": 15,
         "dependencies": 1
       },
       "failed": false,
@@ -18645,8 +18654,8 @@
       "issuerId": 135,
       "issuerName": "./~/core-js/library/modules/es6.array.iterator.js",
       "profile": {
-        "factory": 33,
-        "building": 36
+        "factory": 23,
+        "building": 16
       },
       "failed": false,
       "errors": 0,
@@ -18686,9 +18695,9 @@
       "issuerId": 141,
       "issuerName": "./~/core-js/library/modules/es6.symbol.js",
       "profile": {
-        "factory": 158,
-        "building": 256,
-        "dependencies": 1
+        "factory": 104,
+        "building": 203,
+        "dependencies": 0
       },
       "failed": false,
       "errors": 0,
@@ -18728,9 +18737,9 @@
       "issuerId": 141,
       "issuerName": "./~/core-js/library/modules/es6.symbol.js",
       "profile": {
-        "factory": 155,
-        "building": 251,
-        "dependencies": 2
+        "factory": 101,
+        "building": 203,
+        "dependencies": 0
       },
       "failed": false,
       "errors": 0,
@@ -18770,8 +18779,8 @@
       "issuerId": 140,
       "issuerName": "./~/core-js/library/modules/es6.promise.js",
       "profile": {
-        "factory": 13,
-        "building": 33,
+        "factory": 9,
+        "building": 16,
         "dependencies": 0
       },
       "failed": false,
@@ -18812,9 +18821,9 @@
       "issuerId": 36,
       "issuerName": "./~/core-js/library/modules/_object-create.js",
       "profile": {
-        "factory": 108,
-        "building": 264,
-        "dependencies": 1
+        "factory": 78,
+        "building": 212,
+        "dependencies": 0
       },
       "failed": false,
       "errors": 0,
@@ -18854,9 +18863,9 @@
       "issuerId": 141,
       "issuerName": "./~/core-js/library/modules/es6.symbol.js",
       "profile": {
-        "factory": 160,
-        "building": 260,
-        "dependencies": 0
+        "factory": 106,
+        "building": 204,
+        "dependencies": 1
       },
       "failed": false,
       "errors": 0,
@@ -18896,8 +18905,8 @@
       "issuerId": 140,
       "issuerName": "./~/core-js/library/modules/es6.promise.js",
       "profile": {
-        "factory": 13,
-        "building": 32,
+        "factory": 9,
+        "building": 14,
         "dependencies": 0
       },
       "failed": false,
@@ -18938,9 +18947,9 @@
       "issuerId": 139,
       "issuerName": "./~/core-js/library/modules/es6.object.set-prototype-of.js",
       "profile": {
-        "factory": 62,
-        "building": 127,
-        "dependencies": 108
+        "factory": 55,
+        "building": 101,
+        "dependencies": 74
       },
       "failed": false,
       "errors": 0,
@@ -18980,8 +18989,8 @@
       "issuerId": 140,
       "issuerName": "./~/core-js/library/modules/es6.promise.js",
       "profile": {
-        "factory": 13,
-        "building": 34,
+        "factory": 9,
+        "building": 15,
         "dependencies": 0
       },
       "failed": false,
@@ -19022,9 +19031,9 @@
       "issuerId": 140,
       "issuerName": "./~/core-js/library/modules/es6.promise.js",
       "profile": {
-        "factory": 12,
-        "building": 28,
-        "dependencies": 1
+        "factory": 8,
+        "building": 18,
+        "dependencies": 0
       },
       "failed": false,
       "errors": 0,
@@ -19064,8 +19073,8 @@
       "issuerId": 39,
       "issuerName": "./~/core-js/library/modules/es6.string.iterator.js",
       "profile": {
-        "factory": 74,
-        "building": 345
+        "factory": 38,
+        "building": 283
       },
       "failed": false,
       "errors": 0,
@@ -19105,9 +19114,9 @@
       "issuerId": 107,
       "issuerName": "./~/core-js/library/fn/array/from.js",
       "profile": {
-        "factory": 20,
-        "building": 8,
-        "dependencies": 2
+        "factory": 2,
+        "building": 13,
+        "dependencies": 1
       },
       "failed": false,
       "errors": 0,
@@ -19147,9 +19156,9 @@
       "issuerId": 64,
       "issuerName": "./~/core-js/library/modules/web.dom.iterable.js",
       "profile": {
-        "factory": 73,
-        "building": 354,
-        "dependencies": 2
+        "factory": 37,
+        "building": 288,
+        "dependencies": 0
       },
       "failed": false,
       "errors": 0,
@@ -19189,9 +19198,8 @@
       "issuerId": 108,
       "issuerName": "./~/core-js/library/fn/object/create.js",
       "profile": {
-        "factory": 66,
-        "building": 66,
-        "dependencies": 43
+        "factory": 54,
+        "building": 25
       },
       "failed": false,
       "errors": 0,
@@ -19231,8 +19239,8 @@
       "issuerId": 109,
       "issuerName": "./~/core-js/library/fn/object/get-prototype-of.js",
       "profile": {
-        "factory": 67,
-        "building": 48
+        "factory": 72,
+        "building": 24
       },
       "failed": false,
       "errors": 0,
@@ -19272,9 +19280,9 @@
       "issuerId": 110,
       "issuerName": "./~/core-js/library/fn/object/keys.js",
       "profile": {
-        "factory": 6,
-        "building": 40,
-        "dependencies": 1
+        "factory": 4,
+        "building": 20,
+        "dependencies": 0
       },
       "failed": false,
       "errors": 0,
@@ -19314,8 +19322,9 @@
       "issuerId": 111,
       "issuerName": "./~/core-js/library/fn/object/set-prototype-of.js",
       "profile": {
-        "factory": 67,
-        "building": 48
+        "factory": 53,
+        "building": 27,
+        "dependencies": 55
       },
       "failed": false,
       "errors": 0,
@@ -19355,8 +19364,8 @@
       "issuerId": 112,
       "issuerName": "./~/core-js/library/fn/promise.js",
       "profile": {
-        "factory": 5,
-        "building": 34,
+        "factory": 4,
+        "building": 37,
         "dependencies": 1
       },
       "failed": false,
@@ -19397,9 +19406,9 @@
       "issuerId": 113,
       "issuerName": "./~/core-js/library/fn/symbol/index.js",
       "profile": {
-        "factory": 66,
-        "building": 79,
-        "dependencies": 43
+        "factory": 60,
+        "building": 72,
+        "dependencies": 26
       },
       "failed": false,
       "errors": 0,
@@ -19439,9 +19448,9 @@
       "issuerId": 113,
       "issuerName": "./~/core-js/library/fn/symbol/index.js",
       "profile": {
-        "factory": 67,
-        "building": 116,
-        "dependencies": 120
+        "factory": 61,
+        "building": 78,
+        "dependencies": 96
       },
       "failed": false,
       "errors": 0,
@@ -19481,9 +19490,9 @@
       "issuerId": 113,
       "issuerName": "./~/core-js/library/fn/symbol/index.js",
       "profile": {
-        "factory": 67,
-        "building": 116,
-        "dependencies": 120
+        "factory": 62,
+        "building": 78,
+        "dependencies": 95
       },
       "failed": false,
       "errors": 0,
@@ -19523,8 +19532,8 @@
       "issuerId": 169,
       "issuerName": "./src/app/inbox/home/index.css",
       "profile": {
-        "factory": 5,
-        "building": 201,
+        "factory": 3,
+        "building": 107,
         "dependencies": 1
       },
       "failed": false,
@@ -19566,7 +19575,7 @@
       "issuerName": "./src/app/inbox/layout/index.css",
       "profile": {
         "factory": 4,
-        "building": 216,
+        "building": 106,
         "dependencies": 1
       },
       "failed": false,
@@ -19607,8 +19616,8 @@
       "issuerId": 171,
       "issuerName": "./src/app/inbox/message/index.css",
       "profile": {
-        "factory": 4,
-        "building": 169,
+        "factory": 3,
+        "building": 156,
         "dependencies": 1
       },
       "failed": false,
@@ -19649,9 +19658,9 @@
       "issuerId": 172,
       "issuerName": "./src/app/layout/index.css",
       "profile": {
-        "factory": 11,
-        "building": 1046,
-        "dependencies": 75
+        "factory": 5,
+        "building": 602,
+        "dependencies": 47
       },
       "failed": false,
       "errors": 0,
@@ -19691,8 +19700,8 @@
       "issuerId": 173,
       "issuerName": "./src/app/outbox/index.css",
       "profile": {
-        "factory": 7,
-        "building": 210,
+        "factory": 2,
+        "building": 116,
         "dependencies": 1
       },
       "failed": false,
@@ -19733,8 +19742,8 @@
       "issuerId": 174,
       "issuerName": "./src/app/page404/index.css",
       "profile": {
-        "factory": 830,
-        "building": 154
+        "factory": 499,
+        "building": 95
       },
       "failed": false,
       "errors": 0,
@@ -19775,8 +19784,8 @@
       "issuerName": "./src/components/Alert/s-alert-default.css",
       "profile": {
         "factory": 3,
-        "building": 405,
-        "dependencies": 1
+        "building": 306,
+        "dependencies": 2
       },
       "failed": false,
       "errors": 0,
@@ -19816,8 +19825,8 @@
       "issuerId": 176,
       "issuerName": "./src/components/Menu/index.css",
       "profile": {
-        "factory": 4,
-        "building": 377,
+        "factory": 2,
+        "building": 148,
         "dependencies": 1
       },
       "failed": false,
@@ -19858,9 +19867,9 @@
       "issuerId": 177,
       "issuerName": "./src/components/Rodal/rodal.css",
       "profile": {
-        "factory": 6,
-        "building": 384,
-        "dependencies": 3
+        "factory": 3,
+        "building": 298,
+        "dependencies": 1
       },
       "failed": false,
       "errors": 0,
@@ -19900,8 +19909,8 @@
       "issuerId": 9,
       "issuerName": "./~/reflux-core/lib/utils.js",
       "profile": {
-        "factory": 58,
-        "building": 32
+        "factory": 31,
+        "building": 37
       },
       "failed": false,
       "errors": 0,
@@ -19941,9 +19950,9 @@
       "issuerId": 156,
       "issuerName": "./~/react-notification-system/dist/NotificationSystem.js",
       "profile": {
-        "factory": 30,
-        "building": 235,
-        "dependencies": 2
+        "factory": 10,
+        "building": 115,
+        "dependencies": 1
       },
       "failed": false,
       "errors": 0,
@@ -19983,8 +19992,8 @@
       "issuerId": 154,
       "issuerName": "./~/react-notification-system/dist/NotificationContainer.js",
       "profile": {
-        "factory": 35,
-        "building": 214,
+        "factory": 14,
+        "building": 158,
         "dependencies": 2
       },
       "failed": false,
@@ -20025,9 +20034,9 @@
       "issuerId": 79,
       "issuerName": "./src/app/home/index.jsx",
       "profile": {
-        "factory": 291,
-        "building": 883,
-        "dependencies": 12
+        "factory": 138,
+        "building": 558,
+        "dependencies": 4
       },
       "failed": false,
       "errors": 0,
@@ -20067,8 +20076,8 @@
       "issuerId": 155,
       "issuerName": "./~/react-notification-system/dist/NotificationItem.js",
       "profile": {
-        "factory": 9,
-        "building": 46
+        "factory": 7,
+        "building": 23
       },
       "failed": false,
       "errors": 0,
@@ -20108,8 +20117,8 @@
       "issuerId": 156,
       "issuerName": "./~/react-notification-system/dist/NotificationSystem.js",
       "profile": {
-        "factory": 34,
-        "building": 245
+        "factory": 11,
+        "building": 117
       },
       "failed": false,
       "errors": 0,
@@ -20150,7 +20159,7 @@
       "issuerName": "./~/reflux-core/lib/createStore.js",
       "profile": {
         "factory": 11,
-        "building": 35
+        "building": 37
       },
       "failed": false,
       "errors": 0,
@@ -20190,9 +20199,9 @@
       "issuerId": 43,
       "issuerName": "./~/reflux-core/lib/index.js",
       "profile": {
-        "factory": 32,
-        "building": 30,
-        "dependencies": 1
+        "factory": 14,
+        "building": 19,
+        "dependencies": 0
       },
       "failed": false,
       "errors": 0,
@@ -20232,8 +20241,8 @@
       "issuerId": 67,
       "issuerName": "./~/reflux-core/lib/createStore.js",
       "profile": {
-        "factory": 10,
-        "building": 23,
+        "factory": 11,
+        "building": 35,
         "dependencies": 0
       },
       "failed": false,
@@ -20274,9 +20283,9 @@
       "issuerId": 166,
       "issuerName": "./~/reflux/src/index.js",
       "profile": {
-        "factory": 25,
-        "building": 59,
-        "dependencies": 25
+        "factory": 10,
+        "building": 30,
+        "dependencies": 21
       },
       "failed": false,
       "errors": 0,
@@ -20316,9 +20325,9 @@
       "issuerId": 166,
       "issuerName": "./~/reflux/src/index.js",
       "profile": {
-        "factory": 24,
-        "building": 49,
-        "dependencies": 0
+        "factory": 9,
+        "building": 25,
+        "dependencies": 1
       },
       "failed": false,
       "errors": 0,
@@ -20358,9 +20367,9 @@
       "issuerId": 166,
       "issuerName": "./~/reflux/src/index.js",
       "profile": {
-        "factory": 24,
-        "building": 55,
-        "dependencies": 32
+        "factory": 10,
+        "building": 27,
+        "dependencies": 26
       },
       "failed": false,
       "errors": 0,
@@ -20400,8 +20409,8 @@
       "issuerId": 162,
       "issuerName": "./~/reflux/src/addES6.js",
       "profile": {
-        "factory": 24,
-        "building": 41,
+        "factory": 20,
+        "building": 34,
         "dependencies": 0
       },
       "failed": false,
@@ -20442,8 +20451,8 @@
       "issuerId": 96,
       "issuerName": "./src/models/home.js",
       "profile": {
-        "factory": 299,
-        "building": 259
+        "factory": 241,
+        "building": 219
       },
       "failed": false,
       "errors": 0,
@@ -20483,9 +20492,9 @@
       "issuerId": 166,
       "issuerName": "./~/reflux/src/index.js",
       "profile": {
-        "factory": 25,
-        "building": 58,
-        "dependencies": 26
+        "factory": 10,
+        "building": 29,
+        "dependencies": 23
       },
       "failed": false,
       "errors": 0,
@@ -20525,9 +20534,9 @@
       "issuerId": 166,
       "issuerName": "./~/reflux/src/index.js",
       "profile": {
-        "factory": 25,
-        "building": 61,
-        "dependencies": 23
+        "factory": 10,
+        "building": 28,
+        "dependencies": 24
       },
       "failed": false,
       "errors": 0,
@@ -20567,9 +20576,9 @@
       "issuerId": 84,
       "issuerName": "./src/app/inbox/home/index.jsx",
       "profile": {
-        "factory": 56,
-        "building": 4,
-        "dependencies": 5
+        "factory": 66,
+        "building": 1,
+        "dependencies": 3
       },
       "failed": false,
       "errors": 0,
@@ -20609,9 +20618,9 @@
       "issuerId": 85,
       "issuerName": "./src/app/inbox/layout/index.jsx",
       "profile": {
-        "factory": 107,
-        "building": 2,
-        "dependencies": 5
+        "factory": 63,
+        "building": 6,
+        "dependencies": 4
       },
       "failed": false,
       "errors": 0,
@@ -20651,9 +20660,9 @@
       "issuerId": 86,
       "issuerName": "./src/app/inbox/message/index.jsx",
       "profile": {
-        "factory": 58,
-        "building": 2,
-        "dependencies": 5
+        "factory": 43,
+        "building": 1,
+        "dependencies": 3
       },
       "failed": false,
       "errors": 0,
@@ -20693,8 +20702,8 @@
       "issuerId": 80,
       "issuerName": "./src/app/layout/index.jsx",
       "profile": {
-        "factory": 353,
-        "building": 5
+        "factory": 192,
+        "building": 3
       },
       "failed": false,
       "errors": 0,
@@ -20734,9 +20743,9 @@
       "issuerId": 88,
       "issuerName": "./src/app/outbox/index.jsx",
       "profile": {
-        "factory": 84,
-        "building": 2,
-        "dependencies": 8
+        "factory": 76,
+        "building": 1,
+        "dependencies": 2
       },
       "failed": false,
       "errors": 0,
@@ -20776,9 +20785,9 @@
       "issuerId": 81,
       "issuerName": "./src/app/page404/index.jsx",
       "profile": {
-        "factory": 347,
+        "factory": 160,
         "building": 2,
-        "dependencies": 834
+        "dependencies": 508
       },
       "failed": false,
       "errors": 0,
@@ -20818,9 +20827,9 @@
       "issuerId": 90,
       "issuerName": "./src/components/Alert/SAlert.js",
       "profile": {
-        "factory": 36,
+        "factory": 39,
         "building": 1,
-        "dependencies": 4
+        "dependencies": 3
       },
       "failed": false,
       "errors": 0,
@@ -20862,7 +20871,7 @@
       "profile": {
         "factory": 40,
         "building": 2,
-        "dependencies": 4
+        "dependencies": 2
       },
       "failed": false,
       "errors": 0,
@@ -20902,9 +20911,9 @@
       "issuerId": 95,
       "issuerName": "./src/components/Rodal/rodal.js",
       "profile": {
-        "factory": 45,
+        "factory": 59,
         "building": 1,
-        "dependencies": 6
+        "dependencies": 3
       },
       "failed": false,
       "errors": 0,
@@ -20944,7 +20953,7 @@
       "issuerId": 133,
       "issuerName": "./~/core-js/library/modules/_string-at.js",
       "profile": {
-        "factory": 42,
+        "factory": 28,
         "building": 0,
         "dependencies": 0
       },
@@ -20985,7 +20994,7 @@
       "issuerId": 133,
       "issuerName": "./~/core-js/library/modules/_string-at.js",
       "profile": {
-        "factory": 42,
+        "factory": 28,
         "building": 0,
         "dependencies": 0
       },
@@ -21026,8 +21035,8 @@
       "issuerId": 79,
       "issuerName": "./src/app/home/index.jsx",
       "profile": {
-        "factory": 291,
-        "building": 1,
+        "factory": 126,
+        "building": 0,
         "dependencies": 0
       },
       "failed": false,
@@ -21067,7 +21076,7 @@
       "issuerId": 89,
       "issuerName": "./src/common/request.js",
       "profile": {
-        "factory": 109,
+        "factory": 75,
         "building": 0,
         "dependencies": 0
       },
@@ -21108,8 +21117,8 @@
       "issuerId": 4,
       "issuerName": "./~/babel-runtime/helpers/createClass.js",
       "profile": {
-        "factory": 40,
-        "building": 1,
+        "factory": 18,
+        "building": 0,
         "dependencies": 0
       },
       "failed": false,
@@ -21149,7 +21158,7 @@
       "issuerId": 56,
       "issuerName": "./~/core-js/library/modules/_object-gopd.js",
       "profile": {
-        "factory": 12,
+        "factory": 11,
         "building": 0,
         "dependencies": 1
       },
@@ -21190,7 +21199,7 @@
       "issuerId": 57,
       "issuerName": "./~/core-js/library/modules/_object-gopn.js",
       "profile": {
-        "factory": 12,
+        "factory": 11,
         "building": 0,
         "dependencies": 0
       },
@@ -21231,12 +21240,12 @@
       "issuerId": null,
       "issuerName": null,
       "profile": {
-        "factory": 58,
-        "building": 1132
+        "factory": 51,
+        "building": 1050
       },
       "failed": false,
       "errors": 0,
-      "warnings": 0,
+      "warnings": 1,
       "reasons": [],
       "usedExports": true,
       "providedExports": null,
@@ -21305,8 +21314,8 @@
               "issuerId": 3,
               "issuerName": "./~/html-webpack-plugin/lib/loader.js!./src/index.html",
               "profile": {
-                "factory": 530,
-                "building": 591
+                "factory": 589,
+                "building": 453
               },
               "failed": false,
               "errors": 0,
@@ -21346,8 +21355,8 @@
               "issuerId": 0,
               "issuerName": "./~/lodash/lodash.js",
               "profile": {
-                "factory": 5,
-                "building": 21
+                "factory": 3,
+                "building": 14
               },
               "failed": false,
               "errors": 0,
@@ -21387,8 +21396,8 @@
               "issuerId": 0,
               "issuerName": "./~/lodash/lodash.js",
               "profile": {
-                "factory": 6,
-                "building": 25
+                "factory": 4,
+                "building": 21
               },
               "failed": false,
               "errors": 0,
@@ -21428,7 +21437,7 @@
               "issuerId": null,
               "issuerName": null,
               "profile": {
-                "factory": 34,
+                "factory": 26,
                 "building": 25
               },
               "failed": false,
@@ -21474,8 +21483,8 @@
           "issuerId": 3,
           "issuerName": "./~/html-webpack-plugin/lib/loader.js!./src/index.html",
           "profile": {
-            "factory": 530,
-            "building": 591
+            "factory": 589,
+            "building": 453
           },
           "failed": false,
           "errors": 0,
@@ -21515,8 +21524,8 @@
           "issuerId": 0,
           "issuerName": "./~/lodash/lodash.js",
           "profile": {
-            "factory": 5,
-            "building": 21
+            "factory": 3,
+            "building": 14
           },
           "failed": false,
           "errors": 0,
@@ -21556,8 +21565,8 @@
           "issuerId": 0,
           "issuerName": "./~/lodash/lodash.js",
           "profile": {
-            "factory": 6,
-            "building": 25
+            "factory": 4,
+            "building": 21
           },
           "failed": false,
           "errors": 0,
@@ -21597,7 +21606,7 @@
           "issuerId": null,
           "issuerName": null,
           "profile": {
-            "factory": 34,
+            "factory": 26,
             "building": 25
           },
           "failed": false,

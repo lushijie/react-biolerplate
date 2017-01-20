@@ -2,12 +2,13 @@
  * @Author: lushijie
  * @Date:   2016-11-11 16:28:28
  * @Last Modified by:   lushijie
- * @Last Modified time: 2017-01-20 16:31:36
+ * @Last Modified time: 2017-01-20 17:23:21
  */
 
-var path = require('path');
-var webpack = require('webpack');
-var base = path.join(__dirname);
+var path = require('path')
+var webpack = require('webpack')
+var base = path.join(__dirname)
+var Pconf = require('./webpack2.plugin.conf.js')
 
 var vendors = [
   'antd/lib/icon',
@@ -19,7 +20,7 @@ var vendors = [
   'react-dom',
   'react-router',
   'reqwest',
-];
+]
 
 module.exports = {
   cache: true,
@@ -33,21 +34,8 @@ module.exports = {
     vendor: vendors,
   },
   plugins: [
-    new webpack.DllPlugin({
-      path: path.join(__dirname, 'manifest.json'),
-      name: '[name]_[chunkhash]',
-      context: __dirname,
-    }),
-    new webpack.DefinePlugin({
-      "process.env": {
-        NODE_ENV: JSON.stringify("production")
-      }
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      },
-      except: ['$super', '$', 'exports', 'require']
-    }),
+    Pconf.dllPluginConf(),
+    Pconf.definePluginConf(),
+    Pconf.uglifyJsPluginConf()
   ],
 };
