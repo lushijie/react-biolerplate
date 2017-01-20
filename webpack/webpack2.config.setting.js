@@ -2,7 +2,7 @@
  * @Author: lushijie
  * @Date:   2016-11-11 17:20:12
  * @Last Modified by:   lushijie
- * @Last Modified time: 2017-01-20 15:26:13
+ * @Last Modified time: 2017-01-20 18:49:20
  */
 var path = require('path');
 var moment = require('moment');
@@ -12,13 +12,12 @@ var htmlPluginOptions = {
   filename: 'index.html',
   title: 'route',
   hash: true,
-  inject: false,
+  inject: true,
   template: path.resolve(__dirname, '..','src/index.html'),
-  // favicon: './src/resource/images/favicon.ico',
   minify: {
-    removeComments: false,
-    collapseWhitespace: false,
-    minifyCSS: false
+    removeComments: true,
+    collapseWhitespace: true,
+    minifyCSS: true
   },
 };
 

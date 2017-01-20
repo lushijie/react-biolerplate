@@ -7,7 +7,7 @@
     "start": "npm run dev",
     "json": "json-server --config=./json-server/setting.json ./json-server/db.json --middlewares=./json-server/middleware1.js",
     "dev": "export NODE_ENV=development && webpack-dev-server --config=./webpack2.config.js",
-    "debug": "export NODE_ENV=development && webpack -p --config=./webpack2.config.js --progress --profile --json > stats.json",
+    "debug": "export NODE_ENV=development && webpack --config=./webpack2.config.js --progress --profile --json > stats.json",
     "release": "export NODE_ENV=production && webpack --config=./webpack2.config.js --progress"
   },
   "author": "lushijie1218@126.com",

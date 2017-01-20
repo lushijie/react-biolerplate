@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2017-01-04 17:36:43
 * @Last Modified by:   lushijie
-* @Last Modified time: 2017-01-20 18:08:58
+* @Last Modified time: 2017-01-20 18:50:12
 */
 var webpack = require('webpack')
 var path = require('path')
@@ -105,7 +105,6 @@ module.exports = {
   },
   devtool: Settings.ISDEV ? 'inline-source-map' : 'cheap-module-source-map',
   plugins: [
-
     Pconf.providePluginConf(Settings.providePluginOptions),
     Pconf.htmlWebPackPluginConf(Settings.htmlPluginOptions),
     Pconf.definePluginConf(),
