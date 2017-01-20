@@ -21,7 +21,7 @@ module.exports = {
   rules: {
     'no-debugger':                  'warn',     // 禁用 debugger
     'no-use-before-define':         'warn',     // 禁止在变量定义之前使用它们
-    // 'no-unused-vars':               'warn',     // 禁止出现未使用过的变量
+    'no-unused-vars':               'warn',     // 禁止出现未使用过的变量
     'no-unused-expressions':        'warn',     // 禁止出现未使用过的表达式
     'no-var':                       'warn',     // 要求使用 let 或 const 而不是 var
     'no-mixed-spaces-and-tabs':     'warn',     // 禁止空格和 tab 的混合缩进

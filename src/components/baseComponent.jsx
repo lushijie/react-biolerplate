@@ -21,7 +21,7 @@ class BaseComponent extends React.Component {
   }
 
   listen(store, type, scb, fcb){
-    let self = this;
+    //let self = this;
     type = type.split(' ');
     type.forEach(t => {
       let stype = t + 'Success',

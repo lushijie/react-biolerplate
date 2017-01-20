@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2016-12-28 18:10:44
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-12-29 19:35:36
+* @Last Modified time: 2017-01-20 15:09:41
 */
 import Layout from 'app/layout'
 import IndexHome from 'app/home'
@@ -40,6 +40,7 @@ export let rootRoute = [
         //   }, 'inbox_index');
         // },
         onEnter: function(nextState, replaceState){
+          console.log(nextState, replaceState);
           console.log('Inbox onEnter');
         },
         childRoutes: InboxRouter

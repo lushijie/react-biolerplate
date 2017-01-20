@@ -1,7 +1,5 @@
-import React, {Component} from 'react'
+import React from 'react'
 import {withRouter} from 'react-router'
-import {render} from 'react-dom'
-import {Link, IndexLink} from 'react-router'
 import {BaseComponent, Menu, Alert} from 'components'
 import './index.scss'
 

@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import {render} from 'react-dom'
 import {Link, IndexLink} from 'react-router'
 import './index.css'
 
