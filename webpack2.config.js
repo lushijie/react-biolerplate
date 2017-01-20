@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2017-01-04 17:36:43
 * @Last Modified by:   lushijie
-* @Last Modified time: 2017-01-20 17:49:46
+* @Last Modified time: 2017-01-20 18:08:58
 */
 var webpack = require('webpack')
 var path = require('path')
@@ -111,8 +111,9 @@ module.exports = {
     Pconf.definePluginConf(),
     // Pconf.dllReferencePluginConf(),
     // Pconf.commonsChunkPluginConf(),
-    new webpack.optimize.CommonsChunkPlugin({
+    Pconf.commonsChunkPluginConf({
       name: 'vendors',
+      filename: 'vendors.bundle.js'
       // minChunks: function (module, count) {
       //   return (
       //     module.resource &&
@@ -121,13 +122,12 @@ module.exports = {
       //   )
       // }
     }),
-    new webpack.optimize.CommonsChunkPlugin({
+    Pconf.commonsChunkPluginConf({
       name: 'common',
-      //chunks: ['vendors']
+      filename: 'common.bundle.js'
     }),
     Pconf.uglifyJsPluginConf(),
-    Pconf.compressionWebpackPluginConf()
-
+    Pconf.compressionWebpackPluginConf(),
   ],
   devServer: {
     stats: {

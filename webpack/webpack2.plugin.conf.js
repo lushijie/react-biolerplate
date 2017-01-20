@@ -2,7 +2,7 @@
  * @Author: lushijie
  * @Date:   2016-03-04 11:28:41
  * @Last Modified by:   lushijie
- * @Last Modified time: 2017-01-20 17:41:16
+ * @Last Modified time: 2017-01-20 18:02:13
  */
 var webpack = require('webpack')
 var path = require('path')
@@ -67,13 +67,6 @@ module.exports = {
     }, options);
     return (
       new webpack.optimize.CommonsChunkPlugin(options)
-    )
-  },
-
-  // 把相似的chunks和files合并来更好的缓存
-  'dedupePluginConf': function() {
-    return (
-      new webpack.optimize.DedupePlugin()
     )
   },
 
