@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2017-01-04 17:36:43
 * @Last Modified by:   lushijie
-* @Last Modified time: 2017-01-20 16:45:02
+* @Last Modified time: 2017-01-20 17:03:05
 */
 var webpack = require('webpack')
 var path = require('path')
@@ -47,9 +47,9 @@ module.exports = {
               sourceMap: Settings.ISDEV ? true : false,
               plugins: function() {
                 return [
-                  require('cssnano'),
-                  require('precss'),
-                  require('cssnext')
+                  // require('cssnano'),
+                  // require('precss'),
+                  // require('cssnext')
                 ]
               }
             }

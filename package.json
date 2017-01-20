@@ -6,12 +6,12 @@
   "scripts": {
     "start": "npm run dev",
     "json": "json-server --config=./json-server/setting.json ./json-server/db.json --middlewares=./json-server/middleware1.js",
-    "predev": " [ -f dist/vendor.bundle.js ] || webpack --config=./webpack/webpack2.dll.conf.js --progress --profile",
-    "dev": "export NODE_ENV=development && webpack-dev-server --config=./webpack2.config.js",
-    "predebug": "[ -f dist/vendor.bundle.js ] || webpack --config=./webpack/webpack2.dll.conf.js --progress --profile",
-    "debug": "export NODE_ENV=development && webpack --config=./webpack2.config.js",
-    "prerelease": "webpack --config=./webpack/webpack2.dll.conf.js --progress --profile",
-    "release": "export NODE_ENV=production && webpack --config=./webpack2.config.js"
+    "predev": " [ -f dist/vendor.bundle.js ] || webpack --config=./webpack/webpack2.dll.conf.js --progress --profile --json > stats1.json",
+    "dev": "export NODE_ENV=development && webpack-dev-server --config=./webpack2.config.js --json > stats2.json",
+    "predebug": "[ -f dist/vendor.bundle.js ] || webpack --config=./webpack/webpack2.dll.conf.js --progress --profile --json > stats1.json",
+    "debug": "export NODE_ENV=development && webpack --config=./webpack2.config.js --json > stats2.json",
+    "prerelease": "webpack --config=./webpack/webpack2.dll.conf.js --profile --json > stats1.json",
+    "release": "export NODE_ENV=production && webpack --config=./webpack2.config.js  --profile --json > stats2.json"
   },
   "author": "lushijie1218@126.com",
   "license": "ISC",
@@ -62,6 +62,7 @@
     "transfer-webpack-plugin": "^0.1.4",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.2",
+    "webpack-bundle-analyzer": "~2.2.1",
     "webpack-dev-server": "^1.15.1"
   }
 }
