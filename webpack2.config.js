@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2017-01-04 17:36:43
 * @Last Modified by:   lushijie
-* @Last Modified time: 2017-01-20 17:11:29
+* @Last Modified time: 2017-01-20 17:39:59
 */
 var webpack = require('webpack')
 var path = require('path')
@@ -13,6 +13,17 @@ var Pconf = require('./webpack/webpack2.plugin.conf.js')
 module.exports = {
   entry: {
     index: './src/app/app.jsx',
+    vendors: [
+      'antd/lib/icon',
+      'autobind-decorator',
+      'babel-polyfill',
+      'classnames',
+      // 'moment',
+      'react',
+      'react-dom',
+      'react-router',
+      'reqwest',
+    ]
   },
   output: {
     publicPath: '/dist/',
@@ -94,11 +105,29 @@ module.exports = {
   },
   devtool: Settings.ISDEV ? 'inline-source-map' : 'cheap-module-source-map',
   plugins: [
-    Pconf.uglifyJsPluginConf(),
-    Pconf.commonsChunkPluginConf(),
-    Pconf.htmlWebPackPluginConf(Settings.htmlPluginOptions),
+
     Pconf.providePluginConf(Settings.providePluginOptions),
-    Pconf.dllReferencePluginConf()
+    Pconf.htmlWebPackPluginConf(Settings.htmlPluginOptions),
+    Pconf.definePluginConf(),
+    // Pconf.dllReferencePluginConf(),
+    // Pconf.commonsChunkPluginConf(),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendors',
+      // minChunks: function (module, count) {
+      //   return (
+      //     module.resource &&
+      //     /\.js$/.test(module.resource) &&
+      //     module.resource.indexOf(path.join(__dirname, '../node_modules')) === 0
+      //   )
+      // }
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'common',
+      //chunks: ['vendors']
+    }),
+    Pconf.uglifyJsPluginConf(),
+    Pconf.compressionWebpackPluginConf()
+
   ],
   devServer: {
     stats: {

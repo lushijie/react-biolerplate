@@ -1,0 +1,58 @@
+ http://0.0.0.0:5050/webpack-dev-server/
+webpack result is served from /dist/
+content is served from .
+404s will fallback to /dist/index.html
+Hash: [1m51cff751b767f191b69f[39m[22m
+Version: webpack [1m2.2.0[39m[22m
+Time: [1m9993[39m[22mms
+               [1mAsset[39m[22m       [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m           [1m[39m[22m       [1mChunk Names[39m[22m
+   [1m[33mvendors.bundle.js[39m[22m     [1m[33m299 kB[39m[22m    [1m0, 2[39m[22m  [1m[32m[emitted][39m[22m  [1m[33m[big][39m[22m  vendors
+     [1m[32mindex.bundle.js[39m[22m     129 kB    [1m1, 2[39m[22m  [1m[32m[emitted][39m[22m         index
+    [1m[32mcommon.bundle.js[39m[22m    1.45 kB       [1m2[39m[22m  [1m[32m[emitted][39m[22m         common
+  [1m[32mindex.bundle.js.gz[39m[22m    30.1 kB        [1m[39m[22m  [1m[32m[emitted][39m[22m         
+[1m[32mvendors.bundle.js.gz[39m[22m    90.9 kB        [1m[39m[22m  [1m[32m[emitted][39m[22m         
+          [1m[32mindex.html[39m[22m  386 bytes        [1m[39m[22m  [1m[32m[emitted][39m[22m         
+chunk    {[1m[33m0[39m[22m} [1m[32mvendors.bundle.js[39m[22m (vendors) 1.09 MB {[1m[33m2[39m[22m}[1m[33m [initial][39m[22m[1m[32m [rendered][39m[22m
+    [1] [1m./~/react/react.js[39m[22m 56 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+   [40] [1m./~/react-router/lib/index.js[39m[22m 4.6 kB {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+   [82] [1m./~/react-dom/index.js[39m[22m 63 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+  [138] [1m./~/autobind-decorator/lib/index.js[39m[22m 2.73 kB {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+  [212] [1m./~/classnames/index.js[39m[22m 1.1 kB {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+  [213] [1m./~/reqwest/reqwest.js[39m[22m 19.2 kB {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+  [313] [1m./~/antd/lib/icon/index.js[39m[22m 1.57 kB {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+  [318] [1m./~/babel-polyfill/lib/index.js[39m[22m 833 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+  [611] [1m./~/react-router/lib/IndexLink.js[39m[22m 908 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+  [625] [1m./~/react-router/lib/hashHistory.js[39m[22m 535 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+  [627] [1m./~/react-router/lib/match.js[39m[22m 3.17 kB {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+  [629] [1m./~/react-router/lib/useRoutes.js[39m[22m 2.08 kB {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+  [630] [1m./~/react-router/lib/withRouter.js[39m[22m 2.18 kB {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+  [640] [1m./~/react/lib/React.js[39m[22m 2.62 kB {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+  [718] [1mmulti antd/lib/icon autobind-decorator babel-polyfill classnames react react-dom react-router reqwest[39m[22m 112 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+     + 558 hidden modules
+chunk    {[1m[33m1[39m[22m} [1m[32mindex.bundle.js[39m[22m (index) 278 kB {[1m[33m0[39m[22m}[1m[33m [initial][39m[22m[1m[32m [rendered][39m[22m
+   [21] [1m./~/babel-runtime/helpers/classCallCheck.js[39m[22m 208 bytes {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+   [83] [1m./src/components/index.js[39m[22m 1.16 kB {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+  [314] [1m./src/app/home/index.jsx[39m[22m 7.69 kB {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+  [315] [1m./src/app/layout/index.jsx[39m[22m 1.88 kB {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+  [316] [1m./src/app/page404/index.jsx[39m[22m 1.66 kB {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+  [317] [1m./src/app/router.js[39m[22m 1.07 kB {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+  [320] [1m./src/app/inbox/home/index.jsx[39m[22m 1.96 kB {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+  [321] [1m./src/app/inbox/layout/index.jsx[39m[22m 1.97 kB {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+  [323] [1m./src/app/inbox/router.js[39m[22m 933 bytes {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+  [324] [1m./src/app/outbox/index.jsx[39m[22m 3 kB {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+  [333] [1m./src/models/index.js[39m[22m 368 bytes {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+  [607] [1m./~/react-notification-system/dist/NotificationSystem.js[39m[22m 6.36 kB {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+  [709] [1m./src/app/layout/index.css[39m[22m 1.4 kB {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+  [711] [1m./src/app/page404/index.css[39m[22m 1.4 kB {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+  [717] [1m./src/app/app.jsx[39m[22m 842 bytes {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+     + 131 hidden modules
+chunk    {[1m[33m2[39m[22m} [1m[32mcommon.bundle.js[39m[22m (common) 0 bytes[1m[33m [entry][39m[22m[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[39m[22m:
+         [1mAsset[39m[22m    [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m[1m[39m[22m[1mChunk Names[39m[22m
+    [1m[32mindex.html[39m[22m  532 kB       [1m0[39m[22m  [1m[32m[39m[22m
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 529 kB[1m[33m [entry][39m[22m[1m[32m [rendered][39m[22m
+        [0] [1m./~/lodash/lodash.js[39m[22m 527 kB {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+        [1] [1m(webpack)/buildin/global.js[39m[22m 509 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+        [2] [1m(webpack)/buildin/module.js[39m[22m 517 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+        [3] [1m./~/html-webpack-plugin/lib/loader.js!./src/index.html[39m[22m 824 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+webpack: bundle is now VALID.

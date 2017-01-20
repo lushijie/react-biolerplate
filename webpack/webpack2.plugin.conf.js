@@ -2,22 +2,23 @@
  * @Author: lushijie
  * @Date:   2016-03-04 11:28:41
  * @Last Modified by:   lushijie
- * @Last Modified time: 2017-01-20 17:21:33
+ * @Last Modified time: 2017-01-20 17:41:16
  */
 var webpack = require('webpack')
 var path = require('path')
 var moment = require('moment')
-var objectAssign = require('object-assign')
+var ObjectAssign = require('object-assign')
 var CleanPlugin = require('clean-webpack-plugin')
 var ExtractTextPlugin = require("extract-text-webpack-plugin")
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var TransferWebpackPlugin = require('transfer-webpack-plugin')
+var CompressionWebpackPlugin = require('compression-webpack-plugin')
 
 module.exports = {
 
   //为打包之后的各个文件添加说明头部
   'bannerPluginConf': function(options) {
-    options = objectAssign({
+    options = ObjectAssign({
       banner: 'This file last modified is at ' + moment().format('YYYY-MM-DD h:mm:ss'),
       raw: true,
       entryOnly: true
@@ -30,7 +31,7 @@ module.exports = {
   //下次打包清除上一次打包文件
   'cleanPluginConf': function(paths, options) {
     paths = paths || ['dist'];
-    options = objectAssign({
+    options = ObjectAssign({
       root: __dirname,
       verbose: true,
       dry: false
@@ -40,9 +41,22 @@ module.exports = {
     )
   },
 
+  compressionWebpackPluginConf: function(options) {
+    options = ObjectAssign({
+      asset: '[path].gz[query]',
+      algorithm: 'gzip',
+      test: new RegExp(
+        '\\.(' + ['js', 'css'].join('|') + ')$'
+      ),
+      threshold: 10240,
+      minRatio: 0.8
+    }, options);
+    return new CompressionWebpackPlugin(options);
+  },
+
   //提取common文件模块
   'commonsChunkPluginConf': function(options) {
-    options = objectAssign({
+    options = ObjectAssign({
       //1.如果不存在 chunk 为 common 的模块，则从所有模块提取公共到 common 这一公共模块;
       //2.如果存在 chunk 的 name 为 common 的模块，
       //则以common 为基础，提取其他模块和common相同的部分并合并到 common 模块
@@ -66,7 +80,7 @@ module.exports = {
   //definePlugin 会把定义的string 变量插入到所有JS代码中
   //注意与providePluginConf的区分
   'definePluginConf': function(options) {
-    options = objectAssign({
+    options = ObjectAssign({
       "process.env": {
         NODE_ENV: JSON.stringify("production")
       }
@@ -77,7 +91,7 @@ module.exports = {
   },
 
   'dllPluginConf': function(options) {
-    options = objectAssign({
+    options = ObjectAssign({
       path: path.join(__dirname, 'manifest.json'),
       name: '[name]_[chunkhash]',
       context: __dirname,
@@ -91,7 +105,7 @@ module.exports = {
 
   //常用并且不常变化的打包成dll引入
   'dllReferencePluginConf': function(options) {
-    options = objectAssign({
+    options = ObjectAssign({
       context: __dirname,
       manifest: require('./manifest.json'),
     }, options);
@@ -103,7 +117,7 @@ module.exports = {
   //css 以文件类型引入而不再内嵌到HTML中
   'extractTextPluginConf': function(fileName, options) {
     fileName = fileName || "[name].bundle.css";
-    //options = objectAssign({}, options);
+    //options = ObjectAssign({}, options);
     return (
       new ExtractTextPlugin(fileName)
     )
@@ -118,7 +132,7 @@ module.exports = {
 
   //如果有多个页面需要写多个htmlWebPackPluginConf
   'htmlWebPackPluginConf': function(options) {
-    options = objectAssign({}, options);
+    options = ObjectAssign({}, options);
     return (
       new HtmlWebpackPlugin(options)
     )
@@ -145,7 +159,7 @@ module.exports = {
   //eg: options = {$: 'jquery'} 相当于每个页面中 var $ = require('jquery')
   //注意与definePluginConf的区分
   'providePluginConf': function(options) {
-    options = objectAssign({}, options);
+    options = ObjectAssign({}, options);
     return (
       new webpack.ProvidePlugin(options)
     )
@@ -162,7 +176,7 @@ module.exports = {
 
   //js压缩组件
   'uglifyJsPluginConf': function(options) {
-    options = objectAssign({
+    options = ObjectAssign({
       //sourceMap: true,
       compress: {
         warnings: false
