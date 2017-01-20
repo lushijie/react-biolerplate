@@ -2,12 +2,12 @@
 * @Author: lushijie
 * @Date:   2017-01-04 17:36:43
 * @Last Modified by:   lushijie
-* @Last Modified time: 2017-01-20 16:04:56
+* @Last Modified time: 2017-01-20 16:45:02
 */
-var webpack = require('webpack');
-var path = require('path');
-var Settings = require('./webpack/webpack2.config.setting.js');
-var Pconf = require('./webpack/webpack2.plugin.conf.js');
+var webpack = require('webpack')
+var path = require('path')
+var Settings = require('./webpack/webpack2.config.setting.js')
+var Pconf = require('./webpack/webpack2.plugin.conf.js')
 //var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
@@ -94,12 +94,12 @@ module.exports = {
   },
   devtool: Settings.ISDEV ? 'inline-source-map' : 'cheap-module-source-map',
   plugins: [
-    // Settings.ISDEV ? Pconf.noopPluginConf() : Pconf.uglifyJsPluginConf(),
     Pconf.uglifyJsPluginConf(),
     Pconf.commonsChunkPluginConf(),
     Pconf.htmlWebPackPluginConf(Settings.htmlPluginOptions),
     Pconf.providePluginConf(Settings.providePluginOptions),
-    Pconf.dllPluginConf()
+    Pconf.dllPluginConf(),
+    //Pconf.bundleAnalyzerPluginConf()
   ],
   devServer: {
     stats: {

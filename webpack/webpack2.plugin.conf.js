@@ -2,16 +2,17 @@
  * @Author: lushijie
  * @Date:   2016-03-04 11:28:41
  * @Last Modified by:   lushijie
- * @Last Modified time: 2017-01-20 16:04:05
+ * @Last Modified time: 2017-01-20 16:43:13
  */
-var webpack = require('webpack');
-var path = require('path');
-var moment = require('moment');
-var objectAssign = require('object-assign');
-var CleanPlugin = require('clean-webpack-plugin');
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var TransferWebpackPlugin = require('transfer-webpack-plugin');
+var webpack = require('webpack')
+var path = require('path')
+var moment = require('moment')
+var objectAssign = require('object-assign')
+var CleanPlugin = require('clean-webpack-plugin')
+var ExtractTextPlugin = require("extract-text-webpack-plugin")
+var HtmlWebpackPlugin = require('html-webpack-plugin')
+var TransferWebpackPlugin = require('transfer-webpack-plugin')
+var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 module.exports = {
 
@@ -26,6 +27,19 @@ module.exports = {
     return (
       new webpack.BannerPlugin(bannerText)
     )
+  },
+
+  'bundleAnalyzerPluginConf': function()  {
+    return new BundleAnalyzerPlugin({
+      analyzerMode: 'server',
+      analyzerPort: 8888,
+      reportFilename: 'report.html',
+      openAnalyzer: true,
+      generateStatsFile: false,
+      statsFilename: 'stats.json',
+      statsOptions: null,
+      logLevel: 'info'
+    })
   },
 
   //下次打包清除上一次打包文件
