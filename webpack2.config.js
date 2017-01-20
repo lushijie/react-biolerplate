@@ -2,11 +2,11 @@
 * @Author: lushijie
 * @Date:   2017-01-04 17:36:43
 * @Last Modified by:   lushijie
-* @Last Modified time: 2017-01-20 15:25:46
+* @Last Modified time: 2017-01-20 16:04:56
 */
 var webpack = require('webpack');
 var path = require('path');
-var setting = require('./webpack/webpack2.config.setting.js');
+var Settings = require('./webpack/webpack2.config.setting.js');
 var Pconf = require('./webpack/webpack2.plugin.conf.js');
 //var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
@@ -38,13 +38,13 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              sourceMap: setting.ISDEV ? true : false
+              sourceMap: Settings.ISDEV ? true : false
             }
           },
           {
             loader: 'postcss-loader',
             options: {
-              sourceMap: setting.ISDEV ? true : false,
+              sourceMap: Settings.ISDEV ? true : false,
               plugins: function() {
                 return [
                   require('cssnano'),
@@ -57,7 +57,7 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-              sourceMap: setting.ISDEV ? true : false
+              sourceMap: Settings.ISDEV ? true : false
             }
           }
         ]
@@ -92,16 +92,14 @@ module.exports = {
       'resources': path.join(__dirname, 'src/resources'),
     }
   },
-  devtool: setting.ISDEV ? 'inline-source-map' : 'cheap-module-source-map',
+  devtool: Settings.ISDEV ? 'inline-source-map' : 'cheap-module-source-map',
   plugins: [
-    setting.ISDEV ? Pconf.noopPluginConf() : Pconf.uglifyJsPluginConf(),
+    // Settings.ISDEV ? Pconf.noopPluginConf() : Pconf.uglifyJsPluginConf(),
+    Pconf.uglifyJsPluginConf(),
     Pconf.commonsChunkPluginConf(),
-    Pconf.htmlWebPackPluginConf(setting.htmlPluginOptions),
-    Pconf.providePluginConf(setting.providePluginOptions),
-    Pconf.dllPluginConf(),
-    new webpack.LoaderOptionsPlugin({
-      debug: true
-    })
+    Pconf.htmlWebPackPluginConf(Settings.htmlPluginOptions),
+    Pconf.providePluginConf(Settings.providePluginOptions),
+    Pconf.dllPluginConf()
   ],
   devServer: {
     stats: {
@@ -115,5 +113,7 @@ module.exports = {
       index: '/dist/index.html',
     }
   },
-  performance: { hints: false }
+  performance: {
+    hints: false
+  }
 }

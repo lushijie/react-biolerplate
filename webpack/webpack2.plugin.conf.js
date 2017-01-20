@@ -2,7 +2,7 @@
  * @Author: lushijie
  * @Date:   2016-03-04 11:28:41
  * @Last Modified by:   lushijie
- * @Last Modified time: 2017-01-20 14:16:45
+ * @Last Modified time: 2017-01-20 16:04:05
  */
 var webpack = require('webpack');
 var path = require('path');
@@ -153,7 +153,7 @@ module.exports = {
   //js压缩组件
   'uglifyJsPluginConf': function(options) {
     var optionsDefault = {
-      sourceMap: true,
+      //sourceMap: true,
       compress: {
         warnings: false
       },
