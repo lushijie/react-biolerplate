@@ -6,11 +6,11 @@
   "scripts": {
     "start": "npm run dev",
     "json": "json-server --config=./json-server/setting.json ./json-server/db.json --middlewares=./json-server/middleware1.js",
-    "predev": " [ -f dist/vendor.bundle.js ] || webpack --config=./webpack/webpack.dll.conf.js --progress --profile",
+    "predev": " [ -f dist/vendor.bundle.js ] || webpack --config=./webpack/webpack2.dll.conf.js --progress --profile",
     "dev": "export NODE_ENV=development && webpack-dev-server --config=./webpack2.config.js",
-    "predebug": "[ -f dist/vendor.bundle.js ] || webpack --config=./webpack/webpack.dll.conf.js --progress --profile",
+    "predebug": "[ -f dist/vendor.bundle.js ] || webpack --config=./webpack/webpack2.dll.conf.js --progress --profile",
     "debug": "export NODE_ENV=development && webpack --config=./webpack2.config.js",
-    "prerelease": "webpack --config=./webpack/webpack.dll.conf.js --progress --profile",
+    "prerelease": "webpack --config=./webpack/webpack2.dll.conf.js --progress --profile",
     "release": "export NODE_ENV=production && webpack --config=./webpack2.config.js"
   },
   "author": "lushijie1218@126.com",

@@ -2,12 +2,12 @@
 * @Author: lushijie
 * @Date:   2017-01-04 17:36:43
 * @Last Modified by:   lushijie
-* @Last Modified time: 2017-01-04 19:10:07
+* @Last Modified time: 2017-01-20 13:54:08
 */
 var webpack = require('webpack');
 var path = require('path');
-var setting = require('./webpack/webpack.config.setting.js');
-var Pconf = require('./webpack/webpack.plugin.conf.js');
+var setting = require('./webpack/webpack2.config.setting.js');
+var Pconf = require('./webpack/webpack2.plugin.conf.js');
 //var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
