@@ -3,7 +3,7 @@
 #### 该项目包含：
   * react-router 的配置与使用;
   * react 搭配 reflux 进行数据流管理;
-  * webpack配置与使用;
+  * webpack@2.2.0 配置与使用;
   * json-server 模拟请求.
 
 ### 安装依赖
