@@ -2,7 +2,7 @@
  * @Author: lushijie
  * @Date:   2016-03-04 11:28:41
  * @Last Modified by:   lushijie
- * @Last Modified time: 2017-01-04 18:27:55
+ * @Last Modified time: 2017-01-20 14:16:45
  */
 var webpack = require('webpack');
 var path = require('path');
@@ -16,8 +16,13 @@ var TransferWebpackPlugin = require('transfer-webpack-plugin');
 module.exports = {
 
   //为打包之后的各个文件添加说明头部
-  'bannerPluginConf': function(bannerText) {
-    bannerText = bannerText || 'This file last modified is at ' + moment().format('YYYY-MM-DD h:mm:ss');
+  'bannerPluginConf': function(options) {
+    let optionsDefault = {
+      banner: 'This file last modified is at ' + moment().format('YYYY-MM-DD h:mm:ss'),
+      raw: true,
+      entryOnly: true
+    }
+    options = objectAssign(optionsDefault, options);
     return (
       new webpack.BannerPlugin(bannerText)
     )
@@ -126,14 +131,6 @@ module.exports = {
     )
   },
 
-  //根据模块调用次数，给模块分配ids，常被调用的ids分配更短的id，
-  //使得ids可预测，降低文件大小，该模块推荐使用
-  'occurrenceOrderPluginConf': function() {
-    return (
-      new webpack.optimize.OccurrenceOrderPlugin()
-    )
-  },
-
   //jquery(其他类库亦如此)引入全局的方案，之后不用在每个文件中require('jquery')
   //eg: options = {$: 'jquery'} 相当于每个页面中 var $ = require('jquery')
   //注意与definePluginConf的区分
@@ -156,6 +153,7 @@ module.exports = {
   //js压缩组件
   'uglifyJsPluginConf': function(options) {
     var optionsDefault = {
+      sourceMap: true,
       compress: {
         warnings: false
       },

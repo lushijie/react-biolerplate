@@ -46,12 +46,12 @@ export let rootRoute = [
       },
       {
         path: 'outbox',
-        component: Outbox,
+        component: Outbox
       }
     ]
   },
   {
     path: '*',
-    component: Page404,
+    component: Page404
   }
 ]

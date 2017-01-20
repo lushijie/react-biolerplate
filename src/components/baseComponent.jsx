@@ -21,13 +21,13 @@ class BaseComponent extends React.Component {
   }
 
   listen(store, type, scb, fcb){
-    var self = this;
+    let self = this;
     type = type.split(' ');
     type.forEach(t => {
       let stype = t + 'Success',
-          ftype = t + 'Failed';
+        ftype = t + 'Failed';
 
-      var listener = store.listen((respType, data) => {
+      let listener = store.listen((respType, data) => {
         if(respType === stype) {
           if(typeof scb === 'function') {
             scb(data, respType);
@@ -44,7 +44,7 @@ class BaseComponent extends React.Component {
       });
 
       // record listeners for unsubscribe
-      if(this.listeners.indexOf(listener) == -1) {
+      if(this.listeners.indexOf(listener) === -1) {
         this.listeners.push(listener);
       }
 

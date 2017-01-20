@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2017-01-04 17:36:43
 * @Last Modified by:   lushijie
-* @Last Modified time: 2017-01-20 14:28:48
+* @Last Modified time: 2017-01-20 14:08:00
 */
 var webpack = require('webpack');
 var path = require('path');
@@ -23,16 +23,22 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
-        enforce: 'pre',
-        exclude: /node_modules/,
-        loader: 'eslint-loader',
-        options: {
-          fix: true
-        }
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'postcss-loader'
+        ]
       },
       {
-        test: /\.s?css$/,
+        test: /\.scss$/,
+        // loader: ExtractTextPlugin.extract({
+        //     fallbackLoader: 'style-loader',
+        //     loader: [
+        //         'css-loader',
+        //         'postcss-loader'
+        //     ]
+        // })
         use:[
           'style-loader',
           {
@@ -68,7 +74,7 @@ module.exports = {
       },
       {
         test: /\.jsx?$/,
-        loader: 'babel-loader',
+        loader: 'babel-loader', // Do not use "use" here
         exclude: [
           path.join(__dirname, 'node_modules'),
         ],
@@ -99,9 +105,16 @@ module.exports = {
     Pconf.htmlWebPackPluginConf(setting.htmlPluginOptions),
     Pconf.providePluginConf(setting.providePluginOptions),
     Pconf.dllPluginConf(),
-    new webpack.LoaderOptionsPlugin({
-      debug: true
-    })
+    //Pconf.extractTextPluginConf(),
+    // new webpack.LoaderOptionsPlugin({
+    //   options: {
+    //     postcss: [
+    //       require('cssnano'),
+    //       require('precss'),
+    //       require('cssnext')
+    //     ]
+    //   }
+    // }),
   ],
   devServer: {
     stats: {

@@ -128,7 +128,7 @@ export default withRouter(class extends BaseComponent {
       message: 'Notification message',
       level: 'success',
       position: 'tc',
-      autoDismiss: 500,
+      autoDismiss: 500
     });
   }
 
