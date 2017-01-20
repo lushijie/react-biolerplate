@@ -2,7 +2,7 @@
  * @Author: lushijie
  * @Date:   2016-11-11 16:28:28
  * @Last Modified by:   lushijie
- * @Last Modified time: 2016-12-14 16:40:53
+ * @Last Modified time: 2017-01-20 16:31:36
  */
 
 var path = require('path');
@@ -10,10 +10,11 @@ var webpack = require('webpack');
 var base = path.join(__dirname);
 
 var vendors = [
+  'antd/lib/icon',
   'autobind-decorator',
   'babel-polyfill',
   'classnames',
-  'moment',
+  // 'moment',
   'react',
   'react-dom',
   'react-router',

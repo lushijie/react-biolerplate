@@ -50,7 +50,7 @@ module.exports = {
     'react/jsx-key':                'warn',     // Validate JSX has key prop when in array or iterator
     'react/jsx-closing-bracket-location': 'warn', //Validate closing bracket location in JSX (fixable)
     'react/jsx-indent-props':       'warn',     // Validate props indentation in JSX (fixable)
-
+    'react/jsx-wrap-multilines':    'warn',
     'react/no-danger':              'warn',     // Prevent usage of dangerous JSX properties
     'react/no-deprecated':          'warn',     // Prevent usage of deprecated methods
     'react/no-did-mount-set-state': 'warn',     // Prevent usage of setState in componentDidMount
@@ -62,7 +62,6 @@ module.exports = {
     'react/prefer-es6-class':       'warn',     // Enforce ES5 or ES6 class for React Components
     'react/react-in-jsx-scope':     'warn',     // Prevent missing React when using JSX
     'react/self-closing-comp':      'warn',     // Prevent extra closing tags for components without children (fixable)
-    'react/wrap-multilines':        'warn',     // Prevent missing parentheses around multilines JSX (fixable)
   },
   globals: {
     'React': true,
