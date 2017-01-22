@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2017-01-04 17:36:43
 * @Last Modified by:   lushijie
-* @Last Modified time: 2017-01-20 18:50:12
+* @Last Modified time: 2017-01-22 11:26:55
 */
 var webpack = require('webpack')
 var path = require('path')
@@ -60,7 +60,7 @@ module.exports = {
                 return [
                   require('cssnano'),
                   require('precss'),
-                  require('cssnext')
+                  require('postcss-cssnext')
                 ]
               }
             }
