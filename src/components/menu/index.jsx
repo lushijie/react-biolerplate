@@ -10,7 +10,7 @@ export default class extends Component {
         <ul>
           <li><IndexLink to="/" activeClassName="active">Home</IndexLink></li>
           <li><Link to="/outbox" activeClassName="active">Outbox</Link></li>
-            {/*IndexLink可以保证在子节点激活的状态下，父节点不会同样的被激活*/}
+          {/*IndexLink可以保证在子节点激活的状态下，父节点不会同样的被激活*/}
           <li><IndexLink to="/inbox" activeClassName="active">Inbox</IndexLink></li>
           <li style={{marginLeft: '20px'}}>
             <Link to="/messages/123" activeClassName="active" query={{q:'querytest'}} >Message</Link>
