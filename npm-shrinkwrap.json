@@ -5371,11 +5371,6 @@
       "from": "react-lazy-load@>=3.0.10 <4.0.0",
       "resolved": "http://registry.npm.qiwoo.org/react-lazy-load/download/react-lazy-load-3.0.10.tgz"
     },
-    "react-notification-system": {
-      "version": "0.2.11",
-      "from": "react-notification-system@>=0.2.11 <0.3.0",
-      "resolved": "https://registry.npmjs.org/react-notification-system/-/react-notification-system-0.2.11.tgz"
-    },
     "react-resizable": {
       "version": "1.4.6",
       "from": "react-resizable@>=1.4.2 <2.0.0",

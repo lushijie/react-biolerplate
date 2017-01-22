@@ -1,6 +1,5 @@
 import React from 'react'
 import {withRouter} from 'react-router'
-import Notification from 'react-notification-system'
 import {BaseComponent, Alert, Rodal} from 'components'
 import {HomeActions, HomeStore} from 'models'
 
@@ -115,18 +114,7 @@ export default withRouter(class extends BaseComponent {
   // }
 
   componentWillUnmount() {
-    //todo
     this.unsubscribe();
-  }
-
-  handleTestNotification(evt) {
-    console.log(evt.target);
-    this._notification.addNotification({
-      message: 'Notification message',
-      level: 'success',
-      position: 'tc',
-      autoDismiss: 500
-    });
   }
 
   handleShowRodal() {
@@ -150,11 +138,9 @@ export default withRouter(class extends BaseComponent {
       <div>
         <h2>Home</h2>
         <h3>This is Home page!</h3>
-        <button onClick={(evt) => this.handleTestNotification(evt)}>Notification测试</button>
         <button onClick={() => this.handleTestRouterJump()}>路由跳转测试</button>
         <button onClick={() => this.handleShowRodal()}>Rodal测试</button>
         <button onClick={() => this.handleShowAlert()}>Alert测试</button>
-        <Notification ref={(c) => this._notificationRef = c}/>
         <Rodal visible={this.state.rodalVisible}
             onClose={() => this.handleHideRodal()}
         >
