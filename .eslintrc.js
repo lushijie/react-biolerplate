@@ -17,6 +17,9 @@ module.exports = {
     'eslint-plugin-react'
   ],
   rules: {
+    'jsx-quotes':                   ["error", "prefer-single"], //强制在 JSX 属性中一致地使用单引号
+    'no-multi-spaces':              'warn',     // 禁止使用多个空格
+    'curly':                        'warn',     // 强制所有控制语句使用一致的括号风格
     'no-debugger':                  'warn',     // 禁用 debugger
     'no-use-before-define':         'warn',     // 禁止在变量定义之前使用它们
     'no-unused-vars':               'warn',     // 禁止出现未使用过的变量

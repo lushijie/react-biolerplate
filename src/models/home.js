@@ -18,12 +18,12 @@ export const HomeStore = Reflux.createStore({
   listenables: [HomeActions],
   onTestListener1() {
     this.trigger('onTestListener1Success', {errno: 0, data: 'onTestListener1Success'});
-    this.trigger('onTestListener1Failed',  {errno: -1, data: 'onTestListener1Failed'});
+    this.trigger('onTestListener1Failed', {errno: -1, data: 'onTestListener1Failed'});
   },
 
   onTestListener2() {
     this.trigger('onTestListener2Success', {errno: 0, data: 'onTestListener2Success'});
-    this.trigger('onTestListener2Failed',  {errno: -1, data: 'onTestListener2Failed'});
+    this.trigger('onTestListener2Failed', {errno: -1, data: 'onTestListener2Failed'});
   },
 
   onTestRequest({...arg}) {
