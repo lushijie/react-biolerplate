@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2017-01-04 17:36:43
 * @Last Modified by:   lushijie
-* @Last Modified time: 2017-01-23 09:41:00
+* @Last Modified time: 2017-01-23 09:47:29
 */
 var webpack = require('webpack')
 var path = require('path')
@@ -135,7 +135,8 @@ module.exports = function(env) {
       proxy: {
         '/resources/**': {
           target: 'http://127.0.0.1:5050/src/',
-          secure: false
+          secure: false,
+          changeOrigin: true
         }
       }
     },
