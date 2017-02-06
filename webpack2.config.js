@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2017-01-04 17:36:43
 * @Last Modified by:   lushijie
-* @Last Modified time: 2017-02-06 10:07:56
+* @Last Modified time: 2017-02-06 20:02:55
 */
 var webpack = require('webpack')
 var path = require('path')
@@ -87,7 +87,7 @@ module.exports = function(env) {
           query: {
             cacheDirectory: true,
             plugins: ['transform-runtime', 'transform-decorators-legacy'],
-            presets: ['es2015', 'stage-0', 'react']
+            //presets: ['es2015', 'stage-0', 'react']
           }
         }
       ]
@@ -119,12 +119,15 @@ module.exports = function(env) {
       }),
       Pconf.uglifyJsPluginConf(),
       Pconf.compressionWebpackPluginConf(),
+      Pconf.hotModuleReplacementPluginConf()
     ],
     devServer: {
       stats: {
         cached: false,
         colors: true
       },
+      hot: true,
+      inline: true,
       compress: true,
       contentBase: '.',
       port: 5050,

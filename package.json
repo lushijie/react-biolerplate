@@ -8,7 +8,9 @@
     "json": "json-server --config=./json-server/setting.json ./json-server/db.json --middlewares=./json-server/middleware1.js",
     "dev": "webpack-dev-server --env.NODE_ENV=development --config=./webpack2.config.js",
     "debug": "webpack --env.NODE_ENV=development --config=./webpack2.config.js --progress --profile",
-    "release": "webpack --config=./webpack2.config.js --env.NODE_ENV=production --progress"
+    "release": "webpack --config=./webpack2.config.js --env.NODE_ENV=production --progress",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "author": "lushijie1218@126.com",
   "license": "ISC",
@@ -57,6 +59,7 @@
     "url-loader": "^0.5.7",
     "webpack": "~2.2.0",
     "webpack-bundle-analyzer": "~2.2.1",
-    "webpack-dev-server": "^1.15.1"
+    "webpack-dev-server": "^1.15.1",
+    "@kadira/storybook": "^2.21.0"
   }
 }
