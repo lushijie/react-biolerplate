@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2017-01-04 17:36:43
 * @Last Modified by:   lushijie
-* @Last Modified time: 2017-01-23 09:47:29
+* @Last Modified time: 2017-02-06 10:07:56
 */
 var webpack = require('webpack')
 var path = require('path')
@@ -101,7 +101,7 @@ module.exports = function(env) {
         'components': path.join(__dirname, 'src/components'),
         'constants': path.join(__dirname, 'src/constants'),
         'models': path.join(__dirname, 'src/models'),
-        'resources': path.join(__dirname, 'src/resources'),
+        'resources': path.join(__dirname, 'resources'),
       }
     },
     devtool: IS_DEV ? 'inline-source-map' : 'cheap-module-source-map',
@@ -133,10 +133,11 @@ module.exports = function(env) {
         index: '/dist/index.html',
       },
       proxy: {
-        '/resources/**': {
-          target: 'http://127.0.0.1:5050/src/',
+        '/static/**': {
+          target: 'http://127.0.0.1:5050/resources/',
           secure: false,
-          changeOrigin: true
+          changeOrigin: true,
+          pathRewrite: {"^/static" : ""}
         }
       }
     },
