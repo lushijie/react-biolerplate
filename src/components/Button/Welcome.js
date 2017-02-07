@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2017-02-07 14:24:51
 * @Last Modified by:   lushijie
-* @Last Modified time: 2017-02-07 14:24:57
+* @Last Modified time: 2017-02-07 15:44:33
 */
 import React from 'react';
 
@@ -54,27 +54,7 @@ export default class Welcome extends React.Component {
           This is a UI component dev environment for your app.
         </p>
         <p>
-          We've added some basic stories inside the <code style={styles.code}>src/stories</code> directory.
-          <br/>
-          A story is a single state of one or more UI components. You can have as many stories as you want.
-          <br/>
-          (Basically a story is like a visual test case.)
-        </p>
-        <p>
-          See these sample <a style={styles.link} href='#' onClick={this.showApp.bind(this)}>stories</a> for a component called <code style={styles.code}>Button</code>.
-        </p>
-        <p>
-          Just like that, you can add your own components as stories.
-          <br />
-          You can also edit those components and see changes right away.
-          <br />
-          (Try editing the <code style={styles.code}>Button</code> component
-          located at <code style={styles.code}>src/stories/Button.js</code>.)
-        </p>
-        <p>
-          This is just one thing you can do with Storybook.
-          <br/>
-          Have a look at the <a style={styles.link} href="https://github.com/kadirahq/react-storybook" target="_blank">React Storybook</a> repo for more information.
+          Link to <a style={styles.link} href='#' onClick={this.showApp.bind(this)}>Button</a>.
         </p>
         <p style={styles.note}>
           <b>NOTE:</b>

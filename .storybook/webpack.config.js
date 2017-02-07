@@ -22,5 +22,8 @@ module.exports = {
       test: /\.s?css$/,
       loader: 'style-loader!css-loader!postcss-loader!sass-loader'
     }]
-  }
+  },
+  resolve: {
+    extensions: ['', '.js', '.jsx'],
+  },
 };

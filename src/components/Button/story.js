@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2017-02-07 14:21:36
 * @Last Modified by:   lushijie
-* @Last Modified time: 2017-02-07 14:26:51
+* @Last Modified time: 2017-02-07 15:41:07
 */
 import React from 'react';
 import { storiesOf, action, linkTo } from '@kadira/storybook';
@@ -34,6 +34,8 @@ storiesOf('Button', module)
   .add('with text', () => (
     <Button onClick={action('clicked')}>Hello Button</Button>
   ))
-  .add('with some emoji', () => (
-    <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>
+  .add('with container', () => (
+    <div style={{border: '1px solid red'}}>
+      <Button onClick={action('clicked')}>Hello Button</Button>
+    </div>
   ));
