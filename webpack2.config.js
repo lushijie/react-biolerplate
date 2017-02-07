@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2017-01-04 17:36:43
 * @Last Modified by:   lushijie
-* @Last Modified time: 2017-02-06 20:02:55
+* @Last Modified time: 2017-02-07 15:54:20
 */
 var webpack = require('webpack')
 var path = require('path')
@@ -86,7 +86,7 @@ module.exports = function(env) {
           ],
           query: {
             cacheDirectory: true,
-            plugins: ['transform-runtime', 'transform-decorators-legacy'],
+            //plugins: ['transform-runtime', 'transform-decorators-legacy'],
             //presets: ['es2015', 'stage-0', 'react']
           }
         }
