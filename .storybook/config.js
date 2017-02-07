@@ -1,4 +1,5 @@
-import { configure } from '@kadira/storybook';
+// import React from 'react';
+import { configure, addDecorator } from '@kadira/storybook';
 import { setOptions } from '@kadira/storybook-addon-options';
 
 setOptions({
@@ -11,6 +12,12 @@ setOptions({
   downPanelInRight: true,
   sortStoriesByKind: false
 });
+
+// addDecorator((story) => (
+//   <div style={{textAlign: 'center'}}>
+//     {story()}
+//   </div>
+// ));
 
 function loadStories() {
   require('../src/components/stories');
