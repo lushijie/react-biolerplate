@@ -1,3 +1,9 @@
+/*
+* @Author: lushijie
+* @Date:   2017-02-07 14:24:06
+* @Last Modified by:   lushijie
+* @Last Modified time: 2017-02-07 14:24:12
+*/
 import React from 'react';
 
 const buttonStyles = {

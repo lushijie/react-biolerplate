@@ -1,3 +1,9 @@
+/*
+* @Author: lushijie
+* @Date:   2017-02-07 14:24:51
+* @Last Modified by:   lushijie
+* @Last Modified time: 2017-02-07 14:24:57
+*/
 import React from 'react';
 
 const styles = {
