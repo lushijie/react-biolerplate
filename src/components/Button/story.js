@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2017-02-07 14:21:36
 * @Last Modified by:   lushijie
-* @Last Modified time: 2017-02-07 17:37:30
+* @Last Modified time: 2017-02-07 17:45:08
 */
 import React from 'react';
 import { storiesOf, action, linkTo } from '@kadira/storybook';
@@ -10,9 +10,8 @@ import { storiesOf, action, linkTo } from '@kadira/storybook';
 import withReadme from 'storybook-readme/with-readme';
 import autobind from 'autobind-decorator';
 
-import Button from './Button';
+import Button from './index';
 import ButtonREADME from './README.md';
-import Welcome from './Welcome';
 
 // const stories = storiesOf('Storybook Knobs', module);
 // stories.addDecorator(withKnobs);
@@ -37,10 +36,6 @@ class ButtonWrapper extends React.Component {
   }
 }
 
-storiesOf('Welcome', module)
-  .add('link to button', () => (
-    <Welcome showApp={linkTo('Button')}/>
-  ));
 
 storiesOf('Button', module)
   .addDecorator(withReadme(ButtonREADME))
