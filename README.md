@@ -22,3 +22,6 @@
     2.    node server.js
     3.    http://127.0.0.1:3001/
 
+### StoryBook
+    npm run storybook
+    http://127.0.0.1:6006/
