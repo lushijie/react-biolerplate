@@ -2,19 +2,20 @@
 * @Author: lushijie
 * @Date:   2017-02-07 14:21:36
 * @Last Modified by:   lushijie
-* @Last Modified time: 2017-02-07 17:45:08
+* @Last Modified time: 2017-02-08 11:55:12
 */
 import React from 'react';
 import { storiesOf, action, linkTo } from '@kadira/storybook';
 // import { withKnobs, text, boolean, number } from '@kadira/storybook-addon-knobs';
 import withReadme from 'storybook-readme/with-readme';
 import autobind from 'autobind-decorator';
+import { withKnobs, text, boolean, number } from '@kadira/storybook-addon-knobs';
 
 import Button from './index';
 import ButtonREADME from './README.md';
 
-// const stories = storiesOf('Storybook Knobs', module);
-// stories.addDecorator(withKnobs);
+const stories = storiesOf('Storybook Knobs', module);
+stories.addDecorator(withKnobs);
 
 @autobind
 class ButtonWrapper extends React.Component {
@@ -36,8 +37,7 @@ class ButtonWrapper extends React.Component {
   }
 }
 
-
-storiesOf('Button', module)
+stories
   .addDecorator(withReadme(ButtonREADME))
   .add('with text', () => (
     <Button onClick={action('clicked')}>Hello Button</Button>
@@ -49,4 +49,7 @@ storiesOf('Button', module)
   )).
   add('with event', () => (
     <ButtonWrapper />
+  ))
+  .add('with knobs', () => (
+    <Button onClick={action('clicked')}>{text('Label', 'Hello Button')}</Button>
   ))
