@@ -2,15 +2,13 @@
 * @Author: lushijie
 * @Date:   2017-02-07 14:21:36
 * @Last Modified by:   lushijie
-* @Last Modified time: 2017-02-08 11:55:12
+* @Last Modified time: 2017-02-08 11:57:13
 */
 import React from 'react';
-import { storiesOf, action, linkTo } from '@kadira/storybook';
-// import { withKnobs, text, boolean, number } from '@kadira/storybook-addon-knobs';
-import withReadme from 'storybook-readme/with-readme';
 import autobind from 'autobind-decorator';
+import withReadme from 'storybook-readme/with-readme';
+import { storiesOf, action, linkTo } from '@kadira/storybook';
 import { withKnobs, text, boolean, number } from '@kadira/storybook-addon-knobs';
-
 import Button from './index';
 import ButtonREADME from './README.md';
 
