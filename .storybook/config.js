@@ -4,13 +4,13 @@ import { setOptions } from '@kadira/storybook-addon-options';
 
 setOptions({
   name: 'Component Doc',
-  url: '',
+  url: 'https://github.com/wd4blue/',
   goFullScreen: false,
   showLeftPanel: true,
   showDownPanel: true,
   showSearchBox: false,
   downPanelInRight: true,
-  sortStoriesByKind: false
+  sortStoriesByKind: true
 });
 
 // addDecorator((story) => (
