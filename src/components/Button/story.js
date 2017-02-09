@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2017-02-07 14:21:36
 * @Last Modified by:   lushijie
-* @Last Modified time: 2017-02-08 11:57:13
+* @Last Modified time: 2017-02-09 16:14:33
 */
 import React from 'react';
 import autobind from 'autobind-decorator';
@@ -12,7 +12,7 @@ import { withKnobs, text, boolean, number } from '@kadira/storybook-addon-knobs'
 import Button from './index';
 import ButtonREADME from './README.md';
 
-const stories = storiesOf('Storybook Knobs', module);
+const stories = storiesOf('Button', module);
 stories.addDecorator(withKnobs);
 
 @autobind

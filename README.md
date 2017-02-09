@@ -22,6 +22,7 @@
     1.    npm run release
     2.    node server.js
     3.    http://127.0.0.1:3001/
+    4.    storybook http://127.0.0.1:3001/story
 
 ### StoryBook
     npm run storybook

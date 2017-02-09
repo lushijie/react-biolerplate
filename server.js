@@ -2,7 +2,7 @@
  * @Author: lushijie
  * @Date:   2016-06-16 18:21:14
  * @Last Modified by:   lushijie
- * @Last Modified time: 2016-12-14 16:51:52
+ * @Last Modified time: 2017-02-09 16:13:02
  */
 var express = require('express')
 var path = require('path')
@@ -15,6 +15,8 @@ var app = express()
 app.use(express.static(path.join(__dirname, 'dist')))
 
 app.use('/dist', express.static(path.join(__dirname, 'dist')))
+
+app.use('/story', express.static(path.join(__dirname, 'storybook-static/')))
 
 // send all requests to index.html so browserHistory in React Router works
 app.get('*', function(req, res) {

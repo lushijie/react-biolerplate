@@ -3,7 +3,7 @@ import { configure, addDecorator } from '@kadira/storybook';
 import { setOptions } from '@kadira/storybook-addon-options';
 
 setOptions({
-  name: 'Component',
+  name: 'Component Doc',
   url: '',
   goFullScreen: false,
   showLeftPanel: true,
