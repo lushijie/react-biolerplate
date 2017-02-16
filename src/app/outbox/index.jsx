@@ -7,12 +7,12 @@ export default withRouter(class extends BaseComponent {
   static contextTypes = {
     history: React.PropTypes.object.isRequired,
     router: React.PropTypes.object.isRequired,
-    location: React.PropTypes.object.isRequired
+    location: React.PropTypes.object.isRequired,
   }
 
   state = {
     // 初始化state,替代原getInitialState, 注意前面没有static
-    unsaved: true
+    unsaved: true,
   }
 
   componentDidMount() {

@@ -11,7 +11,7 @@ import request from 'common/request';
 export const HomeActions = Reflux.createActions([
   'testListener1',
   'testListener2',
-  'testRequest'
+  'testRequest',
 ]);
 
 export const HomeStore = Reflux.createStore({
@@ -30,10 +30,10 @@ export const HomeStore = Reflux.createStore({
     request({
       url: '/test/profile',
       method: 'get',
-      data: arg
+      data: arg,
     }).then(
       resp => this.trigger('onTestRequestSuccess', resp),
       resp => this.trigger('onTestRequestFailed', resp)
     );
-  }
+  },
 })

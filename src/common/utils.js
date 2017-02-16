@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2016-12-10 11:39:02
 * @Last Modified by:   lushijie
-* @Last Modified time: 2016-12-14 10:37:41
+* @Last Modified time: 2017-02-16 10:13:40
 */
 import * as querystring from 'querystring';
 
@@ -40,7 +40,21 @@ export let Utils = {
     return querystring.stringify(queryObject);
   },
 
-
+  getChildRoutes(childs) {
+    let childRoutes = [];
+    if(Array.isArray(childs)) {
+      console.log(childs)
+      for(let i = 0; i < childs.length; i++) {
+        if(Array.isArray(childs[i])) {
+          childRoutes = childRoutes.concat(childs[i]);
+        }
+        if(typeof(childs[i]) === 'string') {
+          childRoutes.push(childs[i]);
+        }
+      }
+    }
+    return childRoutes;
+  },
 }
 
 export {Utils as default};

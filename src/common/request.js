@@ -24,7 +24,7 @@ function request(obj) {
     method: 'get',
     type: 'json',
     crossOrigin: true,
-    withCredentials: true
+    withCredentials: true,
   };
 
   if( typeof(obj) === 'string' ) {
