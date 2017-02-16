@@ -28,7 +28,7 @@ module.exports = {
     'no-mixed-spaces-and-tabs':     'warn',     // 禁止空格和 tab 的混合缩进
     'eqeqeq':                       'warn',     // 要求使用 === 和 !==
     'no-extra-semi':                'warn',     // 禁止不必要的分号
-    'comma-dangle':                 ['warn', 'never'], // 禁用拖尾逗号
+    'comma-dangle':                 ['warn', 'always-multiline'], // 禁用拖尾逗号
     'indent':                       ['warn', 2],     // 强制使用一致的缩进
     'no-eval':                      'error',    // 禁用 eval()
     'no-redeclare':                 'error',    // 禁止多次声明同一变量'

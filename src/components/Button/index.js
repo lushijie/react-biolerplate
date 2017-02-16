@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2017-02-07 14:24:06
 * @Last Modified by:   lushijie
-* @Last Modified time: 2017-02-07 14:24:12
+* @Last Modified time: 2017-02-16 09:22:18
 */
 import React from 'react';
 
@@ -18,8 +18,8 @@ const buttonStyles = {
 
 const Button = ({ children, onClick }) => (
   <button
-    style={buttonStyles}
-    onClick={onClick}
+      style={buttonStyles}
+      onClick={onClick}
   >
     {children}
   </button>
