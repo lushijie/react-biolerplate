@@ -27,7 +27,7 @@ export default [
     //第二种indexRoute方式路由中配置indexRoute
     indexRoute: {
       //一、非动态加载 component
-      component: require('./inbox/home').default
+      component: require('./inbox/home').default,
       //二、动态加载 getComponent
     },
 
@@ -36,10 +36,10 @@ export default [
     onEnter: function(){
       // arg < nextState, replaceState >
       console.log('Inbox onEnter');
-    }
+    },
   },
   {
     path: 'outbox',
-    component: require('./outbox').default
-  }
+    component: require('./outbox').default,
+  },
 ]

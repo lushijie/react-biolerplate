@@ -5,10 +5,10 @@
   "main": "./src/app/app.jsx",
   "scripts": {
     "start": "npm run dev",
-    "json": "json-server --config=./json-server/setting.json ./json-server/db.json --middlewares=./json-server/middleware1.js",
-    "dev": "webpack-dev-server --env.NODE_ENV=development --config=./webpack2.config.js",
-    "debug": "webpack --env.NODE_ENV=development --config=./webpack2.config.js --progress --profile",
-    "release": "webpack --config=./webpack2.config.js --env.NODE_ENV=production --progress",
+    "json": "json-server --config=./mock/setting.json ./mock/db.json --middlewares=./mock/middleware.js",
+    "dev": "webpack-dev-server --config=./webpack2.config.js --env=development",
+    "debug": "webpack --config=./webpack2.config.js --progress --profile --env=development",
+    "release": "webpack --config=./webpack2.config.js --progress --env=production",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -65,6 +65,7 @@
     "url-loader": "^0.5.7",
     "webpack": "~2.2.0",
     "webpack-bundle-analyzer": "~2.2.1",
-    "webpack-dev-server": "^1.15.1"
+    "webpack-dev-server": "~1.16.2",
+    "yargs": "~3.10.0"
   }
 }

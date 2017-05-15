@@ -3,5 +3,5 @@
   "watch": true,
   "static": "./src/resource",
   "no-cors": false,
-  "routes": "./json-server/router.json"
+  "routes": "./mock/router.json"
 }

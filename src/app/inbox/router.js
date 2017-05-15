@@ -11,7 +11,7 @@ export default [
     component: require('app/inbox/message').default,
     onEnter: function () {
       console.log('Come from Message Redirect');
-    }
+    },
   },
   {
     //相对路径：messages/id为相对路径 最终url是 ip:5050/inbox/messages/id
@@ -27,7 +27,7 @@ export default [
     },
     onLeave: function() {
       //onLeave hook 会在所有将离开的路由中触发，从最下层的子路由开始直到最外层父路由结束
-    }
-  }
+    },
+  },
 ]
 

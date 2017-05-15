@@ -8,15 +8,15 @@ let rootRoute = [
     path: '/',
     component: require('./layout').default,
     indexRoute: {
-      component: require('./home').default
+      component: require('./home').default,
       //onEnter: (nextState, replace) => replace('/inbox')  // 可以通过 onEnter 跳转到一个默认的路由页面
     },
-    childRoutes: require('./router').default
+    childRoutes: require('./router').default,
   },
   {
     path: '*',
-    component: require('./page404').default
-  }
+    component: require('./page404').default,
+  },
 ]
 
 ReactDOM.render(

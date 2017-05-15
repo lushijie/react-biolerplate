@@ -2,16 +2,17 @@
 * @Author: lushijie
 * @Date:   2017-01-04 17:36:43
 * @Last Modified by:   lushijie
-* @Last Modified time: 2017-02-07 15:54:20
+* @Last Modified time: 2017-05-15 09:23:01
 */
-var webpack = require('webpack')
-var path = require('path')
-var Settings = require('./webpack/webpack2.config.setting.js')
-var Pconf = require('./webpack/webpack2.plugin.conf.js')
+var webpack = require('webpack');
+var path = require('path');
+var OPTIONS = require('./webpack/webpack2.options.js');
+var PLUGINS = require('./webpack/webpack2.plugins.js');
+let argv = require('yargs').argv;
 
 module.exports = function(env) {
-  const IS_DEV = (env.NODE_ENV === 'development');
-  return {
+  const isDev = (env.NODE_ENV === 'development');
+  let workflow = {
     entry: {
       index: './src/app/app.jsx',
       vendors: [
@@ -19,7 +20,6 @@ module.exports = function(env) {
         'autobind-decorator',
         'babel-polyfill',
         'classnames',
-        // 'moment',
         'react',
         'react-dom',
         'react-router',
@@ -50,13 +50,13 @@ module.exports = function(env) {
             {
               loader: 'css-loader',
               options: {
-                sourceMap: IS_DEV ? true : false
+                sourceMap: isDev ? true : false
               }
             },
             {
               loader: 'postcss-loader',
               options: {
-                sourceMap: IS_DEV ? true : false,
+                sourceMap: isDev ? true : false,
                 plugins: function() {
                   return [
                     require('cssnano'),
@@ -69,7 +69,7 @@ module.exports = function(env) {
             {
               loader: 'sass-loader',
               options: {
-                sourceMap: IS_DEV ? true : false
+                sourceMap: isDev ? true : false
               }
             }
           ]
@@ -104,22 +104,21 @@ module.exports = function(env) {
         'resources': path.join(__dirname, 'resources'),
       }
     },
-    devtool: IS_DEV ? 'inline-source-map' : 'cheap-module-source-map',
+    devtool: isDev ? 'inline-source-map' : 'cheap-module-source-map',
     plugins: [
-      Pconf.providePluginConf(Settings.providePluginOptions),
-      Pconf.htmlWebPackPluginConf(Settings.htmlPluginOptions),
-      Pconf.definePluginConf(),
-      Pconf.commonsChunkPluginConf({
+      PLUGINS.providePluginConf(OPTIONS.providePluginOptions),
+      PLUGINS.definePluginConf(),
+      PLUGINS.commonsChunkPluginConf({
         name: 'vendors',
         filename: 'vendors.bundle.js'
       }),
-      Pconf.commonsChunkPluginConf({
+      PLUGINS.commonsChunkPluginConf({
         name: 'common',
         filename: 'common.bundle.js'
       }),
-      Pconf.uglifyJsPluginConf(),
-      Pconf.compressionWebpackPluginConf(),
-      Pconf.hotModuleReplacementPluginConf()
+      PLUGINS.uglifyJsPluginConf(),
+      PLUGINS.compressionWebpackPluginConf(),
+      PLUGINS.hotModuleReplacementPluginConf()
     ],
     devServer: {
       stats: {
@@ -148,4 +147,6 @@ module.exports = function(env) {
       hints: false
     }
   }
+  workflow.plugins = workflow.plugins.concat(PLUGINS.htmlWebPackPluginConf(OPTIONS.htmlPluginOptions));
+  return workflow;
 }
