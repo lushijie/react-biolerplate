@@ -2,7 +2,7 @@
  * @Author: lushijie
  * @Date:   2016-11-11 17:20:12
  * @Last Modified by:   lushijie
- * @Last Modified time: 2017-05-15 09:19:55
+ * @Last Modified time: 2017-05-15 09:30:29
  */
 const path = require('path');
 const argv = require('yargs').argv;
@@ -28,8 +28,6 @@ let htmlPluginOptions = [
     // excludeChunks: [],
   }),
 ];
-
-console.log(htmlPluginOptions);
 
 var providePluginOptions = {
   autobind: 'autobind-decorator'

@@ -10,7 +10,7 @@
     "debug": "webpack --config=./webpack2.config.js --progress --profile --env=development",
     "release": "webpack --config=./webpack2.config.js --progress --env=production",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybuild": "build-storybook"
   },
   "author": "lushijie1218@126.com",
   "license": "ISC",

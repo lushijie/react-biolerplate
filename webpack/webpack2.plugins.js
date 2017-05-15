@@ -2,7 +2,7 @@
  * @Author: lushijie
  * @Date:   2016-03-04 11:28:41
  * @Last Modified by:   lushijie
- * @Last Modified time: 2017-05-15 09:21:13
+ * @Last Modified time: 2017-05-15 09:30:34
  */
 
 const webpack = require('webpack');
@@ -112,7 +112,6 @@ module.exports = {
    // options 支持数组
    'htmlWebPackPluginConf': function(options) {
      if(Object.prototype.toString.call(options)=== '[object Array]') {
-      console.log(123123);
        let plist = [];
        for(let i = 0; i < options.length; i++) {
          plist.push(new HtmlWebpackPlugin(ObjectAssign({}, options[i])));

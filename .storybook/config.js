@@ -4,7 +4,7 @@ import { setOptions } from '@kadira/storybook-addon-options';
 
 setOptions({
   name: 'Component Doc',
-  url: 'https://github.com/wd4blue/',
+  url: 'https://github.com/lushijie/',
   goFullScreen: false,
   showLeftPanel: true,
   showDownPanel: true,
