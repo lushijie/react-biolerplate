@@ -1,5 +1,5 @@
 # react-reflux示例
-=============
+
 #### 该项目包含：
   * react-router 的配置与使用;
   * react 搭配 reflux 进行数据流管理;
